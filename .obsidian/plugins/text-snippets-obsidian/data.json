@@ -1,0 +1,15 @@
+{
+  "snippets_file": "def : > [!abstract] Definition\ninfo : > [!info] ",
+  "snippets": [
+    "def : > [!abstract] Definition",
+    "info : > [!info] "
+  ],
+  "endSymbol": "$end$",
+  "newlineSymbol": "$nl$",
+  "stopSymbol": "$tb$",
+  "pasteSymbol": "$pst$",
+  "useTab": false,
+  "useSpace": true,
+  "wordDelimiters": "$()[]{}<>,.!?;:'\"\\/",
+  "isWYSIWYG": true
+}
