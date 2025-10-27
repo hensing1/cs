@@ -43,7 +43,7 @@ H_{3}^{3}(t) &= (3-2t)t^{2}
 Es ist $H_{0}^{3}+H_{3}^{3}=1$.
 
 $H_{0}^{3}$ und $H_{3}^{3}$ interpolieren die Punkte $p_{0}$ und $p_{1}$, $H_{1}^{3}$ und $H_{2}^{3}$ die Ableitungen $m_{0}$ und $m_{1}$: $$p(t)=p_{0}H_{0}^{3}+m_{1}H_{1}^{3}(t)+m_{2}H_{2}^{3}(t)+p_{1}H_{3}^{3}(t)$$
-#### Bernstein-Basis
+#### Bernstein-Basis und Bézierkurven
 Mit Bernstein-Polynomen des Grades $n$ erhält man im Intervall $[0,1]$ eine *Zerlegung der 1* mit $n+1$ Polynomen.
 Mit diesen $n+1$ Polynomen und $n+1$ *Kontrollpunkten* kann man die Bézierkurven definieren:
 - Interpoliert den ersten ($P_{0}$) und letzten ($P_{n}$) Kontrollpunkt ($B_{0}^{n}(0)=1$, $B_{n}^{n}(1)=1$)
@@ -52,6 +52,22 @@ Mit diesen $n+1$ Polynomen und $n+1$ *Kontrollpunkten* kann man die Bézierkurve
 - Kurve verläuft in der [[Disco - VL 1#^719510|konvexen Hülle]] der Kontrollpunkte
 
 Vgl. [[CG - VL 7#Bernsteinpolynome und Bézierkurven|Computergrafik]]
+
+##### Ableitung einer Bézierkurve
+Die $k$-te Ableitung einer Bézierkurve $n$-nten Grades wiederum eine Bézierkurve mit Grad $n-k$ :
+$$p^{(k)}(t) = \frac{n!}{(n-k)!} \sum_{i=0}^{n-k}\Delta^{k}b_{i}B_{i}^{n-k}(t)$$
+mit den Bernsteinpolynom-Koeffizienten $\Delta^{k}b_{i}$ rekursiv definiert: $$\begin{align}
+\Delta^{0}b_{i}&=b_{i} \\
+\Delta^{k}b_{i}&=\Delta^{k-1}b_{i+1}-\Delta^{k-1}b_{i}
+\end{align}$$
+
+Anschaulich spannen die Vektoren von einem Kontrollpunkt zum nächsten das neue Kontrollpolygon der Ableitung auf:
+![[Bezierableitung.png|150]]
+
+### Kurvenlänge
+Die Länge einer Kurve ist definiert als das Integral über die Länge des Tangentenvektors: $$s: [a,b] \to [0, s(b)], \,u \mapsto s(u)=\int_{a}^{u}\|p'(t)\|\,dt$$
+
+
 
 ## Arc Length Parametrization
 
