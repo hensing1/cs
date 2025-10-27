@@ -1,0 +1,1 @@
+Man kann mit UNION Einträge aus einer anderen Tabelle, die man auslesen möchte, unten dran klatschen (Anzahl der Spalten muss halt stimmen, und man muss die Namen der Tabelle und der Spalten rausfinden)

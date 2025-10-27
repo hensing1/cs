@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+
+% Template by Alexander Ley and Kai Sturm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% load packages 
+\usepackage[ngerman]{babel}    
+\usepackage[intlimits,tbtags]{amsmath}
+\usepackage{amssymb}   
+\usepackage{amsfonts}
+\usepackage{latexsym}  
+\usepackage{amsxtra}   
+\usepackage{amstext}   
+\usepackage{bm}        
+\usepackage{amsthm}    
+\usepackage{amscd}     
+\usepackage[dvipsnames]{xcolor}
+\usepackage{marvosym}
+\usepackage[utf8]{inputenc}
+\usepackage[shortlabels]{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[a4paper,nohead,left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
+
+\unitlength1cm
+\setlength{\parindent}{0mm} % no paragraph indentation
+
+
+%%%%%%%%%%%%%%%%   Exercises   %%%%%%%%%%%%%%%%%%%%%%%
+
+% new environments for Exercises:
+\newtheoremstyle{Aufgabe_Style}
+ {\topsep}   % ABOVESPACE
+ {\topsep}   % BELOWSPACE
+ {\normalfont}  % BODYFONT
+ {0pt}       % INDENT (empty value is the same as 0pt)
+ {\large\bfseries} % HEADFONT
+ {}         % HEADPUNCT
+ {\newline} % HEADSPACE
+ {}          % CUSTOM-HEAD-SPEC
+\theoremstyle{Aufgabe_Style}
+\newtheorem{Aufgabe}{Aufgabe}
+
+\newtheoremstyle{Bearbeitung_Style}
+ {\topsep}   % ABOVESPACE
+ {\topsep}   % BELOWSPACE
+ {\normalfont}  % BODYFONT
+ {0pt}       % INDENT (empty value is the same as 0pt)
+ {\color{blue}\bfseries} % HEADFONT
+ {:}         % HEADPUNCT
+ {\newline} % HEADSPACE
+ {}          % CUSTOM-HEAD-SPEC
+\theoremstyle{Bearbeitung_Style}
+\newtheorem*{Bearbeitung}{Bearbeitung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\newcommand{\studentnames}{Vorname 1 Nachname 1, Vorname 2 Nachname 2, Vorname 3 Nachname 3}
+\newcommand{\sheetnumber}{X}
+\newcommand{\sheetname}{Blattname}
+\newcommand{\duedate}{dd.mm.yyyy}
+
+
+\begin{center}
+{\Large\bf Numerik Übungsblatt \sheetnumber: \sheetname} \\
+\bigskip
+{\large Dozent: Prof. Dr. Reinhard Klein} \\
+\smallskip
+{\small Wintersemster 2023/2024}  \\
+\medskip
+\end{center}
+ \begin{center}
+ {{\color{blue}\bfseries Bearbeitet von:} \studentnames}
+ \end{center}
+
+\bigskip
+
+\textbf{\large Blatt \sheetnumber.} \hfill
+\textbf{Abgabe bis \duedate\ }
+
+\smallskip 
+\hrule
+
+
+ \begin{flushright}
+  \begin{tabular}{c|c|c|c|c}
+  1 & 2 & 3 & 4 & $\Sigma$ \\
+  \hline
+  \hspace{1cm} & \hspace{1cm} & \hspace{1cm} & \hspace{1cm} & \hspace{1cm} \\[0.5cm]
+ \end{tabular}
+ \end{flushright}
+
+% \bigskip\bigskip 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Bearbeitung}
+
+  % Aufgabe 1
+  \begin{Aufgabe}
+  \end{Aufgabe}
+
+  % Aufgabe 2
+  \begin{Aufgabe}
+  \end{Aufgabe}
+
+  % Aufgabe 3
+  \begin{Aufgabe}
+  \end{Aufgabe}
+
+  % Aufgabe 4
+  \begin{Aufgabe}
+  \end{Aufgabe}
+
+\end{Bearbeitung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

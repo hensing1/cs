@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+
+\title{Lösungen für Übungsblatt 2}
+\author{Henning Lehmann}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 2.2: Rekursionsgleichungen lösen}
+
+\paragraph{Theorem:}
+Die geschlossene Form von $S(n)$ lautet $S(n)=2 \cdot n!$ für $n \geq 2$.
+
+\paragraph{Beweis:}
+\subparagraph{Induktionsanfang:} 
+\begin{equation}
+\begin{split}
+S(2) &= \sum\limits_{i=1}^1 i \cdot S(i)=1 \cdot S(1)=4 \\
+& = 2 \cdot 2!=2 \cdot 2 \cdot 1=4.
+\end{split}
+\end{equation}
+
+\subparagraph{Induktionsannahme:}$S(n)=\sum\limits_{i=1}^{n-1}i \cdot S(i)=2 \cdot n!$ für alle $n\geq 2$.
+
+\subparagraph{Induktionsschritt:}
+\begin{equation}
+\begin{split}
+S(n+1)=\sum_{i=1}^ni \cdot S(i) &= n \cdot S(n) + \sum_{i=1}^{n-1}i \cdot S(i) \\
+&=n\cdot S(n)+2\cdot n! \\
+&=n\cdot 2\cdot n!+2\cdot n! \\
+&=(n+1)\cdot 2\cdot n! \\
+&=2\cdot (n+1)!
+\end{split}
+\end{equation}
+$\hfill\square$
+
+\clearpage
+
+\section*{Aufgabe 2.4: Multiplikation zweier Zahlen}
+\subsection*{(a)}
+\textit{Annahme:} Das Verschieben einer Zahl um $i$ Stellen liegt in $\Theta(1)$.
+
+\paragraph{Lösung:} Die "`Schulmethode"' zum Multiplizieren zweier Zahlen liegt in $\Theta(n^2)$.
+
+\paragraph{Begründung:} Das Multiplizieren von $x$ mit einer Stelle von $y$ benötigt eine Laufzeit von $c*n$, da $x$ $n$ Stellen hat. Das anschließende Verschieben liegt laut Annahme in $\Theta(1)$.
+
+Da $y$ ebenfalls $n$ Stellen hat, passieren insgesamt $n$ Multiplikationen mit jeweils einer Laufzeit in $\Theta(n)$. Daher liegt die Zeit für die Ausführung aller Multiplikationen in $\Theta(n^2)$.\\
+
+Die hierbei entstehenden Zwischenergebnisse haben eine Durchschnittliche Stellenzahl von $3/2 n$ (sie werden durchschnittlich um $1/2 n$ Stellen nach rechts verschoben). Die Addition von zwei dieser Zwischenergebnisse liegt ebenfalls in $\Theta(n)$ und findet erneut $n$-mal statt - insofern liegt die Laufzeit für die Addition ebenfalls in $\Theta(n^2)$.\\
+
+Insgesamt liegt die Laufzeit der Schulmethode also in $\Theta(n^2)+\Theta(n^2)=\Theta(n^2)$.
+
+\subsection*{(b)}
+Anzugeben ist die Rekursionsgleichung für \textsc{CleverMult} in der allgemeinen Form $T(n)=aT(n/b)+f(n)$.\\
+
+\noindent Für den beschriebenen Algorithmus ergeben sich folgende Parameter:
+\begin{itemize}
+	\item $a=3$, da es drei rekursive Aufrufe gibt.
+	\item $b=2$, da sich die Problemgröße $n$ bei jedem Aufruf halbiert.
+	\item $f(n)=c\cdot n=\Theta(n)$, da alle übrigen Operationen Additionen sind, welche gemäß Aufgabenstellung in $\Theta(n)$ liegen.
+\end{itemize}
+
+\noindent Die Rekursionsgleichung lautet also $T(n)=3T(n/2)+\Theta(n)$.\\
+
+\noindent Da $f(n)\in O(n^{\log_23-\epsilon})$ mit $\epsilon = 1 > 0$, gilt laut Master-Theorem:
+$$T(n)=\Theta(n^{\log_23})\approx \Theta(n^{1,58})$$
+
+\end{document}

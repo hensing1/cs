@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"d16ed4bab130a6b5","type":"text","text":"**Definitionsmäßige Eigenschaften von Leben**\n\n- Metabolismus\n- Wachstum\n- Reproduktion\n- Reaktion auf Stimuli\n- Anpassung und Evolution\n- Fähigkeit, Energie von der Außenwelt aufzunehmen\n- Regenerationsfähigkeit\n- Konsum","x":-520,"y":40,"width":400,"height":360},
+		{"id":"dac6f3cf616b5980","type":"text","text":"**Künstliches Leben**\n\"Life made by man rather than by nature\"\n\n![[AL 1 - Intro & Langton's Ant#^c380dd]]\n\n![[AL 1 - Intro & Langton's Ant#^0ad659]]","x":-40,"y":40,"width":640,"height":460},
+		{"id":"dd3593e1002df19b","type":"text","text":"![[AL 1 - Intro & Langton's Ant#Langtons Ameise]]","x":720,"y":40,"width":1040,"height":1560},
+		{"id":"80656b4187ad24ae","type":"text","text":"# Intro\n","x":200,"y":-360,"width":160,"height":60},
+		{"id":"a6ad3842db268d70","type":"text","text":"# Cellular Automata (allgemein)\n\n> [!abstract] *Definition*\n> Ein Cellular Automaton besteht aus:\n> - Einem Gitter von Zellen ($d$-dimensional)\n> - Einer definierten *Nachbarschaft* für jede Zelle (z.B. 4- oder 8-Nachbarschaft) mit Radius $r$\n> - Endliche Anzahl $k$ von möglichen *Zuständen* für eine Zelle\n> - Ein Initialzustand\n> - Eine *Übergangsregel*, die gleichzeitig auf alle Zellen angewandt wird, um den Folgezustand zu bestimmen.\n\nDer Zustand einer Zelle $i$ ist $a_{i}(t)$ im Zeitpunkt $t$.\n\nFormal für Anzahl der möglichen Regeln ($d=1$): $Z=k^{k^{(2r+1)}}$.\n\n![[AL 2 - 1D Cellular Automata#Eigenschaften von Regeln]]\n\n![[AL 2 - 1D Cellular Automata#Verhaltensklassen]]\n\n","x":-40,"y":1680,"width":1040,"height":1160},
+		{"id":"05ffe768b55c3ba2","type":"text","text":"\n# 2-dimensionale CA\n\n![[AL 3 - 2D Cellular Automata]]","x":1035,"y":1680,"width":885,"height":1200}
+	],
+	"edges":[
+		{"id":"f8a15bea4070d036","fromNode":"80656b4187ad24ae","fromSide":"bottom","toNode":"d16ed4bab130a6b5","toSide":"top","toEnd":"none"},
+		{"id":"23e2106b4c4bf835","fromNode":"80656b4187ad24ae","fromSide":"bottom","toNode":"dac6f3cf616b5980","toSide":"top","toEnd":"none"},
+		{"id":"c38d3ece59f34d82","fromNode":"80656b4187ad24ae","fromSide":"bottom","toNode":"dd3593e1002df19b","toSide":"top","toEnd":"none"}
+	]
+}

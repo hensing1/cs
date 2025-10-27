@@ -1,0 +1,6 @@
+- S. 121: Begriff "Nullmenge" ist nirgendwo definiert. Ist "Niveaumenge" gemeint?
+- S. 121: Bemerkung mitten im Text, nur schwer zu erkennen wo sie aufhört
+- S. 121: Mittelwertsatz falsch. Es ist $f(b) - f(a) = \ldots$, nicht $f(a) - f(b) = \ldots$.
+- S. 126: Formel 8.17: Es muss heißen: $d^{p}f(a)(\ldots)$, und nicht $\partial^{p}f(a)(\ldots)$
+- Definitionen für Definitheit (Bemerkungen 8.10 und 8.11) kommen zu spät. Die Definitheitsbegriffe werden für Matrizen bereits wesentlich früher im Skript verwendet.
+	- (Streng genommen ist Definitheit für Matrizen bereits im Skript von Dr. Räsch definiert, allerdings sind wir in meinem Semester in der linearen Algebra nicht mehr dazu gekommen. Eine erneute Definition im Numerikskript - sei es als Bemerkung - wäre bereits hilfreich für das Nacharbeiten.)

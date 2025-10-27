@@ -1,0 +1,22 @@
+aktion , befehl , kurzform
+,  , r
+Ausführung unterbrechen wenn Zeile n erreicht wird ,  , 
+Ausführung unterbrechen wenn Funktion fun() aufgerufen wird ,  , 
+, watch X , 
+Alle Breakpoints anzeigen ,  , 
+Alle Register anzeigen ,  , 
+Breakpunkt Nummer N entfernen ,  , 
+Breakpoint an Zeile oder Funktion X entfernen ,  , 
+, next , 
+, step , 
+,  , ni
+,  , si
+Programm nach Breakpoint fortsetzen ,  , 
+,  , fin
+Die Ausführung der letzten Zeile rückgängig machen. ,  , 
+, reverse-cont , 
+, print X , 
+, x X , --
+Variable X Wert Y zuweisen ,  , --
+Datentyp von X ausgeben ,  , 
+, backtrace , 

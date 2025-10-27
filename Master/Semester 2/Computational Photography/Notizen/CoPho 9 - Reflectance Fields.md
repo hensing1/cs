@@ -1,0 +1,2 @@
+- Foto kann als Summe aus anderen Fotos dargestellt werden
+- 

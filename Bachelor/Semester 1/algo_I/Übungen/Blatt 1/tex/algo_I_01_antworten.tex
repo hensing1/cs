@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Lösungen für Übungsblatt 1}
+\author{Henning Lehmann, Ayoub Errami}
+\date{18.10.2022}
+
+\begin{document}
+\maketitle
+\section{Aufgabe 1.1: Vereinfachen von Funktionen}
+
+\begin{itemize}
+	\item $g_1(n)=n^4$
+	\item $g_2(n)=1$
+	\item $g_3(n)=n^{3,5}$
+	\item $g_4(n)=max(k_1,k_2)$
+\end{itemize}
+
+\section{Aufgabe 1.2: Algorithmus analysieren}
+\subsection{(a)}
+\subsubsection{Theorem}
+
+Der Algorithmus gibt eine absteigend sortierte Permutation von A zurück.
+
+\subsubsection{Beweis}
+
+\begin{description}
+	\item{Sei $\text{sort}(X)$ eine absteigend sortierte Permutation einer Zahlenfolge $X$.}
+	\item{Sei $S_n(x)$ eine Zahlenfolge mit den $n$ größten Elementen aus einer Zahlenfolge $X$.}
+	\item{Sei $U_n(A)$ der initiale Inhalt von $A$ ohne die $n$ größten Elemente.}
+\end{description}
+
+\paragraph{Invariante in Zeile 1:}
+$$
+A[1..i-1]=\text{sort}(S_{i-1}(A))
+$$
+$$
+A[i..n]=U_{i-1}(A)
+$$
+
+\paragraph{Induktionsanfang i=1:}
+$$
+A[1..0]=\text{leere Zahlenfolge}=\text{sort}(s_0(A))
+$$
+$$
+A[1..n]=U_0(A)
+$$
+
+\paragraph{Induktionsschritt}\mbox{}\\
+\indent Angenommen die Invariante gilt für ein $i \ge 1$. \\
+Im Schleifendurchlauf wird das größte Element aus $A[i..n]$ an die Stelle $i$ gesetzt, wobei alle kleineren Elemente in $A[i+1..n]$ verbleiben. \\
+D.h. am Ende der Schleife gilt:
+\begin{description}
+	\item $A[1..i]=\text{sort}(s_i(A))$
+	\item $A[i+1..n]=U_i(A)$
+	\item $\Rightarrow$ die Invariante gilt auch für $i+1$.
+\end{description}
+Für $i=n-1$:
+\begin{description}
+	\item $A[1..n-1]=\text{sort}(s_{n-1}(A))$
+	\item $A[n..n]=U_{n-1}(A)$
+\end{description}
+Eine Zahlenreihe aus $n$ Elementen ohne die $n-1$ größten Elemente enthält trivialerweise lediglich das kleinste Element, welches sich hierbei in $A[n]$ befindet. Da die übrigen Elemente sich sortiert in $A[1..n-1]$ befinden, folgt: \\
+\indent Die Ausgabe des Algorithmus ist eine absteigend sortierte Permutation von A. $\hfill\square$
+
+\subsection{(b)}
+\begin{description}
+	\item Objektvergleiche in Z.2: $n-i$.
+	\item Objektvergleiche in Z.3: $1$.
+	\item $\rightarrow$ Objektvergleiche pro Schleifendurchlauf: $n-i+1$.
+\end{description}
+Insgesamt:
+\begin{equation}
+\begin{split}
+\sum_{i=1}^{n-1}(n-i+1) & = (n-1)*n-\frac{(n-1)*n}{2}+(n-1) \\
+& = n^2-n-0,5n^2-0,5n+n-1 \\
+& = 0,5n^2-0,5n-1 \in \Theta(n^2)
+\end{split}
+\end{equation}
+
+\subsection{(c)}
+\paragraph{Minimale Vertauschungen:}\mbox{}\\
+\indent Bereits absteigend sortierte Zahlenfolge (z.B. $[5,4,3,2,1]$). \\
+$\rightarrow$ 0 Vertauschungen, da sich das Maximum aus $A[i..n]$ immer an der Stelle $i$ befindet und daher in Z.3 nie $j \neq i$.
+
+\paragraph{Maximale Vertauschungen:}\mbox{}\\
+\indent Zahlenfolge, bei welcher das kleinste Element an erster Stelle steht, der Rest jedoch absteigend sortiert ist (z.B. $[1,5,4,3,2]$). \\
+$\rightarrow n-1$ Vertauschungen, da das kleinste Element bei jedem Schleifendurchlauf einen Platz nach rechts getauscht wird, bis es nach $n-1$ Vertauschungen an seinem korrekt einsortierten Platz ankommt.
+
+\section{1.3: O-Notation}
+
+\begin{center}
+\begin{tabular}{| r | c | c | c | c | c | c | c |}
+\hline
+& $s(n)$ & $log_2(n)$ & $2n$ & $3^n$ & $\frac{log_2(n)}{sqrt(n)}$ & $0,05$ & $ne^n$ \\ \hline
+$s(n)$ & $\Theta$ & - & O & o & $\omega$ & $\Omega$ & o \\ \hline
+$log_2(n)$ & & $\Theta$ & o & o & $\omega$ & $\omega$ & o \\ \hline
+$2n$ & & & $\Theta$ & o & $\omega$ & $\omega$ & o \\ \hline
+$3^n$ & & & & $\Theta$ & $\omega$ & $\omega$ & o \\ \hline
+$\frac{log_2(n)}{sqrt(n)}$ & & & & & $\Theta$ & o & o \\ \hline
+$0,05$ & & & & & & $\Theta$ & o \\ \hline
+$ne^n$ & & & & & & & $\Theta$ \\ \hline
+\end{tabular}
+\end{center}
+Um die restlichen Felder auszufüllen, orientiere man sich am gegenüberliegenden Feld der Diagonale: 
+\begin{description}
+	\item $f=o(g) \iff g=\omega(f)$
+	\item $f=O(g) \iff g=\Omega(f)$
+	\item $f=\Theta(g) \iff g=\Theta(f)$
+	\item Wenn keine Beziehung zwischen $f$ und $g$, dann auch keine Beziehung zwischen $g$ und $f$.
+\end{description}
+
+\end{document}

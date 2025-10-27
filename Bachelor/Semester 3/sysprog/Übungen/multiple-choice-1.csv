@@ -1,0 +1,11 @@
+output,address, command
+A 4-Byte signed decimal,r10, 
+A 2-Byte unsigned integer in decimal,r10, 
+A 8-Byte hexadecimal,r10, 
+A string ,123456 (hex), 
+An array of 5 characters,123456 (oct), 
+An array of 5 characters printed as ASCII (numerical) values,123456 (dec), 
+An array of 10 pointers,r10, 
+An array of 3 2-Byte octals,r10, 
+An array of 4 single-precision floating point numbers,r10, 
+An array of 8 half-precision floating point numbers,r10, 

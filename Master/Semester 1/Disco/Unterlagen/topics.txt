@@ -1,0 +1,46 @@
+
+
+Discrete and Computational Geometry WS 2024/25
+
+(This is a list of topics for the non-algorithmic part. Check the other document for a list of topics/questions for the algorithmic part.)
+
+
+Fundamentals
+- Radon points and Radon's lemma
+- Caratheodory's theorem
+- Separation theorem
+- Helly's theorem
+- Center points and halfspace depth
+
+Convex Polytopes
+- Convex hull of a set of points
+- Simplicial and simple polytopes
+- Face lattice of a polytope 
+- Duality transform and the dual polytope
+- Asymptotic complexity of polytopes
+
+Voronoi diagrams
+- Voronoi diagram and the Delaunay triangulation
+- Complexity of Voronoi diagrams
+- Lifting to the unit paraboloid
+- Higher-order Voronoi diagrams
+
+Arrangements of hyperplanes
+- Simple arrangements
+- Complexity of arrangements (number of faces)
+- Level of a point in an arrangement
+- Clarkson's theorem on levels
+
+Set systems
+- VC dimension of a set system
+- Growth lemma 
+- Epsilon-net theorem
+- Art-Gallery problem
+
+Metric embeddings
+- Expansion/Contraction 
+- Lower bound via the Hamming cube
+- Isometric embedding into l_{\infty}
+
+
+

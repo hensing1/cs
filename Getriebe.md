@@ -1,0 +1,1 @@
+![[Robotik - VL 3#Getriebe]]
