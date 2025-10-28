@@ -66,10 +66,27 @@ Anschaulich spannen die Vektoren von einem Kontrollpunkt zum nächsten das neue 
 
 ### Kurvenlänge
 Die Länge einer Kurve ist definiert als das Integral über die Länge des Tangentenvektors: $$s: [a,b] \to [0, s(b)], \,u \mapsto s(u)=\int_{a}^{u}\|p'(t)\|\,dt$$
+## Splines
+
+vgl. [[CG VL 8 - Splines]]
+
+Spline: parametrisierte Kurve für eine Menge Zeitpunkten *(knots)* $t_{0} \leq t_{1} \leq \dots \leq t_{n}$ , sodass jeder Abschnitt $q_{j}: [t_{j-1}, t_{j}] \to \mathbb{R}^{d}$ eine Polynomkurve ist.
+
+Wir nennen den Vektor $T= \begin{pmatrix}t_{0} \\ t_{1} \\ \vdots  \\ t_{n}\end{pmatrix}$ den *knot vector*.
+
+Die Polynomkurven treffen sich an den Knoten, haben aber dort nicht notwendigerweise dieselbe(n) Ableitung(en):
+
+
+**$C^{n}$-Continuity:** die ersten $n$ Ableitungen stimmen überein, dh. $$q_{1}^{(k)}(b_{1})=q_{2}^{(k)}(a_{2}) \; \forall k=0,\dots,n$$
+für zwei Kurven $q_{1}: [a_{1},b_{1}] \to \mathbb{R}^{n}$, $q_{2}: [a_{2},b_{2}] \to \mathbb{R}^{3}$.
+
+**$G^{n}$-Continuity:** es existiert eine Kurve mit derselben Trace, die $C^{n}$-kontinuierlich ist (tatsächlich benötigt muss man bloß die erste Kurve umparametrisieren).
+
+### Catmull-Rom-Spline
 
 
 
-## Arc Length Parametrization
+### Arc Length Parametrization
 
 Länge $p'(t)$ ist 1 für gesamte Kurve
 Generierung mit *Inverse* der Kurvenlängenfunktion

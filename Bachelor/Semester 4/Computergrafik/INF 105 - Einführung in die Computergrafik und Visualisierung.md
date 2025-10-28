@@ -28,7 +28,7 @@ more info soon
 - [[CG - VL 5]]
 - [[CG - VL 6]]
 - [[CG - VL 7]]
-- [[CG - VL 8]]
+- [[CG VL 8 - Splines]]
 - [[CG - VL 9]]
 - [[CG - VL 10]]
 - [[CG - VL 11]]

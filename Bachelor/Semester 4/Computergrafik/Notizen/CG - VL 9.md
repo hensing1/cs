@@ -37,7 +37,7 @@ Dabei müssen $w_{ij}>0$ und $w_{n0}=w_{0m}=1$ erfüllt sein.
 ## 3D-Splines
 
 Flächen können genauso wie Kurven aneinander angeschlossen werden. 
-Dafür kann man z.B. [[CG - VL 8#B-Spline|B-Splines]] verwenden: Nimm normalisierte B-Splines und spanne damit eine Tensorproduktbasis auf. Nun kann man diese mit Kontrollpunkten multiplizieren und erhält eine Fläche.
+Dafür kann man z.B. [[CG VL 8 - Splines#B-Spline|B-Splines]] verwenden: Nimm normalisierte B-Splines und spanne damit eine Tensorproduktbasis auf. Nun kann man diese mit Kontrollpunkten multiplizieren und erhält eine Fläche.
 
 ## Getrimmte Tensorproduktflächen
 
