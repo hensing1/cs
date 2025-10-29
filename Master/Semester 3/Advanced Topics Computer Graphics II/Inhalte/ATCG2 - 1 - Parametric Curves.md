@@ -83,24 +83,74 @@ für zwei Kurven $q_{1}: [a_{1},b_{1}] \to \mathbb{R}^{n}$, $q_{2}: [a_{2},b_{2}
 **$G^{n}$-Continuity:** es existiert eine Kurve mit derselben Trace, die $C^{n}$-kontinuierlich ist (tatsächlich benötigt muss man bloß die erste Kurve umparametrisieren).
 
 ### Catmull-Rom-Spline
+Die Catmull-Rom-Spline erhalten wir, indem wir kubische Hermite-Polynome aneinanderhängen. Die Ableitung an einem Punkt ist $m_{i}=\frac{1}{2}\,\overrightarrow{P_{i-1} P_{i+1}}$ .
+
+Als Matrix ("FMILL method"):
+![[Catmull-Rom.png]]
+
+Die Catmull-Rom spline interpoliert die Punkte und ist $C^{1}$-kontinuierlich.
+
+### B-Splines
+Eine B-Spline kann man mit Basisfunktionen für die Kontrollpunkte definieren.
+Für Grad $n$ sind die Basisfunktionen: $$\begin{align}
+N_{i}^{0}&:= \begin{cases}
+1 & \text{falls } t \in [t_{i}, t_{i+1}) \\
+0 & \text{sonst}
+\end{cases} \\
+N_{i}^{r} &:= \frac{t-t_{i}}{t_{i+r}-t_{i}}N_{i}^{r-1}(t)+ \frac{t_{i+1+r}-t}{t_{i+1+r}-t_{i+1}}N_{i+1}^{r-1}(t) \,\text{für }1 \leq r \leq n.
+\end{align}$$
+Und der Spline: $$p(t)=\sum_{i=0}^{m}P_{i}N_{i}^{n}(t)$$
 
 
+- wir brauchen mindestens $m\geq n+1$ Kontrollpunkte
+- verwirrenderweise haben die Knots keine 1-zu-1-Korrespondenz zu den Kontrollpunkten. Stattdessen wird die *Basisfunktion* eines jeden Kontrollpunkts bestimmt von $n+2$ aufeinanderfolgenden Knoten
+	- konkret ist $N_{i}^{n}(t)$ bestimmt von $t_{i},\dots,t_{i+n+1}$
+	- wir brauchen also $m+n+2$ Knoten
+- Sind die Knoten äquidistant, erhält man die Basisfunktionen für die [[CG VL 8 - Splines#B-Spline|"gewöhnliche" B-Spline]], die vor den Endpunkten aufhört (je höher der Grad, desto weiter vor den Endpunkten)
+- Setzt man die ersten $n+1$ und die letzten $n+1$ Knoten auf denselben Wert ($t_{0}=\dots=t_{n}$ und $t_{m+1}=\dots=t_{m+n+1}$), dann werden die Endpunkte genau getroffen
+- Die Kontrollpunkte heißen hier **de Boor-Punkte**
+- Es ist $N_{i}^{n}(t)=0$ für $t \not\in [t_{i},t_{i+n+1}]$, also hat der zugehörige de Boor-Punkt nur *lokalen Einfluss* auf den Spline
+- außerdem ist jedes $N_{i}^{n}(t)\geq 0$ und $\sum_{i}N_{i}^{n}(t)=1$ für alle $t$, dh. der Spline bleibt in der *konvexen Hülle* der de Boor-Punkte (also im Kontrollpolygon)
+	- keine "overshoots"
 
-### Arc Length Parametrization
+> An einem Knotenpunkt $t_{j}$ ist der Spline mindestens $C^{n-1}$-kontinuierlich.
 
-Länge $p'(t)$ ist 1 für gesamte Kurve
-Generierung mit *Inverse* der Kurvenlängenfunktion
+Sind $\mu$ aufeinanderfolgende Knotenpunkte gleich, ist der Spline dort mindestens $C^{n-\mu}$-kontinuierlich.
 
-Krümmungsvektor: Ableitung des Tangentenvektors
-Falls arc length parameterized (Länge Tangente bleibt gleich): Krümmungsvektor ist rechtwinklig zu Tangentenvektor
+## Arc Length Parametrization und Geometrie
 
-Krümmung: Länge $p''(s)$
+Wir hätten gerne, dass $\|p'(t)\|=1$ für die gesamte Kurve gilt.
+Das ist im Allgemeinen für Bézierkurven, B-Splines, etc. nicht der Fall.
 
-Leibnitz rule?
+Erzeugung: wir nehmen die *[[ATCG2 - 1 - Parametric Curves#Kurvenlänge|Kurvenlängenfunktion]]* $s(t)$. Da diese monoton steigend ist, existiert die Inverse $t(s)$ ("an welchem Zeitpunkt hat die Kurve die Länge $s$ ?").
+Die Kurve $q(s)=p(t(s))$ ist nun nach Kurvenlänge parametrisiert.
 
-Osculating Plane: aufgespannt von Tangente und Normale
-Binormal $B(s)$: Normal zu osculating plane
+Für nach Kurvenlänge parametrisierte Kurven können wir jetzt geometrische Eigenschaften anhand der Ableitungsvektoren bestimmen:
 
-$B'(s) = \tau(s)N(s)$, $\tau(s)$ ist *Torsion*
+> [!abstract] Definition
+> - Tangentenvektor (normalisierte Ableitung): $T(s) := p'(s)$
+> - Krümmungsvektor: Ableitung des Tangentenvektors, $K(s) := T'(s) = p''(s)$
+> 	- rechtwinklig zur Tangente
+> - Normale: normalisierter Krümmungsvektor, $N(s) := \frac{T'(s)}{\|T'(s)\|}$
+> - Krümmung: $\kappa(s) := \|T'(s)\|=\|p''(s)\|$
+> - Radius der Krümmung: $r(s) := \frac{1}{\kappa(s)}$
+> - Binormale: $B(s) := T(s) \times N(s)$
+> 	- $\{ T,N,B \}$ erzeugen Koordinatensystem, an der Krümmung der Kurve ausgerichtet, am Punkt $p(s)$ (gennannt **Frenet-Frame**)
 
-Frenet frame
+*Osculating Plane:* aufgespannt von Tangente und Normale
+*Osculating Circle:* Kreis mit Radius $r(s)$ mit Zentrum $p(s)+T'(s)$ (schmiegt sich an Kurve an)
+
+Änderungsrate der Binormalen: $B'(s) = T(s) \times N'(s)= \tau(s)N(s)$
+$\tau(s)$ ist *Torsion*
+
+Krümmung bei nicht nach Kurvenlänge parametrisierten Kurven: $$\kappa(t) := \frac{\|p''(t) \times p'(t)\|}{\|p'(t)\|^{3}}$$
+Hierbei ist $K(s)=p''(s)$ eben auch nicht unbedingt rechtwinklig zu $T(s)=p'(s)$.
+Und Torsion: $$\tau(t) := \frac{p'(t) \cdot (p''(t) \times p'''(t))}{\|p'(t) \times p''(t)\|^{2}} = \frac{\det \begin{pmatrix}p'(t) & p''(t) & p'''(t)\end{pmatrix}}{\|p'(t) \times p''(t)\|^{2}}$$
+### Krümmungsenergie
+
+Die Krümmungsenergie ist proportional zur Krümmung entlang der Kurve: $$E=c \int_{0}^{l}\kappa(t)\,dt \approx c \int_{0}^{l}p''(t)\,dt$$
+mit $c$ konstant und $l$ Länge der Kurve.
+
+Ein [[ATCG2 - 1 - Parametric Curves#Hermite-Polynome|Hermite-Polynom]] *minimiert* die Krümmungsenergie für die Rahmenbedingungen (zwei Punkte mit je einer Ableitung).
+
+Die schnellste Weg, um die Länge (und die Krümmungsenergie) einer Kurve zu verringern, ist jeden Punkt proportional zur Krümmung entlang der normale zu verschieben: $q(t)=\kappa(t)N(t)$ (mit $q(t)$ Verschiebungsvektor am Punkt $p(t)$).
