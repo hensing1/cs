@@ -29,7 +29,7 @@ more info soon
 - [[CG - VL 6]]
 - [[CG - VL 7]]
 - [[CG VL 8 - Splines]]
-- [[CG - VL 9]]
+- [[CG - VL 9 - Parametrische Flächen]]
 - [[CG - VL 10]]
 - [[CG - VL 11]]
 - [[CG - VL 12]]
