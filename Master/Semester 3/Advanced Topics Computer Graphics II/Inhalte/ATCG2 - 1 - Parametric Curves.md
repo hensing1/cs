@@ -162,3 +162,8 @@ Die schnellste Weg, um die Länge (und die Krümmungsenergie) einer Kurve zu ver
 
 ## Subdivision
 
+- Man nimmt ein Polygon
+- Man ersetzt jeden Punkt durch zwei Punkte $\frac{1}{4}$ bzw. $\frac{3}{4}$ entlang einer Kante
+- Man erhält ein neues Polygon aus diesen Punkten
+
+-> es kommt ein *kubischer B-Spline* heraus
