@@ -117,6 +117,11 @@ Und der Spline: $$p(t)=\sum_{i=0}^{m}P_{i}N_{i}^{n}(t)$$
 
 Sind $\mu$ aufeinanderfolgende Knotenpunkte gleich, ist der Spline dort mindestens $C^{n-\mu}$-kontinuierlich.
 
+- Für $n=0$ sind die Basisfunktionen Box functions, also Springt die Kurve von Punkt zu Punkt (ist keine Kurve)
+- Für $n=1$ erhält man die lineare Interpolation
+	- Basisfunktionen sind Sawtooth, aka. Boxfunktion gefaltet mit sich selbst
+- Für weitere $n$ faltet man die bisherige Basisfunktion wieder mit der Boxfunktion
+
 ## Arc Length Parametrization und Geometrie
 
 Wir hätten gerne, dass $\|p'(t)\|=1$ für die gesamte Kurve gilt.
@@ -154,3 +159,6 @@ mit $c$ konstant und $l$ Länge der Kurve.
 Ein [[ATCG2 - 1 - Parametric Curves#Hermite-Polynome|Hermite-Polynom]] *minimiert* die Krümmungsenergie für die Rahmenbedingungen (zwei Punkte mit je einer Ableitung).
 
 Die schnellste Weg, um die Länge (und die Krümmungsenergie) einer Kurve zu verringern, ist jeden Punkt proportional zur Krümmung entlang der normale zu verschieben: $q(t)=\kappa(t)N(t)$ (mit $q(t)$ Verschiebungsvektor am Punkt $p(t)$).
+
+## Subdivision
+
