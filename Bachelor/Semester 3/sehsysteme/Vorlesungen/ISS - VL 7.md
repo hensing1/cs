@@ -49,7 +49,7 @@ Man landet jedenfalls hier:
 *Hintransformation (Ortsraum $\to$ Frequenzraum):*
 $$F(u,v) = \sum_{m=0}^{M-1}\sum_{n=0}^{N-1}f(m,n)\cdot \huge e^{-i \cdot 2\pi \cdot(\frac{u \cdot m}{M}+ \frac{v \cdot n}{N})}$$
 *Rücktransformation (Frequenzraum $\to$ Ortsraum):*
-$$f(m,n) = \frac{1}{MN}\sum_{u=0}^{M-1}\sum_{v=0}^{N-1}F(u,v)\cdot \huge e^{-i \cdot 2\pi \cdot(\frac{u \cdot m}{M}+ \frac{v \cdot n}{N})}$$
+$$f(m,n) = \frac{1}{MN}\sum_{u=0}^{M-1}\sum_{v=0}^{N-1}F(u,v)\cdot \huge e^{-i \cdot 2\pi \cdot(\frac{u \cdot m}{M}+ \frac{v \cdot n}{N})}$$ ^0eb88b
 
 ## Bildeigenschaften im Orts- und Frequenzraum
 
@@ -81,6 +81,8 @@ f(m,n) & \stackrel{\text{FT}}{\longrightarrow} & F(u,v) \\
 f \ast g & g \stackrel{\text{FT}}{\longrightarrow}G & F \cdot G \\ 
 \downarrow & & \downarrow \\ 
 f'(m,n) & \stackrel{\text{FT}^{-1}}{\longleftarrow} & F'(u,v) \end{matrix}$$
+
+^616f5d
 
 Komplexität für Konvolution mit Filtergröße $m$: $\mathcal{O}(m^{2}N^{2})$
 Komplexität mit FFT: $\mathcal{O}(N^{2}\log N)$
