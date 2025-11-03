@@ -38,4 +38,6 @@ Nach Konvolutionstheorem haben wir also eine Konvolution im Frequenzraum, und zw
 Überlappen die Kopien der Frequenzbilder der Funktion, kann nicht mehr rekonstruiert werden, ob ein bestimmter Wert durch eine hohe oder eine niedrige Fequenz der Funktion verursacht wurde.
 Diesen Effekt nennt man **Aliasing**.
 
-> Ein kontinuierliches Signal oberhalb der Nyquist-Frequenz sieht abgetastet genauso aus wie ein Signal, das rückwärts läuft
+> Ein kontinuierliches Signal oberhalb der Nyquist-Frequenz sieht abgetastet genauso aus wie ein Signal, das rückwärts läuft:
+> - ein diskretes Signal der Länge $N$ hat $N$ mögliche Frequenzen
+> - jede Frequenz $N-k$ mit $k < \frac{N}{2}$ sieht aus wie die Frequenz $-k$
