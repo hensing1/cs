@@ -162,8 +162,19 @@ Die schnellste Weg, um die Länge (und die Krümmungsenergie) einer Kurve zu ver
 
 ## Subdivision
 
+### Corner Cutting
+
 - Man nimmt ein Polygon
 - Man ersetzt jeden Punkt durch zwei Punkte $\frac{1}{4}$ bzw. $\frac{3}{4}$ entlang einer Kante
 - Man erhält ein neues Polygon aus diesen Punkten
 
 -> es kommt ein *kubischer B-Spline* heraus
+
+### Even/Odd-Rule
+
+Odd: Platziere neuen Punkt mit Gewicht $\left( \frac{1}{2}, \frac{1}{2} \right)$ (Mitte der Kante)
+Even: Platziere neuen Punkt mit Gewicht $\left( \frac{1}{8}, \frac{6}{8}, \frac{1}{8} \right)$ (in der Nähe vom alten Punkt)
+
+(Auch) im Kontext von 3D-Mesh-Subdivision: Odd-rule sagt, wo die neuen Punkte hinzu kommen; Even-Rule sagt, wie die alten Puntke verschoben werden sollen
+
+
