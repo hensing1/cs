@@ -1,4 +1,3 @@
-# Hashing
 ## Hashfunktionen
 Eine Hashfunktion $h$ bildet Werte aus einem Universum $U$ auf einen Wertebereich der Größe $m$ ab, wobei $m \ll |U|$. 
 
