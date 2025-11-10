@@ -4,4 +4,8 @@
 	- Compliance vs. Security
 		- Compliance mit Security-Regeln: zu empfehlen, oft nicht ausreichend
 		- Zertifikationen von zB. Tüv "gutes Zeichen"
-	- 
+
+
+> [!important] VotD - **Cross-Site Request Forgery**
+> 
+
