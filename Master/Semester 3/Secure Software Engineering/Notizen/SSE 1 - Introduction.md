@@ -7,5 +7,4 @@
 
 
 > [!important] VotD - **Cross-Site Request Forgery**
-> 
-
+>  
