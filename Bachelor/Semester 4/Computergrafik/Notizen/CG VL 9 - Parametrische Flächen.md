@@ -14,6 +14,8 @@ $q_{u}(u,v) := \frac{\partial q(u,v)}{\partial u}$ heißt $u$-Tangente, $q_{v} :
 
 > Eine Fläche heißt *regulär*, wenn beide Tangenten immer existieren und linear unabhängig sind.
 
+^3afcd1
+
 Z.B. Kugel ist am Nord- und Südpol nicht regulär, da der Vektor für den Breitengrad Null wird.
 
 > Der *Normalen(einheits)vektor* $n(u,v) := \frac{q_{u}(u,v)\times q_{v}(u,v)}{\|q_{u}(u,v)\times q_{v}(u,v)\|_{2}}$ definiert die *Tangentialebene* am Punkt $q(u,v)$.
