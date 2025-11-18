@@ -40,7 +40,7 @@ Jedes Pixel des Eingabebilds wird für sich genommen irgendwo hingeschoben. Dann
 
 Jedes Pixel hat also seine eigene Transformationsmatrix.
 
-*Backward/Inverse Warping*
+*Backward/Inverse Warping* ^d1442e
 - Berechne durch die *inverse* Transformationsmatrix die Position der Outputpixel im Inputbild
 - Durch Interpolation: berechne die Intensitätswerte an diesen *irregulären* Positionen
 

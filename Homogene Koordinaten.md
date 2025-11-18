@@ -1,4 +1,3 @@
-# Homogene Koordinaten
 
 Stichworte:
 - perspektivische Verkürzung
