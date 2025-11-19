@@ -11,9 +11,12 @@ f^{+}(x)&= \frac{1}{2}(f(x)+f(-x)) \\
 f^{-}(x) &= \frac{1}{2}(f(x)-f(-x))
 \end{align}$$
 
-Sinc-Funktion: $$\text{sinc}(t):= \begin{cases}
+(Normalisierte) Sinc-Funktion: $$\text{sinc}(t):= \begin{cases}
 \frac{\sin(\pi t)}{\pi t}  & \text{falls }t \neq 0 \\
 1 & \text{falls } t=0.
 \end{cases}$$
 
-Chirp Signal
+Chirp Signal: Sinal mit linear (mit $k$) steigender Frequenz: $$t \mapsto \sin\left( 2\pi\left( f_{0}+\frac{k}{2}t \right)t \right)$$
+
+Heaviside-Funktion: Step-Funktion (1 für $t\geq 0$)
+
