@@ -42,3 +42,5 @@ Wir haben $u$ und $v$ im Parameterraum, und wir wollen Berechnungen im Parameter
 - $q$ mappt $u$ und $v$ in den $\mathbb{R}^{3}$
 - $q_{u}$, $q_{v}$ sind Tangentialvektoren
 - 
+
+Second Fundamental Form: erzählt uns die Änderung des Normalenvektors
