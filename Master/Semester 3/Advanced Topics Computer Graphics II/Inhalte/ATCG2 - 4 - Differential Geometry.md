@@ -48,4 +48,7 @@ Second Fundamental Form: erzählt uns die Änderung des Normalenvektors
 
 - Wir spannen Ebene mit Normale und einem Tangentenvektor auf
 - Wir haben eine Krümmung nach unten/oben entlang dieser Ebene
-- Je nachdem, wie man den Tangentenvektor rotiert, erhält
+- Je nachdem, wie man den Tangentenvektor rotiert, erhält man verschiedene Krümmungen
+- Die Tangentenvektoren für maximale und minimale Krümmung sind *orthogonal*
+
+"Principal Curvatures": Maximale und minimale Krümmung, $\kappa_{1}$ und $kap$
