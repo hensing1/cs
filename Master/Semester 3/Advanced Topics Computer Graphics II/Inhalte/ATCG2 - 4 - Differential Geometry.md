@@ -51,4 +51,10 @@ Second Fundamental Form: erzählt uns die Änderung des Normalenvektors
 - Je nachdem, wie man den Tangentenvektor rotiert, erhält man verschiedene Krümmungen
 - Die Tangentenvektoren für maximale und minimale Krümmung sind *orthogonal*
 
-"Principal Curvatures": Maximale und minimale Krümmung, $\kappa_{1}$ und $kap$
+"Principal Curvatures": Maximale und minimale Krümmung, $\kappa_{1}$ und $\kappa_{2}$
+Interpolierung von Krümmungen gemäß der Euler-Beziehung: $$\kappa_{n}(\omega)=\kappa_{1}\cdot \cos(\phi)^{2}+\kappa_{2} \cdot \sin(\phi)^{2}$$
+mit $\phi$ dem Winkel zwischen der durch $\omega$ induzierten Ebene und der Ebene von $\kappa_{1}$.
+
+Gauss-Krümmung: $\kappa_{G}=\kappa_{1} \cdot \kappa_{2}$
+Durchschnittliche Krümmung (mean curvature): $\kappa_{M}:= \frac{1}{2}(\kappa_{1} + \kappa_{2}) = \frac{1}{\pi}\int_{0}^{\pi}\kappa_{n}(\omega(\theta))\,d\theta$
+
