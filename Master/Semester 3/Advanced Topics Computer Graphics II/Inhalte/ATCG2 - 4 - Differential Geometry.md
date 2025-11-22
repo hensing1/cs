@@ -15,13 +15,16 @@ $$J(u,v) = \begin{pmatrix}
 q_{u}(u,v) & q_{v}(u,v) \\
 &
 \end{pmatrix} \in \mathbb{R}^{3 \times 2}$$
-und dann ist die Tangente von $w$: $$dq_{w}(u,v)=J(u,v)w.$$
+und dann ist die *Richtungsableitung* von $w$: $$dq_{w}(u,v)=J(u,v)w.$$
 $dq_{w}(u,v)$ liegt in der Tangentialebene aufgespannt von $q_{u}(u,v)$ und $q_{v}(u,v)$.
 
 ## First Fundamental Form
-> [!abstract] Definition **Erste Fundamentalform**
-> Es sei $p=q(u,v)$ ein Punkt auf der Oberfläche $q$, und 
 
+> [!abstract] Definition **Erste Fundamentalform**
+> Es seien $q_{u}(u,v)$ und $q_{v}(u,v)$ die Richtungsableitungen nach Parameter-Basisvektoren $u$ und $v$. Dann ist $$M_{1}=J^{T}(u,v) J(u,v)=\begin{pmatrix}E & F \\ F & G\end{pmatrix}$$ mit $$E=\langle q_{u} \mid q_{u} \rangle, \quad F=\langle q_{u} \mid q_{v} \rangle , \quad G=\langle q_{v} \mid q_{v} \rangle$$
+> die Matrix der ersten Fundamentalform mit Basis $q_{u}$, $q_{v}$.
+
+Die erste Fundamentalform erlaubt es, zwei Richtungen $w_{1},w_{2}$ im *Parameterraum* zu nehmen, und daraus das Skalarprodukt zwischen $dq_{w_{1}}(u,v)$ und $dq_{w_{2}}(u,v)$ zu bilden: 
 
 
 ## Shape Operator
