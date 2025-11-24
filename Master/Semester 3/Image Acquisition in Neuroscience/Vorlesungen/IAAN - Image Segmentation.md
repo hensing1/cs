@@ -1,0 +1,3 @@
+- Dice Score
+- Active Contours
+- 
