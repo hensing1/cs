@@ -26,6 +26,14 @@ $dq_{w}(u,v)$ liegt in der Tangentialebene aufgespannt von $q_{u}(u,v)$ und $q_{
 
 Die erste Fundamentalform erlaubt es, zwei Richtungen $w_{1},w_{2}$ im *Parameterraum* zu nehmen, und daraus das Skalarprodukt zwischen $dq_{w_{1}}(u,v)$ und $dq_{w_{2}}(u,v)$ zu bilden: 
 
+Fundamental form: "metric tensor"
+
+parameter domain -> tangent domain
+
+w1 -> J * w1
+w2 -> J * w2
+
+<Jw1 | Jw2 > = (Jw1)^T Jw2 = w1^T J^T J w2 = w1^T M1 w2
 
 ## Shape Operator
 
