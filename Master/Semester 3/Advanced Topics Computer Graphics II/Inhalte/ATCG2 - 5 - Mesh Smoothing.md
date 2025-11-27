@@ -49,3 +49,7 @@ $B_{\varepsilon}$ ist der $\varepsilon$-Ball aber nicht der Ball sondern die Hü
 Kontinuierlicher Laplacian:
 $$\nabla u(x_{0})=\int_{B_{\varepsilon}} \dots$$
 
+
+## Implicit Smoothing
+
+Wir wenden den Laplace-Operator nicht am aktuellen sondern am nächsten Zeitpunkt an
