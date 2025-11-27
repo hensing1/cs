@@ -24,17 +24,13 @@ $dq_{w}(u,v)$ liegt in der Tangentialebene aufgespannt von $q_{u}(u,v)$ und $q_{
 > Es seien $q_{u}(u,v)$ und $q_{v}(u,v)$ die Richtungsableitungen nach Parameter-Basisvektoren $u$ und $v$. Dann ist $$M_{1}=J^{T}(u,v) J(u,v)=\begin{pmatrix}E & F \\ F & G\end{pmatrix}$$ mit $$E=\langle q_{u} \mid q_{u} \rangle, \quad F=\langle q_{u} \mid q_{v} \rangle , \quad G=\langle q_{v} \mid q_{v} \rangle$$
 > die Matrix der ersten Fundamentalform mit Basis $q_{u}$, $q_{v}$.
 
-Die erste Fundamentalform erlaubt es, zwei Richtungen $w_{1},w_{2}$ im *Parameterraum* zu nehmen, und daraus das Skalarprodukt zwischen $dq_{w_{1}}(u,v)$ und $dq_{w_{2}}(u,v)$ zu bilden: 
+Die erste Fundamentalform erlaubt es, zwei Richtungen $w_{1},w_{2}$ im *Parameterraum* zu nehmen, und daraus das Skalarprodukt zwischen den jeweiligen Richtungsableitungen $dq_{w_{1}}(u,v)$ und $dq_{w_{2}}(u,v)$ zu bilden: 
 
-Fundamental form: "metric tensor"
-
-parameter domain -> tangent domain
-
-w1 -> J * w1
-w2 -> J * w2
-
-<Jw1 | Jw2 > = (Jw1)^T Jw2 = w1^T J^T J w2 = w1^T M1 w2
-
+$$\begin{align}
+\omega_{1} &\to J \omega_{1} \\
+\omega_{2} &\to J \omega_{2} \\
+\langle J \omega_{1} \mid J \omega_{2} \rangle &= (J \omega_{1})^T (J \omega_{2}) = \omega_{1}^T J^T J \omega_{2} = \omega_{1} M_{1} \omega_{2}.
+\end{align}$$
 ## Shape Operator
 
 $$\begin{align}
