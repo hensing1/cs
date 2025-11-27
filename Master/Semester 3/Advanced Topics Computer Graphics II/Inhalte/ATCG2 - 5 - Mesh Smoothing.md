@@ -11,3 +11,7 @@ Das Smoothing eines Objekts ist jetzt die Diffusion der Hitze über die Grenze d
 Die Hitze verteilt sich in die entgegengesetzte Richtung des Gradienten (Fouriersches Gesetz): $$f= -\lambda \cdot \nabla \rho(x,t).$$
 Mit Hitzefluss $f$ und Normalenvektor $n$ des Objekts ist der Gesamtfluss (Flux), der sich über die Objektgrenze bewegt: $$\Phi=\int_{\partial \Omega}\langle f \mid n \rangle \,dA.$$
 Dieser Wert lässt sich anders ausdrücken als die Menge an Hitze, die das Gesamtobjekt an Hitze verliert: $$\Phi=- \int_{\text{interior}(\Omega)}\frac{ \partial  }{ \partial t } \rho(x,t)\,dV.$$
+
+## 1D-Diffusion Flow
+
+Die zweite Ableitung beschreibt die Krümmung. Um den nächsten Zeitschritt der Diffusion zu erhalten, ändern wir die Funktion also proportional zur zweiten Ableitung: $$f^{(t+1)}(x_{i})=f^{(t)}(x_{i})+\lambda \cdot \frac{ \partial ^{2} f^{(t)} }{ \partial ^{2}x^{2} } $$
