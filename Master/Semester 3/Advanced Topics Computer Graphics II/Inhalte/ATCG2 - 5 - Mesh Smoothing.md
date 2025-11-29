@@ -47,18 +47,19 @@ $L=\frac{1}{2}\begin{pmatrix}-2 & 1 & 0 & \dots & 0 & 1 \\ 1 & -2 & 1 & 0 & \dot
 $=\frac{1}{2} A-D$, A ist "stiffness matrix", D ist "mass matrix".
 
 > **Explicit Euler Step als Matrix**
-> Mit Vertices $V=(v_{1},\dots,v_{n})^{T}$:
+> Mit Vertices $V=(v_{1},\dots,v_{n})^{T}$: $$V^{(t+1)}=(I+\lambda L) \cdot V^{(t)}$$
+> Den expliziten Eulerschritt nennt man auch *Laplacian Smoothing*.
 
-Problem: Smoothing hiermit schrumpft das Polygon zu einzelnem Punkt
+Problem: Laplacian Smoothing schrumpft geschlossene Kurve zu einzelnem Punkt.
 
 Laplace-Beltrami: das ganze für 2D
 Für Laplace-Beltrami bitte in den nächsten Foliensatz gucken da ist die Formel richtig
 
 Der Laplace-Operator ist die Divergenz der Ableitungsmatrix
 
-$B_{\varepsilon}$ ist der $\varepsilon$-Ball aber nicht der Ball sondern die Hülle
-Kontinuierlicher Laplacian:
-$$\nabla u(x_{0})=\int_{B_{\varepsilon}} \dots$$
+Auf kontinuierlichen Oberflächen drücken wir den Laplace-Operator mithilfe des $\varepsilon$-Balls $B_{\varepsilon}$ aus:
+$$\nabla u(x_{0})\propto \lim_{ \varepsilon \to 0 } \frac{1}{\varepsilon ^{2}}\left(\frac{1}{|B_{\varepsilon}(x_{0})|}\int_{B_{\varepsilon}(x_{0})}u(x)dx \;- u(x_{0}) \right).$$
+
 
 
 ## Implicit Smoothing
