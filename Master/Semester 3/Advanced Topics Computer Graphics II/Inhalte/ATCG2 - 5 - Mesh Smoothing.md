@@ -24,9 +24,9 @@ mit $g(x,t)= \frac{1}{\sqrt{ 2 \pi t^{2} }}\exp\left( - \frac{\|x\|_{2}^{2}}{2t^
 
 Die zweite Ableitung beschreibt die Krümmung. Um den nächsten Zeitschritt der Diffusion zu erhalten, ändern wir die Funktion also proportional zur zweiten Ableitung: $$f^{(t+1)}(x_{i})=f^{(t)}(x_{i})+\lambda \cdot \frac{ \partial ^{2} f^{(t)} }{ \partial ^{2}x^{2} } $$
 Das nennt man den *expliziten Eulerschritt*
+Wir können $\lambda=dt$ interprätieren - je kleiner $\lambda$, desto mehr Zeitschritte brauchen wir, aber desto genauer orientiert sich alles an der Hitze-Analogie.
 
 Um die zweite Ableitung effizient zu berechnen: $$\frac{ \partial ^{2}f^{(t)}(x_{i}) }{ \partial x^{2} } \approx \frac{f^{(t)}(x_{i+1})-2f^{(t)}(x_{i})+f^{(t)}(x_{i-1})}{2}$$
-$\lambda=dt$
 
 Das ist der *Laplace-Operator*.
 Eingesetzt: $$f^{(t+1)}(x_{i})=f^{(t)}(x_{i})+\lambda \cdot  \frac{f^{(t)}(x_{i+1})-2f^{(t)}(x_{i})+f^{(t)}(x_{i-1})}{2}.$$
@@ -43,8 +43,11 @@ $V^{(t)}$ ist der Vektor mit unseren ganzen Punkten zum Zeitpunkt $t$
 $$V^{(t+1)}=V^{(t)}+\lambda L V^{(t)}=(I+\lambda L)V^{(t)}$$
 Laplace-Operator: nimmt Funktion, gibt Funktion zurück
 
-$L=\frac{1}{2}\begin{pmatrix}-2 & 1 & 0 & \dots & 0 & 1 \\ 1 & -2 & 1 & 0 & \dots & 0\end{pmatrix}$
-$=\frac{1}{2} A-D$, A ist "stiffness matrix", D ist "mass matrix"
+$L=\frac{1}{2}\begin{pmatrix}-2 & 1 & 0 & \dots & 0 & 1 \\ 1 & -2 & 1 & 0 & \dots & 0 \\ 0 & 1 & -2 & 1 & \ddots & 0 \\ \vdots  & \ddots & \ddots & \ddots & \ddots  & \vdots  \\ 1 & 0 & \dots & 0 & 1 & -2\end{pmatrix}$
+$=\frac{1}{2} A-D$, A ist "stiffness matrix", D ist "mass matrix".
+
+> **Explicit Euler Step als Matrix**
+> Mit Vertices $V=(v_{1},\dots,v_{n})^{T}$:
 
 Problem: Smoothing hiermit schrumpft das Polygon zu einzelnem Punkt
 
