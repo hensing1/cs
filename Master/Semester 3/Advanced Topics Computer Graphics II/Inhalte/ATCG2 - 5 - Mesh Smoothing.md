@@ -60,8 +60,16 @@ Der Laplace-Operator ist die Divergenz der Ableitungsmatrix
 Auf kontinuierlichen Oberflächen drücken wir den Laplace-Operator mithilfe des $\varepsilon$-Balls $B_{\varepsilon}$ aus:
 $$\nabla u(x_{0})\propto \lim_{ \varepsilon \to 0 } \frac{1}{\varepsilon ^{2}}\left(\frac{1}{|B_{\varepsilon}(x_{0})|}\int_{B_{\varepsilon}(x_{0})}u(x)dx \;- u(x_{0}) \right).$$
 
+## Taubin-Smoothing
 
+Dies das Frequenzanalyse
 
-## Implicit Smoothing
+Taubin-Smoothing erlaub das Glätten einer geschlossenen Kurve (bzw. eines Meshes), ohne dass dieses im Limit zu einem Punkt zusammenschrumpft.
+
+> **Taubin-Smoothing**
+> Sei $V=(v_{1},\dots,v_{n})^{T}.$ Der Glättungsschritt im Taubin-Smoothing ist $$V^{(t+1)}=((I+\mu \cdot L)(I+\lambda \cdot L))V^{(t)},$$
+> mit $\mu<0$, $\lambda>0$ und $|\mu|>|\lambda|$.
+
+Intuitiv werden die Vertices erst mit $\lambda$ Laplace-gesmootht, und dann mit $\mu$ wieder in die entgegengesetzte Richtung verschoben.
 
 Wir wenden den Laplace-Operator nicht am aktuellen sondern am nächsten Zeitpunkt an
