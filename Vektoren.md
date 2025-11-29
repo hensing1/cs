@@ -48,3 +48,11 @@ Rechte-Hand-Regel:
 ![[Kreuzprodukt_rechte_Hand.png|150]]
 
 Als lustige Matrix: ![[Robotik - VL 6#^a9b165]]
+
+## Vektorfeld
+
+Ein Vektorfeld ist ein $\mathbb{R}^{n}$, bei dem für jeden Punkt in diesem $n$-dimensionalen Raum ein $n$-dimensionaler Vektor definiert ist: $$F: \mathbb{R}^{n} \to \mathbb{R}^{n}.$$
+> **Divergenz**
+> Die Divergenz eines $n$-dimensionalen Vektorfelds $F=\begin{bmatrix}F_{1}(x) \\ F_{2} \\ \vdots \\ F_{n}(x)\end{bmatrix}$ im $\mathbb{R}^{n}$ ist definiert als $$\nabla \cdot F=\frac{ \partial F_{1} }{ \partial x_{1} } + \frac{ \partial F_{2} }{ \partial x_{2} } +\dots+\frac{ \partial F_{n} }{ \partial x_{n} }. $$
+
+Intuitiv sagt einem die Divergenz, wie sehr an einem bestimmten Punkt die auseinanderlaufen.
