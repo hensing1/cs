@@ -26,7 +26,7 @@ more info soon
 - [[CG - VL 3]]
 - [[CG - VL 4]]
 - [[CG - VL 5]]
-- [[CG - VL 6]]
+- [[CG - VL 6 - OpenGL-Pipeline]]
 - [[CG - VL 7]]
 - [[CG VL 8 - Splines]]
 - [[CG VL 9 - Parametrische Flächen]]
