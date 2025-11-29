@@ -1,5 +1,7 @@
 [[atcg2-05-Mesh_Smoothing.pdf]]
 
+## Smoothing ist wie Hitzeverteilung
+
 Gegeben seien:
 - Ein Skalarfeld $\rho: \mathbb{R}^{2} \times \mathbb{R}_{\geq0} \to \mathbb{R}$ mit $(x,t) \mapsto \rho(x,t)$
 	- Also ein Skalar auf jedem Punkt der Oberfläche, veränderlich über die Zeit
