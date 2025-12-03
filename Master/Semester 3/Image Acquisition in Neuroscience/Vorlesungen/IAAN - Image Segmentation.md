@@ -46,7 +46,7 @@ Um in einzelnen Slices eine Kontur zu finden, nehmen wir [[CV 6 - Snake 🐍|Sna
 - Mesh initialisieren
 	- Mesh-Kugel mit halben Radius von oben errechneter Kugel
 	- absichtlich zu klein, damit es auf jedem Fall innerhalb vom Gehirn ist
-- Mesh expandieren
+- Mesh expandieren (via externer Energie)
 	- jeden Vertex mit Kraft $f_{D}$ in Normalenrichtung verschieben
 		- Normale schätzen: Durschnitt der Normalen aller angrenzenden Dreiecke
 		- Normale eines Dreiecks: Kreuzprodukt zweier Kantenvektoren
@@ -56,13 +56,41 @@ Um in einzelnen Slices eine Kontur zu finden, nehmen wir [[CV 6 - Snake 🐍|Sna
 		- $b \in [0, 1]$ ist Parameter für den Algorithmus
 		- je kleiner $b$, desto größer Gehirnsegmentierung
 	- Berechnung von $f_{D}$: $$f_{D}=\frac{2(I_{\min}-I_{\theta_{l}})}{I_{\max}-I_{2}}$$
-		- Nachbarschaft für $I_{\min}$ und $I_{\max}$: entlang $-n$ (nach innen) für bestimmte Distanz
+		- Nachbarschaft für $I_{\min}$ und $I_{\max}$: entlang $-n$ (nach innen) für bestimmte Distanz - z.B. 20mm für $I_{\min}$, 10mm für $I_{\max}$
 		- Wachstum nach außen wenn $I_{\min}>I_{\theta_{l}}$, zurück nach innen wenn $I_{\min}<I_{\theta_{l}}$
-- Externe Energie: Bildkanten (Grenze des Gehirns ist recht eindeutig zu sehen)
-- Interne Energie: Krümmungsgrad gering halten, gleichmäßiges Sampling entlang der Snake
+- Krümmung kontrollieren (interne Energie)
+	- Verschiebe Vertex ein Stückchen entlang Tangentenrichtung, hin zur durchschn. Position der Nachbarn -> uniform spacing
+	- Verschiebe Vertex auch ein bisschen entlang der Normalenrichtung -> geringere Krümmung
 
-- Active Contours
-- 
+## Segmentierung
+
+### Mit Clustering
+Güte-Term für $k$ Kluster: mit $\gamma(i)$, der einem Vertex-Index $i$ einen Cluster zuweist, und Cluster-Zentren $\mu_{1}$ bis $\mu_{k}$, minimiere $$D=\sum_{i}\|v_{i}-\mu_{\gamma(i)}\|^{2}.$$
+$D$ heißt *Distortion*. Genaue Lösungen sind aber schon für $k=2$ #NP-schwer, also müssen wir approximieren.
+
+#### k-Means Clustering
+- $k$ Cluster-Zentren zufällig wählen
+- Wiederhole bis Konvergenz:
+	- jeden Punkt dem nächsten Zentrums-Punkt zuweisen
+	- neues Zentrum ist der Mittelwert aller Punkte
+
+Probleme:
+- abhängig von Initialisierung
+- leere Cluster möglich
+- Annahme: Cluster sind gleich groß und kugelförmig
+- $k$ empirisch zu wählen
+
+#### Gaussian Mixture Models
+Mehrere Gauß-Verteilungen als Grundlage für Daten annehmen, z.B. Intensitätswerte:
+![[GMM-Gehirn.png]]
+
+Parametrisierung einer Gauß-Kurve:
+$$G_{k} = \pi_{k} \cdot \frac{1}{\sqrt{ 2 \pi }\sigma_{k}} \exp\left( -\frac{(x-\mu_{k})^{2}}{2\sigma_{k}^{2}} \right)$$
+- $\pi_{k}$ ist Gewichtung
+- $\sigma_{k}$ ist Standardabweichung
+- $\mu_{k}$ ist Mittelwert
+
+Es ist $\sum_{k=1}^{K}\pi_{k}=1$.
 
 ## Segmentierung mit Gaussian Mixture Models
 
