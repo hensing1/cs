@@ -90,7 +90,9 @@ $$G_{k} = \pi_{k} \cdot \frac{1}{\sqrt{ 2 \pi }\sigma_{k}} \exp\left( -\frac{(x-
 - $\sigma_{k}$ ist Standardabweichung
 - $\mu_{k}$ ist Mittelwert
 
-Es ist $\sum_{k=1}^{K}\pi_{k}=1$.
+Es ist $\sum_{k=1}^{K}\pi_{k}=1$. Die Gesamtverteilung $p(x)$ ist die Summe über alle $G_{k}$.
+
+
 
 ## Segmentierung mit Gaussian Mixture Models
 
