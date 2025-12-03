@@ -55,6 +55,9 @@ Um in einzelnen Slices eine Kontur zu finden, nehmen wir [[CV 6 - Snake 🐍|Sna
 		- $I_{\max}$ bezieht sich auf maximale Intensität in lokaler Nachbarschaft
 		- $b \in [0, 1]$ ist Parameter für den Algorithmus
 		- je kleiner $b$, desto größer Gehirnsegmentierung
+	- Berechnung von $f_{D}$: $$f_{D}=\frac{2(I_{\min}-I_{\theta_{l}})}{I_{\max}-I_{2}}$$
+		- Nachbarschaft für $I_{\min}$ und $I_{\max}$: entlang $-n$ (nach innen) für bestimmte Distanz
+		- Wachstum nach außen wenn $I_{\min}>I_{\theta_{l}}$, zurück nach innen wenn $I_{\min}<I_{\theta_{l}}$
 - Externe Energie: Bildkanten (Grenze des Gehirns ist recht eindeutig zu sehen)
 - Interne Energie: Krümmungsgrad gering halten, gleichmäßiges Sampling entlang der Snake
 
