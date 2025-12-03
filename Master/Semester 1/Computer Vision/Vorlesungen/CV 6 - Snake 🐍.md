@@ -1,6 +1,7 @@
 [[06snakes_WS2425_slides.pdf]]
 
 # Snakes
+aka: deformable contours, active contours
 
 Gegeben: ein grober Umriss in der Nähe von einem Objekt
 Gesucht: der genaue Umriss von diesem Objekt
@@ -10,8 +11,8 @@ Wir verschieben iterativ jeden Punkt entlang der Schlange entgegen dem Energiegr
 $$
 E_{gesamt}=E_{intern}+E_{extern}
 $$
-Interne Energie: Prior (ermutigt Glattheit, Elastizität, bekannter Umriss, ...)
 Externe Energie: Basierend auf Bildinformationen (Schlange soll Strukturen im Bild folgen, z.B. Kanten).
+Interne Energie: Prior (ermutigt Glattheit, Elastizität, bekannter Umriss, ...)
 
 *Beispiel Externe Energie*
 Mit Gradientenbildern $G_{x}(x,y), G_{y}(x,y)$ und einen Punkt $v$:
