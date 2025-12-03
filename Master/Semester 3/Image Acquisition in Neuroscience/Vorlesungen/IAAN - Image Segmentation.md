@@ -43,6 +43,18 @@ Um in einzelnen Slices eine Kontur zu finden, nehmen wir [[CV 6 - Snake 🐍|Sna
 		- 2% der Bildintensitäten sind oberhalb $I_{98}$ bzw. unterhalb $I_{2}$
 	- Kugelmittelpunkt: Durchschnittsposition aller weißen Pixel
 	- Kugelvolumen gleich dem Volumen aller weißen Pixel
+- Mesh initialisieren
+	- Mesh-Kugel mit halben Radius von oben errechneter Kugel
+	- absichtlich zu klein, damit es auf jedem Fall innerhalb vom Gehirn ist
+- Mesh expandieren
+	- jeden Vertex mit Kraft $f_{D}$ in Normalenrichtung verschieben
+		- Normale schätzen: Durschnitt der Normalen aller angrenzenden Dreiecke
+		- Normale eines Dreiecks: Kreuzprodukt zweier Kantenvektoren
+		- Jede Dreiecksnormale wird mit der Fläche des jeweiligen Dreiecks gewichtet
+	- Bei *lokalem* Itensitäts-Grenzwert $I_{\theta_{l}}$ sagen wir, dass wir das Gehirn verlassen haben: $$I_{\theta_{l}}=I_{2}+b(I_{\max}-I_{2})$$
+		- $I_{\max}$ bezieht sich auf maximale Intensität in lokaler Nachbarschaft
+		- $b \in [0, 1]$ ist Parameter für den Algorithmus
+		- je kleiner $b$, desto größer Gehirnsegmentierung
 - Externe Energie: Bildkanten (Grenze des Gehirns ist recht eindeutig zu sehen)
 - Interne Energie: Krümmungsgrad gering halten, gleichmäßiges Sampling entlang der Snake
 

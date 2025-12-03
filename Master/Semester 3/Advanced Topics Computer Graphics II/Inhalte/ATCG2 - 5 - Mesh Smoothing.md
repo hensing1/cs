@@ -1,4 +1,4 @@
-	[[atcg2-05-Mesh_Smoothing.pdf]]
+[[atcg2-05-Mesh_Smoothing.pdf]]
 
 ## Smoothing ist wie Hitzeverteilung
 
