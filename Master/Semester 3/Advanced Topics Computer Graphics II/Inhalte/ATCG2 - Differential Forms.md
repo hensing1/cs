@@ -10,3 +10,7 @@ Richtungsableitung in Richtung $v_{p}$: $$v_{p}[f]:= \frac{d}{dt}(f(p + tv_{p}))
 
 Keine Koordinaten: nur Punkte ($p$) und Richtungen ($v_{p}$)
 
+statt Basisvektoren $e_{1},e_{2},e_{3}$ haben wir Richtungsableitungen richtung $x, y, z$
+
+> [!abstract] Definition *Differential One-Form*
+> 
