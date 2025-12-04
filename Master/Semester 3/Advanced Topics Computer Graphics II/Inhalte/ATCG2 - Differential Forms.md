@@ -13,4 +13,5 @@ Keine Koordinaten: nur Punkte ($p$) und Richtungen ($v_{p}$)
 statt Basisvektoren $e_{1},e_{2},e_{3}$ haben wir Richtungsableitungen richtung $x, y, z$
 
 > [!abstract] Definition *Differential One-Form*
-> 
+
+Wedge Product
