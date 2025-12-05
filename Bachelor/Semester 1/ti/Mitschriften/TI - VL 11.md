@@ -74,14 +74,14 @@ Mit einem 8:1 MUX kann man jede beliebige 3-Bit-Schaltfunktion realisieren: 3 Ei
 ABER NANU
 Genau dasselbe geht auch mit einem 4:1-Multiplexer:
 - 2 Parameter (sagen wir mal $s_2$ und $s_{1}$) kommen an die Steuerleitungen wie gehabt
-- Hiermit kann man nun zwei Zeilen der Wertetabelle repräsentieren
+- Für jede Belegung von $s_{2}$ und $s_{1}$ gibt es zwei Zeilen in der Wertetabelle (einmal mit $s_{0}=0$, einmal mit $s_{0}=1$)
 - Diese zwei Zeilen können insgesamt vier Zustände haben, müssen nun aber durch nur einen Eingang repräsentiert werden:
 
-| Zeile 1 | Zeile 2 | Wert am Eingang |
-| ------- | ------- | --------------- |
-| 0       | 0       | 0               |
-| 0       | 1       | $S_{0}$         |
-| 1       | 0       | $S_{0}'$        |
-| 1       | 1       | 1               |
+| Zeile 1 ($s_{0}=0$) | Zeile 2 ($s_{0}=1$) | Wert am Eingang |
+| ------------------- | ------------------- | --------------- |
+| 0                   | 0                   | 0               |
+| 0                   | 1                   | $S_{0}$         |
+| 1                   | 0                   | $S_{0}'$        |
+| 1                   | 1                   | 1               |
 
 Also können alle Möglichkeiten abgedeckt werden.
