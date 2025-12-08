@@ -1,4 +1,4 @@
-# Minimale Spannbäume
+aka. Minimal Spanning Tree, MST
 
 > [!abstract] Definition
 > Für einen [[Graphen#Ungerichteter Graph|ungerichteten zusammenhängenden Graphen]] $G=(V,E)$ mit positiven Kantengewichten $w : E \rightarrow \mathbb{R}_{>0}$ heißt eine Kantenmenge $T \subseteq E$ **Spannbaum** von $G$, wenn der Graph $(V,T)$ ein Baum ist. 
