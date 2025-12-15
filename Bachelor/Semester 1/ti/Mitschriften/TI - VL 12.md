@@ -58,7 +58,7 @@ Durch wiederholtes Einsetzen und Ausmultiplizieren ergibt sich:
 $$
 \begin{align}
 C_{1}&= g_0+p_0C_o\\
-C_{2}&= g_1+p_1C_1=g_1+p_1(g_0+p_0C_0)=g_1+p_1g_0+p_1p_0\\
+C_{2}&= g_1+p_1C_1=g_1+p_1(g_0+p_0C_0)=g_1+p_1g_0+p_1p_0C_{0}\\
 C_{3}&= g_2+p_2C_2=\ldots=g_2+p_2g_1+p_2p_1g_0+p_2p_1p_0C_0\\
 \vdots
 \end{align}
