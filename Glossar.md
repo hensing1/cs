@@ -89,6 +89,9 @@ Wenn man Datentypen hat, welche über die Länge eines Bytes hinausgehen, hat ma
 Wieso ist das wichtig?
 -> Wenn mehrere Prozesse / Computer miteinander reden, muss sich auf irgendwas geeinigt werden.
 
+## Majorität (Schaltfunktion)
+Gibt die mehrheitliche Belegung der Eingangsvariablen aus (bei ungerader Anzahl von Eingängen)
+
 ## Moore's Law
 Beobachtung von Gordon Moore aus 1965: alle 12 bis 24 Monate verdoppelt sich die Anzahl der Transistoren pro integrierter Schaltung.
 Dieser Trend lässt sich bis heute beobachten.

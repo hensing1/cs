@@ -49,10 +49,10 @@ Der Carry-Lookahead-Addierer berechnet alle Carry-Bits parallel, und verrechnet 
 
 ### Carry-Lookahead-Generator (CLAG)
 Sei $C_{i}$ das Carry-Bit an der Stelle $i$ beim Addieren zweier Zahlen $A$ und $B$.
-Es wird berechnet mit: $C_{i+1}=A_{i} B_{i} + (A_{i}+B_{i}) C_{i}$ (also letztendlich mit der Majoritätsfunktion aus $A_{i},B_{i}$ und $C_{i}$).
+Es wird berechnet mit: $C_{i+1}= A_{i} B_{i} + A_{i}C_{i} + B_{i} C_{i} = A_{i} B_{i} + (A_{i}+B_{i}) C_{i}$ (also letztendlich mit der [[Glossar#Majorität (Schaltfunktion)|Majoritätsfunktion]] aus $A_{i},B_{i}$ und $C_{i}$).
 
 $A_{i}B_{i}=g_{i}$ heißt *carry generate*, da es nicht vom vorherigen Carry-Bit abhängt.
-$A_{i}+B_{i}=p_{i}$ heißt *carry propagate*, da es das vorherige Carry-Bit weiterpropagiert.
+$A_{i}+B_{i}=p_{i}$ heißt *carry propagate*, da es mit dem vorherigen Carry-Bit verunded wird es damit weiterpropagiert.
 
 Durch wiederholtes Einsetzen und Ausmultiplizieren ergibt sich:
 $$
