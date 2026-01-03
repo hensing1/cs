@@ -89,13 +89,27 @@ Leibnitz-Regel 🍪 (Version der Produktregel): $$v_{p}[f\cdot g]=v_{p}[f] \cdot
 \alpha(av_{p})&=a\cdot\alpha(v_{p}).
 \end{align}$$
 
-Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$. $T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangentialram $T_{p}(\mathbb{R}^{n})$.
+Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$. $T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangenzialram $T_{p}(\mathbb{R}^{n})$.
 Der Dualraum $T_{p}^{\ast}\mathbb{R}^{3}$ von $T_{p}\mathbb{R}^{3}$ heißt auch Kotangenzialraum.
 
 Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt.
 
+Die kanonische Basis von $T_{p}^{\ast}\mathbb{R}^{n}$ schreiben wir $$\{ dx_{1},dx_{2},\dots,dx_{n} \}.$$
+Sie ist dasselbe wie die [[Dualraum#^442317|kanonische Basis vom Dualraum]] - dh. $$dx_{i}\left(\begin{bmatrix}
+v_{1} \\ v_{2} \\ \vdots \\ v_{n}
+\end{bmatrix}\right) = v_{i}.$$
+Jede Differenzielle Eins-Form ist eine Linearkombination aus diesen Basisfunktionen $dx_{1},dx_{2},\dots,dx_{n}$.
+Die Basiselemente $dx_{i}$ sind also jeweils *auch* Differenzielle Eins-Formen.
+
+Die Funktion $dx_{i}$ *projiziert* die $i$-te Komponente des Tangenzialvektors $v_{p}$ auf die Achse $\frac{ \partial  }{ \partial x_{i} }$:
+![[Eins-Form.png|500]]
+
+Die Eins-Form $\alpha=a \cdot dx_{1}+b \cdot dx_{2} + c \cdot dx_{3}$, angewandt auf einen Vektor $v \in T_{p}\mathbb{R}^{3}$ verhält sich exakt wie das Skalarprodukt $\langle \alpha' \mid v \rangle$ mit $\alpha'=\begin{pmatrix}a \\ b \\ c\end{pmatrix}$.
+Deshalb schreiben wir auch gerne $\alpha=\begin{bmatrix}a & b & c\end{bmatrix}$.
+Eine Eins-Form ist also ein Kovektor.
 
 
 Wedge Product
+
 
 [^1]: Beispiel Kugeloberfläche: wenn man reinzoomt, sieht es lokal aus wie $\mathbb{R}^{2}$

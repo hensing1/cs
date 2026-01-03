@@ -13,7 +13,7 @@ Also: $e^{i}$ ist eine Funktion, die für einen Vektor $v \in V$ die $i$-te Koor
 4 \\
 6
 \end{bmatrix}\right) = 4.$$
-Die Elemente von $V^{\ast}$ heißen auch **Kovektoren**.
+Die Elemente von $V^{\ast}$ heißen auch **Kovektoren**. ^442317
 
 Ist $V=\mathbb{R}^{n}$, ist für $v^{\ast} \in V^{\ast}$ und $v \in V$ $$v^{\ast}(v) = \langle v^{\ast} \mid v \rangle $$
 einfach das [[Vektoren#Skalarprodukt|Skalarprodukt]].
