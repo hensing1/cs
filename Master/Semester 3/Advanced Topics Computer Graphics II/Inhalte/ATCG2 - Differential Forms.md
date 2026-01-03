@@ -80,10 +80,18 @@ $$(a v_{p}+b w_{p})[f]=av_{p}[f] + bw_{p}[f]$$
 Linearität:
 $$v_{p}[af+bg]=av_{p}[f] + bv_{p}[g]$$
 
-Leibnitz-Regel 🍪 (Version der Produktregel): $$v_{p}[fg]=v_{p}[f] \cdot g(p)+f(p) \cdot v_{p}[g].$$
+Leibnitz-Regel 🍪 (Version der Produktregel): $$v_{p}[f\cdot g]=v_{p}[f] \cdot g(p)+f(p) \cdot v_{p}[g].$$
 ## One-Form
 
-> [!abstract] Definition *Differential One-Form*
+> [!abstract] Definition *Differential One-Form* (Pfaffsche Form)
+> Eine pfaffsche Form $\alpha$ auf dem Manifold $\mathbb{R}^{n}$ ist ein lineares [[Glossar#Funktional|Funktional]] für die Menge der Tangentenvektoren vom Manifold $\mathbb{R}^{n}$.
+> Das heißt, für jeden Punkt $p$ vom Manfold $\mathbb{R}^{n}$ ist $$\alpha: T_{p}(\mathbb{R}^{n})\to \mathbb{R}$$ und $$\begin{align}\alpha(v_{p}+w_{p})&=\alpha(v_{p}) + \alpha(w_{p})\\
+\alpha(av_{p})&=a\cdot\alpha(v_{p}).
+\end{align}$$
+
+Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$. $T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangentialram $T_{p}(\mathbb{R}^{n})$.
+
+Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt.
 
 Wedge Product
 

@@ -1,4 +1,9 @@
 # Mathematik
+## Funktional
+Ein **Funktional** ist eine [[Lineare Funktionen|lineare Funktion]] vom [[Vektorräume|Vektorraum]] $\mathbb{R}^{n}$ die rellen Zahlen ($f: \mathbb{R}^{n} \to \mathbb{R}$).
+
+Im Unterschied dazu ist eine *lineare Transformation* eine lineare Abbildung zwischen zwei Vektorräumen ($g: \mathbb{R}^{n} \to \mathbb{R}^{m}$), also etwas, das sich durch eine Matrix darstellen lässt.
+
 ## Größter gemeinsamer Teiler
 > [!abstract] *Formale Definition*
 > Für zwei ganze Zahlen $x,y \in \mathbb{Z}$ heißt $d \in \mathbb{N}$ **größter gemeinsamer Teiler $\text{ggT}(x,y)$**, wenn die folgenden beiden Bedingungen erfüllt sind:
