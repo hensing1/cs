@@ -90,8 +90,11 @@ Leibnitz-Regel 🍪 (Version der Produktregel): $$v_{p}[f\cdot g]=v_{p}[f] \cdot
 \end{align}$$
 
 Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$. $T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangentialram $T_{p}(\mathbb{R}^{n})$.
+Der Dualraum $T_{p}^{\ast}\mathbb{R}^{3}$ von $T_{p}\mathbb{R}^{3}$ heißt auch Kotangenzialraum.
 
 Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt.
+
+
 
 Wedge Product
 
