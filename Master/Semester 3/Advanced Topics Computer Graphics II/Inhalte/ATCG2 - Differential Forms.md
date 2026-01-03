@@ -54,7 +54,7 @@ p^{2}+tv^{2}
 &= \sum_{i=1}^{n}v^{i} \,\left.\frac{ \partial f }{ \partial x^{i} } \right|_{p} .
 \end{align}$$
 
-Ist $\|v_{p}\|=1$, erhält man denselben Wert wie in der Analysis (die Steigung der Tangente in Richtung $v_{p}$).
+*Ist $\|v_{p}\|=1$, erhält man denselben Wert wie in der Analysis (die Steigung der Tangente in Richtung $v_{p}$).*
 
 Der Vektor $v_{p}$ wird zu einem *Operator* für die Funktion $f$.
 
