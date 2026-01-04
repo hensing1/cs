@@ -23,6 +23,7 @@ DSC und IoU sind Modelle normalisiert zw. 0 (keine Übereinstimmung) und 1 (perf
 **Tversky Index:**
 $$\text{Tversky}(A,B)=\frac{|A \cap B|}{|A \cap B| + \alpha \,|A \setminus B| + \beta \,|B \setminus A|},\ \alpha \geq 0, \beta \geq 0$$
 Kombination von Dice und IoU. Für $\alpha=\beta=\frac{1}{2}$ erhält man den Dice-Score, für $\alpha=\beta=1$ IoU.
+Mit $A$ Hypothese und $B$ Ground Truth bestraft $\alpha$ false positives und $\beta$ false negatives.
 
 **Hausdorff-Distanz:**
 Konturen-basiert: für jeden Punkt auf der Oberfläche von A wird der nächstgelegene Punkt von B gefunden
