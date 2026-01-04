@@ -44,3 +44,7 @@ Wir haben aber auch extra-decay wegen Inhomogenitäten im Magnetfeld, den wir um
 
 Dauert aber lange -> mache extra Gradient ins Magnetfeld (*Gradient Recalled Echo*): geht schneller, man braucht weniger Energie und es muss nicht genau 180° sein, aber wir verlieren das Signal schneller
 
+
+Wir machen die Lamor-Frequenz zu einer Funktion der Achsenposition
+
+Für zweite Achse: Phase Encoding

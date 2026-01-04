@@ -1,8 +1,11 @@
 {
-  "snippets_file": "def : > [!abstract] Definition\ninfo : > [!info] ",
+  "snippets_file": "def : > [!abstract] Definition\ninfo : > [!info] \nue : ü\noe : ö\nae : ä",
   "snippets": [
     "def : > [!abstract] Definition",
-    "info : > [!info] "
+    "info : > [!info] ",
+    "ue : ü",
+    "oe : ö",
+    "ae : ä"
   ],
   "endSymbol": "$end$",
   "newlineSymbol": "$nl$",

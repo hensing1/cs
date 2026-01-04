@@ -20,18 +20,22 @@ $$\text{DSC}(A,B)= \frac{2 \left|A \cap B\right|}{|A| + |B|}$$
 **Intersection over Union:** $$\text{IoU}(A,B) = \frac{|A \cap B|}{|A \cup B|}$$
 DSC und IoU sind Modelle normalisiert zw. 0 (keine Übereinstimmung) und 1 (perfekte Übereinstimmung).
 
+**Tversky Index:**
+$$\text{Tversky}(A,B)=\frac{|A \cap B|}{|A \cap B| + \alpha \,|A \setminus B| + \beta \,|B \setminus A|},\ \alpha \geq 0, \beta \geq 0$$
+Kombination von Dice und IoU. Für $\alpha=\beta=\frac{1}{2}$ erhält man den Dice-Score, für $\alpha=\beta=1$ IoU.
+
 **Hausdorff-Distanz:**
 Konturen-basiert: für jeden Punkt auf der Oberfläche von A wird der nächstgelegene Punkt von B gefunden
 $$\begin{align}
 d(a,B) &= \min_{b \in B} d(a,b) \\
 \text{HD}(A, B) &= \max\{ \max_{a \in A}d(a,B), \,\max_{b \in B}d(b, A)\}
 \end{align}$$
+
 **Hausdorff 95. Quantil:**
 $$\begin{align}
 d_{95}(A,B) &= \underset{a \in A}{x_{95}}\{ \min_{b \in B} d(a,b) \} \\
 \text{HD}_{95}(A, B) &= \max\{ d_{95}(A, B), d_{95}(B, A)\}
 \end{align}$$
-
 Robuster gegenüber Ausreißern
 
 ## Deformierbare Modelle
