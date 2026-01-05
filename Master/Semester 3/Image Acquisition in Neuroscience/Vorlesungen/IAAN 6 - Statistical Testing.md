@@ -31,3 +31,4 @@ Zweiseitiges p ist hier korrekt, weil wir nicht von einem Bias in eine bestimmte
 
 ## t-Tests
 
+Mit t-Tests testet man Hypothesen über Mittelwerte von Gaussverteilungen.
