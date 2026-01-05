@@ -29,3 +29,5 @@ Zweiseitiger p-Wert: W'keit für Extremwerte an beiden Enden
 Im Münz-Fall: $p=2 \cdot 0.038 = 0.076$
 Zweiseitiges p ist hier korrekt, weil wir nicht von einem Bias in eine bestimmte Richtung ausgegangen sind -> nicht signifikant
 
+## t-Tests
+
