@@ -1,5 +1,3 @@
-# Gauß-Funktion
-
 Die Gaußsche Normalverteilung mit Standardabweichung $\sigma$ ist:
 
 $$G_{\sigma}(x)=\frac{1}{\sqrt{2\pi}\sigma} e^{\Large- \frac{x^{2}}{2\sigma^{2}}}$$
