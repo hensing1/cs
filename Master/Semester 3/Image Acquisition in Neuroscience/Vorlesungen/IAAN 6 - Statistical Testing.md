@@ -32,3 +32,15 @@ Zweiseitiges p ist hier korrekt, weil wir nicht von einem Bias in eine bestimmte
 ## t-Tests
 
 Mit t-Tests testet man Hypothesen über Mittelwerte von [[Gauss-Funktion|Gaussverteilungen]].
+
+### Single-Sample t-Test
+- Wir haben eine Population, von der wir Stichproben ziehen
+- Null-Hypothese $H_{0}$: der Mittelwert dieser Stichproben weicht *nicht* von einem bestimmten Wert ab (z.B. Mittelwert aus der Literatur)
+- Alternativ-Hypothese $H_{A}$: Mittelwert weicht ab (bei einseitigem Test: z.B. Mittelwert ist höher)
+
+**Algorithmus**
+1. Berechne Abweichung von Stichproben-Mittelwert $\bar{x}$ zum Wert $\mu_{0}$ aus $H_{0}$:
+   $$\mu_{0}-\bar{x}=\mu_{0}-\frac{\sum_{i=1}^{n}v_{i}}{n}$$
+2. Berechne Varianz der Stichprobe: $$\sigma ^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(v_{i}-\bar{x})^{2}$$
+3. Berechne Standard-Fehler von $\bar{x}$: $$a = \frac{\sigma}{\sqrt{ n }}$$
+4. Berechne *t-Wert*: $$t=\frac{\bar{x}-\mu_{0}}{a}$$
