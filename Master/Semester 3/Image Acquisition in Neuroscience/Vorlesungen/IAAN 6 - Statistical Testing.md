@@ -71,3 +71,13 @@ Die Studentsche t-Verteilung hat nun den Parameter $\nu=n_{T}+n_{K}-2$.
 #### Welch-Test
 Wenn wir davon ausgehen, dass die Varianzen der Testpopulation und der Kontrollpopulation *nicht* gleich sind, können wir $t$ und $\nu$ wie folgt berechnen:
 ![[Welch-Test.png]]
+
+### Paired t-Test
+Wenn die beiden Gruppen *nicht* unabhängig voneinander sind (z.B. vorher/nachher bei denselben Subjekten), geht der gewöhnliche two-sample t-Test nicht.
+Stattdessen macht man einen single-sample t-Test mit der **Differenz** der zusammengehörenden Werte. Die kann man dann mit der erwarteten Differenz vergleichen.
+
+> **Häufige Herangehensweise in Neuro Imaging**
+> - Ein t-Wert *pro Voxel*, um Veränderungen im Gehirn zu visualisieren
+> - White Matter wird z.B. auf Skelettstruktur reduziert
+> - Stichwort **Statistical Parametric Mapping** (SPM)
+
