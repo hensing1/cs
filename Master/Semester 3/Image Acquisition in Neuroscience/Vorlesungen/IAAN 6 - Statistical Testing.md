@@ -67,3 +67,7 @@ Vielleicht kam der Literaturwert anders zustande als die eigenen Messungen?
 3. Berechne Standard-Fehler von *Differenz* der Stichproben-Mittelwerte: $$a=s_{T,K}\sqrt{ \frac{n_{T}+n_{K}}{n_{T} \cdot n_{K}} }$$
 4. Berechne t-Wert: $$t=\frac{\overline{x^{T}}-\overline{x^{K}}}{a}.$$
 Die Studentsche t-Verteilung hat nun den Parameter $\nu=n_{T}+n_{K}-2$.
+
+#### Welch-Test
+Wenn wir davon ausgehen, dass die Varianzen der Testpopulation und der Kontrollpopulation *nicht* gleich sind, können wir $t$ und $\nu$ wie folgt berechnen:
+![[Welch-Test.png]]
