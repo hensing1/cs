@@ -81,3 +81,5 @@ Stattdessen macht man einen single-sample t-Test mit der **Differenz** der zusam
 > - White Matter wird z.B. auf Skelettstruktur reduziert
 > - Stichwort **Statistical Parametric Mapping** (SPM)
 
+## ANalysis Of VAriance (ANOVA)
+Situation: 
