@@ -8,6 +8,8 @@ Bei Differentialformen geht es um Darstellungen von Oberflächen und Volumen *un
 > Eine $n$-dimensionale Mannigfaltigkeit ist ein geometrisches Objekt, welches *lokal* so aussieht wie der euklidische Raum $\mathbb{R}^{n}$. [^1]
 > Die **Mannigfaltigkeit $\mathbb{R}^{n}$** (Manifold $\mathbb{R}^{n}$) ist die Menge aller *Punkte* $p \in \mathbb{R}^{3}$.
 
+[^1]: Beispiel Kugeloberfläche: wenn man reinzoomt, sieht es lokal aus wie $\mathbb{R}^{2}$
+
 Ein Punkt in der Mannigfaltigkeit existiert *unabhängig* von seinen Koordinaten. Wenn wir möchten, können wir ihm welche zuweisen:
 
 > **Koordinatenfunktion**
@@ -110,8 +112,16 @@ Eine Eins-Form ist also ein Kovektor.
 
 Genau wie Vektorfelder, können wir auch Kovektorfelder haben, mit einem anderen Kovektor an jedem Punkt des Manifolds.
 
+Wir können mit einer Eins-Form das **Differenzial** ausdrücken. Zur Erinnerung:
+- $v_{p}$ ist ein Tangenzialvektor am Punkt $p$
+- $v_{p}[f] \in \mathbb{R}$ ist die Richtungsableitung von einer Funktion $f$ in Richtung $v_{p}$
+- Ist $f: \mathbb{R}^{n}\to \mathbb{R}$, dann ist $$df(v_{p})=v_{p}[f]$$das Differenzial $df$ von $f$.
+	- $df$ hängt ab von einem Vektor ($v_{p}$) und gibt einen reellen Wert zurück, ist also eine Eins-Form.
 
-Wedge Product
+Es ist $$df(v_{p})=v_{1}\left. \frac{ \partial f }{ \partial x } \right|_{p} + v_{2}\left. \frac{ \partial f }{ \partial y } \right|_{p}+v_{3}\left. \frac{ \partial f }{ \partial z } \right|_{p}$$
+und $$v_{1}=dx(v_{p}),\ v_{2}=dy(v_{p}),\ v_{3}=dz(v_{p}).$$
+$df_{p}$ ist gewissermaßen die **ineare Annäherung an $f$ am Punkt $p$**. Man gibt einen Vektor $v_{p}$ rein, und $df(v_{p})$ sagt einem, wie weit die Tangenzialebene von $f$ am Punkt $p$ ansteigt/abfällt.
+![[Differenzial.png|500]]
 
+## Wedge-Produkt
 
-[^1]: Beispiel Kugeloberfläche: wenn man reinzoomt, sieht es lokal aus wie $\mathbb{R}^{2}$
