@@ -126,3 +126,6 @@ $df_{p}$ ist gewissermaßen die **ineare Annäherung an $f$ am Punkt $p$**. Man 
 
 ## Wedge-Produkt
 
+> [!abstract] Definition *Wedge-Produkt*
+> Das Wedge-Produkt zwischen zwei Eins-Formen ist definiert als $$dx_{i} \wedge dx_{j}(v_{p},w_{p}) \equiv \begin{vmatrix} dx_{i}(v_{p}) & dx_{i}(w_{p}) \\ dx_{j}(v_{p}) & d x_{j}(w_{p}) \end{vmatrix}.$$
+
