@@ -104,9 +104,11 @@ Die Basiselemente $dx_{i}$ sind also jeweils *auch* Differenzielle Eins-Formen.
 Die Funktion $dx_{i}$ *projiziert* die $i$-te Komponente des Tangenzialvektors $v_{p}$ auf die Achse $\frac{ \partial  }{ \partial x_{i} }$:
 ![[Eins-Form.png|500]]
 
-Die Eins-Form $\alpha=a \cdot dx_{1}+b \cdot dx_{2} + c \cdot dx_{3}$, angewandt auf einen Vektor $v \in T_{p}\mathbb{R}^{3}$ verhält sich exakt wie das Skalarprodukt $\langle \alpha' \mid v \rangle$ mit $\alpha'=\begin{pmatrix}a \\ b \\ c\end{pmatrix}$.
+Die Eins-Form $\alpha=a \cdot dx_{1}+b \cdot dx_{2} + c \cdot dx_{3}$, angewandt auf einen Tangenzialvektor $v \in T_{p}\mathbb{R}^{3}$ verhält sich exakt wie das Skalarprodukt $\langle \alpha' \mid v \rangle$ mit $\alpha'=\begin{pmatrix}a \\ b \\ c\end{pmatrix}$.
 Deshalb schreiben wir auch gerne $\alpha=\begin{bmatrix}a & b & c\end{bmatrix}$.
 Eine Eins-Form ist also ein Kovektor.
+
+Genau wie Vektorfelder, können wir auch Kovektorfelder haben, mit einem anderen Kovektor an jedem Punkt des Manifolds.
 
 
 Wedge Product
