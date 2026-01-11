@@ -146,3 +146,19 @@ dx_{1} \wedge dx_{3}
 \end{gather}$$
 Linearkombination: $$a\ dx_{1} \wedge dx_{2} + b\ dx_{2} \wedge dx_{3} + c\ dx_{1} \wedge dx_{3}.$$
 Wenn wir im $\mathbb{R}^{2}$ unterwegs sind, ist das (kanonische) Wedge-Produkt von $v_{1}$ und $v_{2}$ einfach die Fläche des Parallelograms mit Seiten $v_{1},\ v_{2}$.
+
+> **Wedge-Produkt von drei 1-Formen**
+> $$dx_{i} \wedge dx_{j} \wedge dx_{k}(u,v,w) = \begin{vmatrix}
+dx_{i}(u) & dx_{i}(v) & dx_{i}(w) \\
+dx_{j}(u) & dx_{j}(v) & dx_{j}(w) \\
+dx_{k}(u) & dx_{k}(v) & dx_{k}(w)
+\end{vmatrix}.$$
+
+Im $\mathbb{R}^{3}$ ist das einfach das Volumen des Parallelepipeds[^2], der von $u,v,w$ aufgespannt wird.
+
+[^2]: Quader mit Parallelogrammen als Seitenflächen
+
+Im allgemeinen:
+![[Wedge-Produkt.png|600]]
+
+Wenn irgendwelche der $x_{i}$'s gleich sind, 
