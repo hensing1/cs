@@ -161,4 +161,5 @@ Im $\mathbb{R}^{3}$ ist das einfach das Volumen des Parallelepipeds[^2], der von
 Im allgemeinen:
 ![[Wedge-Produkt.png|600]]
 
-Wenn irgendwelche der $x_{i}$'s gleich sind, 
+Wenn irgendwelche der $x_{i}$'s gleich sind, ist das gesamte Wedge-Produkt 0.
+
