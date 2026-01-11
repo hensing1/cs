@@ -163,3 +163,4 @@ Im allgemeinen:
 
 Wenn irgendwelche der $x_{i}$'s gleich sind, ist das gesamte Wedge-Produkt 0.
 
+Der Vektorraum aller $k$-Formen am Punkt $p$ wird notiert mit $\Lambda_{p}^{k}(\mathbb{R}^{n})$
