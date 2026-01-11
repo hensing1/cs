@@ -145,4 +145,4 @@ dx_{2} \wedge dx_{3} \\
 dx_{1} \wedge dx_{3}
 \end{gather}$$
 Linearkombination: $$a\ dx_{1} \wedge dx_{2} + b\ dx_{2} \wedge dx_{3} + c\ dx_{1} \wedge dx_{3}.$$
-
+Wenn wir im $\mathbb{R}^{2}$ unterwegs sind, ist das (kanonische) Wedge-Produkt von $v_{1}$ und $v_{2}$ einfach die Fläche des Parallelograms mit Seiten $v_{1},\ v_{2}$.
