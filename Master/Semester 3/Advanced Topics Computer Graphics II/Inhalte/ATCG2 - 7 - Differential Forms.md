@@ -129,3 +129,9 @@ $df_{p}$ ist gewissermaßen die **ineare Annäherung an $f$ am Punkt $p$**. Man 
 > [!abstract] Definition *Wedge-Produkt*
 > Das Wedge-Produkt zwischen zwei Eins-Formen ist definiert als $$dx_{i} \wedge dx_{j}(v_{p},w_{p}) \equiv \begin{vmatrix} dx_{i}(v_{p}) & dx_{i}(w_{p}) \\ dx_{j}(v_{p}) & d x_{j}(w_{p}) \end{vmatrix}.$$
 
+Die 1-Form $dx_{1}(v_{p})$ nimmt den Vektor $v_{p}\in T_{p}\mathbb{R}^{n}$ und projiziert ihn auf die $\left.\frac{ \partial }{ \partial x_{1} }\right|_{p}$-Achse. 
+Man erhält also gewissermaßen ein 1-dimensionales Volumen von einem Vektor entlang einer Achse.
+
+Mit dem Wedge-Produkt erhält man eine **2-Form**.
+Man nimmt zwei Vektoren $v_{p},w_{p} \in T_{p}\mathbb{R}^{n}$. Das Wedge-Produkt der beiden 1-Formen $dx_{i},dx_{j}$ berechnet *die Fläche des **Parallelogramms**, das von $v_{p}$ und $w_{p}$ aufgespannt wird, projiziert auf die Ebene $\left.\frac{ \partial  }{ \partial x_{i} }\right|_{p},\left.\frac{ \partial  }{ \partial x_{j} }\right|_{p}$.*
+
