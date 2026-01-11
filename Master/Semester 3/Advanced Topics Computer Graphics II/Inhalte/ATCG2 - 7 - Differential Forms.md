@@ -135,3 +135,14 @@ Man erhält also gewissermaßen ein 1-dimensionales Volumen von einem Vektor ent
 Mit dem Wedge-Produkt erhält man eine **2-Form**.
 Man nimmt zwei Vektoren $v_{p},w_{p} \in T_{p}\mathbb{R}^{n}$. Das Wedge-Produkt der beiden 1-Formen $dx_{i},dx_{j}$ berechnet *die Fläche des **Parallelogramms**, das von $v_{p}$ und $w_{p}$ aufgespannt wird, projiziert auf die Ebene $\left.\frac{ \partial  }{ \partial x_{i} }\right|_{p},\left.\frac{ \partial  }{ \partial x_{j} }\right|_{p}$.*
 
+Es ist $dx_{i} \wedge dx_{j}=-(dx_{j} \wedge dx_{i})$ (schiefsymmetrisch).
+
+Jede *Linearkombination* von mehreren 2-Formen ist auch eine 2-Form.
+Beispiel mit den kanonischen 2-Formen im $\mathbb{R}^{3}$:
+$$\begin{gather}
+dx_{1} \wedge dx_{2} \\
+dx_{2} \wedge dx_{3} \\
+dx_{1} \wedge dx_{3}
+\end{gather}$$
+Linearkombination: $$a\ dx_{1} \wedge dx_{2} + b\ dx_{2} \wedge dx_{3} + c\ dx_{1} \wedge dx_{3}.$$
+
