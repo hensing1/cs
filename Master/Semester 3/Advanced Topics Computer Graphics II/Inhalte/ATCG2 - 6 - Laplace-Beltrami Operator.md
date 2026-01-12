@@ -11,3 +11,10 @@ Dieser Term ist das *Dirichlet Energie-Integral* und ist analog zur kinetischen 
 
 $f$ optimieren bedeutet, dass $\frac{d}{d \epsilon} E[f + \epsilon h]|_{\epsilon=0}=0$ für alle Funktionen $h$ mit $h(u)=0,\,\forall u \in \partial \Omega.$
 
+Worauf das hinausläuft, ist, dass der [[Laplace-Operator]] von $f$ innerhalb von $\Omega$ auf 0 gehen soll (denn $h$ ist nur auf $\partial \Omega$ gleich 0): $$-\int_{\Omega}h(u)\Delta f(u)\,du=0.$$
+Das ist die allgemeine Formulierung einer **Laplace-Gleichung:** $$\begin{align}
+\Delta f(u)&=0 & \forall u \in \Omega \setminus \partial \Omega \\
+f(u) &= g(u) & \forall u \in \partial \Omega.
+\end{align}$$
+Mit anderen Worten: $-\Delta f$ ist der *Gradient der Dirichlet-Energie*.
+

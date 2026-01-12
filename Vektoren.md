@@ -53,6 +53,15 @@ Als lustige Matrix: ![[Robotik - VL 6#^a9b165]]
 
 Ein Vektorfeld ist ein $\mathbb{R}^{n}$, bei dem für jeden Punkt in diesem $n$-dimensionalen Raum ein $n$-dimensionaler Vektor definiert ist: $$F: \mathbb{R}^{n} \to \mathbb{R}^{n}.$$
 > **Divergenz**
-> Die Divergenz eines $n$-dimensionalen Vektorfelds $F=\begin{bmatrix}F_{1}(x) \\ F_{2} \\ \vdots \\ F_{n}(x)\end{bmatrix}$ im $\mathbb{R}^{n}$ ist definiert als $$\nabla \cdot F=\frac{ \partial F_{1} }{ \partial x_{1} } + \frac{ \partial F_{2} }{ \partial x_{2} } +\dots+\frac{ \partial F_{n} }{ \partial x_{n} }. $$
+> Die Divergenz eines $n$-dimensionalen Vektorfelds $F=\begin{bmatrix}F_{1}(x) \\ F_{2}(x) \\ \vdots \\ F_{n}(x)\end{bmatrix}$ im $\mathbb{R}^{n}$ ist definiert als $$\nabla \cdot F=\frac{ \partial F_{1} }{ \partial x_{1} } + \frac{ \partial F_{2} }{ \partial x_{2} } +\dots+\frac{ \partial F_{n} }{ \partial x_{n} }. $$
 
-Intuitiv sagt einem die Divergenz, wie sehr an einem bestimmten Punkt die auseinanderlaufen.
+^fc6a9b
+
+Intuitiv sagt einem die Divergenz, wie sehr an einem bestimmten Punkt die Vektoren auseinanderlaufen.
+$\nabla \cdot F >0$: man befindet sich nahe einer "Quelle", die Vektoren laufen auseinander
+$\nabla \cdot F=0$: das Vektorfeld ist glatt, dh. nahegelegene Vektoren zeigen grob in dieselbe Richtung
+$\nabla \cdot F<0$: man befindet sich nahe einer "Senke", die Vektoren laufen zusammen
+
+Es ist gewissermaßen das Skalarprodukt zwischen einem Vektor aus dem Vektorfeld, und dem Vektor $\nabla$ mit den partiellen Ableitungsoperatoren - $\nabla = \begin{bmatrix}\frac{ \partial  }{ \partial x_{1} }&\frac{ \partial  }{ \partial x_{2} }& \dots\end{bmatrix}^{T}$. 
+
+Die punktweise Multiplikation von $\nabla$ mit $F$ ergäbe den [[Analysis - VL 17#^71f57b|Gradienten]], deshalb schreibt man $\nabla F$ für den Gradienten und $\nabla \cdot F$ für die Divergenz.
