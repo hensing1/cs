@@ -39,7 +39,7 @@ Beispiel: $$\begin{bmatrix}
 - Man kann eine $n$-dimensionale Mannigfaltigkeit zusammen mit seinen $n$-dimensionalen Tangentialräumen zu einer $2n$-dimensionalen Mannigfaltigkeit *bündeln*.
 
 > [!abstract] Definition *Vektorfeld*
-> Sei $M$ eine Mannigfaltigkeit. Hat man pro Punkt $p \in M$ *einen* Vektor $v_{p}$ aus dem jeweiligen Tangentialraum $T_{p}\,M$.
+> Sei $M$ eine Mannigfaltigkeit. Ein *Vektorfeld* hat pro Punkt $p \in M$ *einen* Vektor $v_{p}$ aus dem jeweiligen Tangentialraum $T_{p}\,M$.
 > Gibt es für all diese Vektoren eine diff.bare Kurve durch $M$, zu der sie tangential sind, heißt das Vektorfeld *glatt* (smooth).
 
 ### Richtungsableitungen
@@ -84,6 +84,17 @@ Linearität:
 $$v_{p}[af+bg]=av_{p}[f] + bv_{p}[g]$$
 
 Leibnitz-Regel 🍪 (Version der Produktregel): $$v_{p}[f\cdot g]=v_{p}[f] \cdot g(p)+f(p) \cdot v_{p}[g].$$
+
+## Metrischer Tensor
+*Metric Tensor*
+
+Gegeben sein ein Vektorraum $T_{p}(M)$ mit einer **Basis** $\{\frac{ \partial  }{ \partial x^{i} }\mid\ i=1,\dots,n\}.$ 
+Wir haben mit $\langle v \mid w \rangle : T_{p}(M) \times T_{p}(M) \to \mathbb{R}$ ein Skalarprodukt für diesen Vektorraum.
+
+> Der Metrische Tensor ist definiert als $g_{ij}=\left\langle  \frac{ \partial  }{ \partial x^{i} } \mid  \frac{ \partial  }{ \partial x^{j} } \right\rangle$ und definiert sein eigenes Skalarprodukt innerhalb des Vektorraums mit $$\langle v \mid w \rangle _{G}=\sum_{i}\sum_{j}v^{i}w^{j}g_{ij}=v^{i}w^{j}g_{ij}=v^{t}Gw$$
+> mit der Matrix $G=\begin{bmatrix}g_{ij}\end{bmatrix}$.
+
+In kartesischen Koordinaten und der euklidischen Metrik ist $G$ die *Identität*.
 ## One-Form
 
 > [!abstract] Definition *Differential One-Form* (Pfaffsche Form)
@@ -99,8 +110,8 @@ Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt.
 
 Die kanonische Basis von $T_{p}^{\ast}\mathbb{R}^{n}$ schreiben wir $$\{ dx_{1},dx_{2},\dots,dx_{n} \}.$$
 Sie ist dasselbe wie die [[Dualraum#^442317|kanonische Basis vom Dualraum]] - dh. $$dx_{i}\left(\begin{bmatrix}
-v_{1} \\ v_{2} \\ \vdots \\ v_{n}
-\end{bmatrix}\right) = v_{i}.$$
+v^{1} \\ v^{2} \\ \vdots \\ v^{n}
+\end{bmatrix}\right) = v^{i}.$$
 Jede Differenzielle Eins-Form ist eine Linearkombination aus diesen Basisfunktionen $dx_{1},dx_{2},\dots,dx_{n}$.
 Die Basiselemente $dx_{i}$ sind also jeweils *auch* Differenzielle Eins-Formen.
 
