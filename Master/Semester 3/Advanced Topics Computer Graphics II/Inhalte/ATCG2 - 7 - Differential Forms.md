@@ -103,10 +103,13 @@ In kartesischen Koordinaten und der euklidischen Metrik ist $G$ die *Identität*
 \alpha(av_{p})&=a\cdot\alpha(v_{p}).
 \end{align}$$
 
-Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$. $T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangenzialram $T_{p}(\mathbb{R}^{n})$.
+Es ist $\alpha \in T_{p}^{\ast}(\mathbb{R}^{n})$.
+$T_{p}^{\ast}(\mathbb{R}^{n})$ ist der [[Dualraum]] vom Tangenzialram $T_{p}(\mathbb{R}^{n})$.
 Der Dualraum $T_{p}^{\ast}\mathbb{R}^{3}$ von $T_{p}\mathbb{R}^{3}$ heißt auch Kotangenzialraum.
 
-Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt.
+Man definiert also *einen Kovektor* pro Punkt $p$ des Manifolds $\mathbb{R}^{n}$.
+
+Das Ding heißt *One-Form*, weil es nur *einen* Vektor als Input nimmt: $\alpha(v_{p})=\langle w \mid v_{p} \rangle \in \mathbb{R}.$
 
 Die kanonische Basis von $T_{p}^{\ast}\mathbb{R}^{n}$ schreiben wir $$\{ dx_{1},dx_{2},\dots,dx_{n} \}.$$
 Sie ist dasselbe wie die [[Dualraum#^442317|kanonische Basis vom Dualraum]] - dh. $$dx_{i}\left(\begin{bmatrix}
