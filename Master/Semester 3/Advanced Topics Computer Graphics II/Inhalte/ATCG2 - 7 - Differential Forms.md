@@ -175,4 +175,14 @@ Im allgemeinen:
 Wenn irgendwelche der $x_{i}$'s gleich sind, ist das gesamte Wedge-Produkt 0.
 
 Der Vektorraum aller $k$-Formen am Punkt $p$ wird notiert mit $\Lambda_{p}^{k}(\mathbb{R}^{n})$. Es ist $T_{p}^{\ast}(\mathbb{R}^{n})=\Lambda_{p}^{1}(\mathbb{R}^{n}).$
+Ist $k=n$, hat man die *Area Form* bzw. *Volume Form*, dh. die $k$ Vektoren, die die Form entgegennimmt, werden nirgendwo hinprojiziert und man erhält direkt das Volumen des $k$-dimensionalen Parallelepipeds der Vektoren.
+
+> *Algebraische Regeln des Wedge-Produkts*
+> Seien $x$ k-Formen und $y$ l-Formen.
+> $$\begin{align}
+ax \wedge y = x \wedge ay &= a(x \wedge y) & a \in \mathbb{R}  \\
+(x_{1} + x_{2}) \wedge y &= x_{1} \wedge y + x_{2} \wedge y \\
+x \wedge (y_{1} + y_{2}) &= x \wedge y_{1} + x \wedge y_{2} \\
+x \wedge y &= (-1)^{kl}y \wedge x. 
+\end{align}$$
 
