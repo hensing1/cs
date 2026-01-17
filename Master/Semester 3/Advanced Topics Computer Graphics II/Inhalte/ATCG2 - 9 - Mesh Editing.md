@@ -10,4 +10,6 @@ Modellierung mit Displacement-Funktion $d$ für eine Oberfläche $\mathcal{S}$: 
 d&: \mathcal{S} \to \mathbb{R}^{3} \\
 p &\mapsto p + d(p).
 \end{align}$$
-Ähnlich wie bei [[CV 6 - Snake 🐍|Snakes]] (?) wollen wir, dass alles in der ROI, das nicht der Griff ist, einen Energie-Term minimiert: $$E=\int_{\mathcal{S}}k_{s}\left\|M_{1}'(u) - M_{1}(u)\right\|_{F}^{2}+k_{b}k_{s}\left\|M_{2}'(u) - M_{2}(u)\right\|_{F}^{2}\,du$$
+Ähnlich wie bei [[CV 6 - Snake 🐍|Snakes]] (?) wollen wir, dass alles in der ROI, das nicht der Griff ist, einen Energie-Term minimiert: $$E=\int_{\mathcal{S}}k_{s}\left\|M_{1}'(u) - M_{1}(u)\right\|_{F}^{2}+k_{b}\left\|M_{2}'(u) - M_{2}(u)\right\|_{F}^{2}\,du$$
+wobei:
+- $\|M_{1}'(u)-M_{1}(u)\|_{F}^{2}$ der *Stretching-Term*
