@@ -16,5 +16,5 @@ Das ist die allgemeine Formulierung einer **Laplace-Gleichung:** $$\begin{align}
 \Delta f(u)&=0 & \forall u \in \Omega \setminus \partial \Omega \\
 f(u) &= g(u) & \forall u \in \partial \Omega.
 \end{align}$$
-Mit anderen Worten: $-\Delta f$ ist der *Gradient der Dirichlet-Energie*.
+Mit anderen Worten: $\frac{ \partial E }{ \partial f }=-\Delta f$ ist der *Gradient der Dirichlet-Energie*.
 
