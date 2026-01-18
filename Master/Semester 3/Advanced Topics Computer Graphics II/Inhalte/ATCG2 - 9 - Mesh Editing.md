@@ -13,3 +13,18 @@ p &\mapsto p + d(p).
 Ähnlich wie bei [[CV 6 - Snake 🐍|Snakes]] (?) wollen wir, dass alles in der ROI, das nicht der Griff ist, einen Energie-Term minimiert: $$E=\int_{\mathcal{S}}k_{s}\left\|M_{1}'(u) - M_{1}(u)\right\|_{F}^{2}+k_{b}\left\|M_{2}'(u) - M_{2}(u)\right\|_{F}^{2}\,du$$
 wobei:
 - $\|M_{1}'(u)-M_{1}(u)\|_{F}^{2}$ der *Stretching-Term*
+
+
+$$\begin{pmatrix}
+-k_{s}\Delta+k_{b}\Delta ^{2} & 0 & 0 \\
+0 & I & 0 \\
+0 & 0 & I
+\end{pmatrix}\begin{pmatrix}
+\vdots \\
+d_{i} \\
+\vdots
+\end{pmatrix} = \begin{pmatrix}
+0 \\
+0 \\
+d_{j}
+\end{pmatrix}$$
