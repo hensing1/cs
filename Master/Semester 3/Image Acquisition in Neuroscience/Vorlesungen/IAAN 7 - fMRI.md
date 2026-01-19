@@ -1,3 +1,5 @@
+[[iaan-07-Functional-MRI.pdf]]
+
 Statt einem hochauflösendem Bild (in *structural MRI*) machen wir wiederholt (z.B. alle 2 Sekunden) ein Bild mit niedriger Auflösung (z.B. 3x3x5 mm³).
 
 Das passiert mit *Echoplanar Imaging*.
