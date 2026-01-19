@@ -23,3 +23,4 @@ Vorbehalt: wir sehen Venen, nicht die Neuronen (können ein paar Zentimeter nebe
 
 ## Hemodynamic Response Function
 
+- Mehrere Stimuli (jede Sek)
