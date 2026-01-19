@@ -23,4 +23,8 @@ Vorbehalt: wir sehen Venen, nicht die Neuronen (können ein paar Zentimeter nebe
 
 ## Hemodynamic Response Function
 
+Wir erfassen die positive Änderung im MR-Signal über die Zeit.
+Weil die absoluten Änderungen recht klein sind, wiederholen wir das Signal mehrfach und bilden den Durchschnitt, um das Rauschen zu verringern.
+
 - Mehrere Stimuli (jede Sek)
+- 
