@@ -14,7 +14,7 @@ Wird eine Gehirnregion stimuliert, passiert folgendes:
 	- schwacher / manchmal gar nicht beobachteter Effekt
 - Lokaler Blutfluss wird erhöht, höhere O2-Konzentration
 	- Signal steigt 2 - 3% gegenüber der Baseline für die Dauer des Stimulus
-	- genannt *Haemodynamische Reaktion*
+	- genannt *Hämodynamische Reaktion*
 - Nach Stimulus: Undershoot für mehrere Dutzend Sekunden
 
 ![[BOLD-response.png|500]]
@@ -26,5 +26,21 @@ Vorbehalt: wir sehen Venen, nicht die Neuronen (können ein paar Zentimeter nebe
 Wir erfassen die positive Änderung im MR-Signal über die Zeit.
 Weil die absoluten Änderungen recht klein sind, wiederholen wir das Signal mehrfach und bilden den Durchschnitt, um das Rauschen zu verringern.
 
-- Mehrere Stimuli (jede Sek)
-- 
+Die Hämodynamische Reaktion ist *ungefähr linear*, dh. ein 2-sekündiger Stimulus sieht etwa so aus wie zwei 1-Sekündige Stimuli zusammengeklebt (bzw. eine Kombination von zwei Stimuli):
+![[HRF-Linearität.png|500]]
+
+Vorbehalte:
+- Sind die Stimuli zu nah beieinander, ist die HRF kleiner als von Linearität erwartet
+- Reaktionen auf sehr kurze Stimuli sind wesentlich höher als erwartet
+-> diese Stimuli werden bei solchen Untersuchungen vermieden
+
+Die HRF sieht etwa so aus wie eine *Gamma-Verteilung*, deshalb nimmt man diese gern als **kanonische HRF**.
+Um den Undershoot zu modellieren, kann man zwei Gamma-Verteilungen voneinander abziehen.
+
+Die HRF sieht für verschiedene Menschen verschieden aus, und auch für verschiedene Gehirnregionen.
+
+Modellierung von kleinen Abweichungen von der kanonischen HRF irgendwie mit Taylor-Approximierung
+
+Faltung der kanonischen HRF mit "Neural Response", um das BOLD-Signal zu erhalten.
+
+## General Linear Model
