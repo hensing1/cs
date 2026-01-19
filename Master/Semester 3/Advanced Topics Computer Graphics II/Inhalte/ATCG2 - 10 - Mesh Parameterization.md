@@ -36,4 +36,4 @@ $A$ ist hierbei eine **[[ATCG2 - 5 - Mesh Smoothing|Laplace-Matrix]]**.
 *Wie wählen wir clevererweise die $\lambda_{ij}$?*
 -> Kanten gewichten mit $\lambda_{ij}=\frac{w_{ij}}{\sum_{j}w_{ij}}$
 - Uniforme Koordinaten: $w_{ij}=1$
-- 
+- p
