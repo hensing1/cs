@@ -64,7 +64,7 @@ Wir wollen eine least-squares-Lösung finden, also $\varepsilon$ minimieren.
 
 Mit einem GLM kann man auch ungewollte Variablen, wie z.B. Kopfbewegungen, "raus-regressieren", indem man sie mit als unabhängige Variable aufnimmt.
 
-## "Task" - fMRI Processing Pipeline
+## fMRI Processing Pipeline
 -> generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
 
 ### Datenerfassung und -Aufbereitung
