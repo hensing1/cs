@@ -80,4 +80,25 @@ Verarbeitungsschritte:
 	- Bilder über Zeit interpolieren
 	- benötigt sehr genaue Scanner-Timings
 - Normalisierung
-	- 
+	- erst: (rigides) Mappen von fMRI-Bildern zu hochauflösendem sMRI-Scan desselben Subjekts:
+	- dann: (nichtlineares) Mappen vom strukturellen Bild zu einem Atlas (z.B. MNI)
+- Glätten
+	- verringert Rauschen
+	- kompensiert für übrig gebliebenes Misalignment
+	- Verstärkt Aktivierungen in der Größenordnung des Kernels
+- High-Pass-Filter
+	- kompensiert das Driften der Baseline-MR-Intensität
+
+### Erstellen des GLM
+
+- Pro-Voxel-Modellierung
+- Die ersten paar Messungen werden meist verworfen, damit sich die $T_{1}$-Relaxation stabilisiert (dauert länger als unsere Mess-Intervalle, weswegen das Signal schwächer ist)
+- Fitten von der gemessenen BOLD-Reaktion zur erwarteten BOLD-Reaktion aus der Hypothese
+- Überprüfen, ob der High-Pass-Filter keine relevanten Teile des erwarteten Signals verschluckt
+
+### Statistische Inferenz
+
+Output des GLMs: t-Scores pro Voxel
+Das können wir jetzt, analog zu vorherigen Kapiteln, in z.B. Gaussian Mixture Models reinpacken
+
+## Group Analysis
