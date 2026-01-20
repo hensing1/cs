@@ -53,9 +53,31 @@ Mit diesem General Linear Model (GLM) können wir z.B. lineare regressionen, t-T
 - Messpunkte: Werte mit $p$ unabhängigen Variablen (z.B. 3D-Koordinaten) und einer abhängigen (z.B. MRT-Intensitätswert)
 	- $\{ (x_{1,1},\dots,x_{p,1},y_{1}), \dots, (x_{1,N},\dots,x_{p,N},y_{N}) \}$
 - Ein Vektor $y \in \mathbb{R}^{N \times 1}$ mit unseren $N$ Messwerten
-- $p$ Vektoren $x_{i}$ mit den zugeh
-- $p$-Lineares Modell ($L(x_{1},\dots,x_{p})$) mit $p+1$ Koeffizienten und [[DLVC - VL 2#^3e9587|iid.]] Gauß-Rauschvektor $\varepsilon$: $$y=\beta_{0}+\beta_{1}x_{1}+\dots+\beta_{p}x_{p} + \varepsilon$$
+- $p$ Vektoren $x_{i} \in \mathbb{R}^{N\times 1}$ mit den zugehörigen $N$ Werten für die unabhängige Variable $i$
+- $p$-Lineares Modell ($L(x_{1},\dots,x_{p})$) mit (im Beispiel Regression) $p+1$ Koeffizienten und [[DLVC - VL 2#^3e9587|iid.]] Gauß-Rauschvektor $\varepsilon$: $$y=\beta_{0}+\beta_{1}x_{1}+\dots+\beta_{p}x_{p} + \varepsilon$$
 In Matrixschreibweise: $$y=X\beta+\varepsilon$$
 mit $\beta=\begin{bmatrix}\beta_{0} & \dots & \beta_{p}\end{bmatrix}^T$ und $X=\begin{bmatrix}1 & x_{1,1} & \dots & x_{p,1} \\ \vdots &\vdots &  &  \vdots \\ 1 & x_{1,N} & \dots & x_{p,N}\end{bmatrix} \in \mathbb{R}^{N \times (p+1)}.$
 
 
+Die durch das lineare Modell unerklärten Variationen werden als Rauschen ($\varepsilon$) modelliert.
+Wir wollen eine least-squares-Lösung finden, also $\varepsilon$ minimieren.
+
+Mit einem GLM kann man auch ungewollte Variablen, wie z.B. Kopfbewegungen, "raus-regressieren", indem man sie mit als unabhängige Variable aufnimmt.
+
+## "Task" - fMRI Processing Pipeline
+-> generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
+
+### Datenerfassung und -Aufbereitung
+Rohdaten: mehrere fMRI-Bilder über die Zeit
+
+Verarbeitungsschritte:
+- Realignment: Kopfbewegungen können zu starken false positives führen, weil sich einzelne Voxel-Werte durch Translation natürlich stark verändern können
+	- -> *rigid registration* zu Referenzbild, z.B. aus der zeitlichen Mitte
+	- Output: korrigierte Bilder und die geschätzten *Bewegungsparameter* (Translation und Rotation)
+	- können als zusätzliche unabh. Variablen aufgenommen werden (sind aber leider meist nicht linear)
+- Slice-Timing-Korrektur
+	- 2D-Slices werden nicht parallel, sondern sequenziell aufgenommen -> einzelnes Bild ist nicht ein Zeitpunkt
+	- Bilder über Zeit interpolieren
+	- benötigt sehr genaue Scanner-Timings
+- Normalisierung
+	- 
