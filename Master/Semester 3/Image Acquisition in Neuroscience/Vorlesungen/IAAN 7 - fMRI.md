@@ -1,3 +1,5 @@
+[[iaan-07-Functional-MRI.pdf]]
+
 Statt einem hochauflösendem Bild (in *structural MRI*) machen wir wiederholt (z.B. alle 2 Sekunden) ein Bild mit niedriger Auflösung (z.B. 3x3x5 mm³).
 
 Das passiert mit *Echoplanar Imaging*.
@@ -5,7 +7,7 @@ Das passiert mit *Echoplanar Imaging*.
 Wir messen damit "Aktivierungen" im Gehirn. 
 
 > **BOLD effect**
-> > *B*lodd *O*xygenation *L*evel *D*ependency
+> > *B*lood *O*xygenation *L*evel *D*ependency
 > Die MR-Signalintensität hängt von der Sauerstoffkonzentration im Blut ab.
 > Je weniger Sauerstoff, desto schwächer wird das Signal ($T_{2}^{\ast}$-Zeit wird verringert).
 
@@ -44,3 +46,16 @@ Modellierung von kleinen Abweichungen von der kanonischen HRF irgendwie mit Tayl
 Faltung der kanonischen HRF mit "Neural Response", um das BOLD-Signal zu erhalten.
 
 ## General Linear Model
+
+Um Hypothesentests für Messungen aus dem MRT (z.B. für einzelne Voxel in fMRI-Bildern) durchzuführen, bedienen wir uns eines allgemein gehaltenen Frameworks.
+Mit diesem General Linear Model (GLM) können wir z.B. lineare regressionen, t-Tests und ANOVA abbilden.
+
+- Messpunkte: Werte mit $p$ unabhängigen Variablen (z.B. 3D-Koordinaten) und einer abhängigen (z.B. MRT-Intensitätswert)
+	- $\{ (x_{1,1},\dots,x_{p,1},y_{1}), \dots, (x_{1,N},\dots,x_{p,N},y_{N}) \}$
+- Ein Vektor $y \in \mathbb{R}^{N \times 1}$ mit unseren $N$ Messwerten
+- $p$ Vektoren $x_{i}$ mit den zugeh
+- $p$-Lineares Modell ($L(x_{1},\dots,x_{p})$) mit $p+1$ Koeffizienten und [[DLVC - VL 2#^3e9587|iid.]] Gauß-Rauschvektor $\varepsilon$: $$y=\beta_{0}+\beta_{1}x_{1}+\dots+\beta_{p}x_{p} + \varepsilon$$
+In Matrixschreibweise: $$y=X\beta+\varepsilon$$
+mit $\beta=\begin{bmatrix}\beta_{0} & \dots & \beta_{p}\end{bmatrix}^T$ und $X=\begin{bmatrix}1 & x_{1,1} & \dots & x_{p,1} \\ \vdots &\vdots &  &  \vdots \\ 1 & x_{1,N} & \dots & x_{p,N}\end{bmatrix} \in \mathbb{R}^{N \times (p+1)}.$
+
+

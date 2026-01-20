@@ -105,7 +105,7 @@ p(x \mid y) &= \frac{p(x,y)}{p(y)}\\
 
 *Unabhängigkeit:*
 Sind zwei Variablen $x,y$ unabhängig, ist $p(x \mid y) = p(x)$. Demnach ist $p(x,y) = p(x)p(y)$.
-Daten $x_{1},x_{2},x_{3},\ldots$ werden *unabhängig und identisch verteilt (u.i.v., independent and identical distributed (i.i.d.))* gemessen, wenn sie unabhängig voneinander aus der gleichen Verteilung gezogen werden. Dann ist $p(x_{1},x_{2},x_{3},\ldots)=p(x_{1})p(x_{2})p(x_{3})\ldots = \prod_{i}p(x_{i})$ (Ziehen mit Zurücklegen).
+Daten $x_{1},x_{2},x_{3},\ldots$ werden *unabhängig und identisch verteilt (u.i.v., independent and identical distributed (i.i.d.))* gemessen, wenn sie unabhängig voneinander aus der gleichen Verteilung gezogen werden. Dann ist $p(x_{1},x_{2},x_{3},\ldots)=p(x_{1})p(x_{2})p(x_{3})\ldots = \prod_{i}p(x_{i})$ (Ziehen mit Zurücklegen). ^3e9587
 
 > [!important] Satz von Bayes
 > Bedingte Wahrscheinlichkeiten können mithilfe der umgekerten Bedingung bestimmt werden: $$\begin{align*}p(y \mid x) &= \frac{p(x \mid y)p(y)}{p(x)}\\&=\frac{p(x \mid y) p(y)}{\int p(x,y)\,dy}\\&=\frac{p(x \mid y)p(y)}{\int p(x \mid y)p(y)\,dy}\end{align*}$$
