@@ -110,3 +110,21 @@ Das können wir jetzt, analog zu vorherigen Kapiteln, in z.B. Gaussian Mixture M
 Beobachtungen von Gehirnaktivitäten, wenn der Proband keine besondere Aufgabe durchführt
 - "Globalismus"-Annahme: Gehirn funktioniert als Ganzes
 - Gehirne können bestimmte Funktionen wiedererlernen, wenn andere Gehirnareale beschädigt werden
+- [[Fourier-Transformation|Fourier-Analyse]] von Gehirnaktivitäten
+	- Herzschlagfrequenz und Atemfrequenz sichtbar, aber eben auch starke Amplituden im niedrigen Frequenzbereich die nicht derart naheliegend sind
+	- Korreliert mit Messungen der *Elektroenzephalographie* (EEG / Gehirnwellen-Voodoo)
+- Unterscheidet sich, je nachdem ob Augen offen oder geschlossen sind
+- Vor Analyse: Signal wieder mit *Bandpassfilter* bereinigen, um Drift des Scanner-Felds sowie hochfrequentes Rauschen zu unterdrücken
+
+**Seed-Voxel**
+Ansatz: nimm ein Voxel heraus (Seed), und färbe alle Voxel ein, deren Aktivierungen mit denen vom Seed korrelieren
+Annahme: korrelierende Gehirnregionen sind miteinander verknüpft
+Beobachtung:
+![[Seeed.png|400]]
+
+"Interrupted Homunculus"-Annahme kann hiermit unterstützt werden
+
+### Independent Component Analysis
+- Wird auf rs-fMRI-Signale angewandt
+- Arbeitshypothese ist vorausgesetzt
+- Datenmatrix $X$
