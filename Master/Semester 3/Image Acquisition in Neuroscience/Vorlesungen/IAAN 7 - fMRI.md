@@ -135,3 +135,15 @@ mit
 - $E$: Gauß-Rauschen
 
 Im Gegensatz zu GLM ist dieser Ansatz explorativ (keine ausgehende Hypothese) - Gefundene Komponenten müssen interpretiert werden, z.B. Kopfbewegungen können sich auch in einzelnen Komponenten niederschlagen
+
+Hyperparameter: Anzahl der Komponenten
+
+Aufdröseln der Daten in Komponenten, die so "un-Gauß'sch" wie möglich sind
+
+Im Gegensatz zu PCA sind die gefundenen Hauptkomponenten nicht unbedingt orthogonal
+
+Erster Schritt: "Whitening"
+- Datenpunkte werden rotiert und skaliert, sodass die *Kovarianz* 0 ist
+- Funktioniert irgendwie mit SVD
+
+Danach: iterativ die Gaußigkeit der Komponenten verringern
