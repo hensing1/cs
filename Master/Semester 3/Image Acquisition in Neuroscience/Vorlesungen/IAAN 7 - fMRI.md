@@ -126,5 +126,12 @@ Beobachtung:
 
 ### Independent Component Analysis
 - Wird auf rs-fMRI-Signale angewandt
-- Arbeitshypothese ist vorausgesetzt
-- Datenmatrix $X$
+- Faktorisierung der fMRI-Daten in eine "geringe Anzahl" von Komponenten
+- Datenmatrix $X \in \mathbb{R}^{p \times N}$: $N$ Voxel aus $p$ fMRI-Scans eines Subjekts
+$$X=AS+E$$
+mit
+- $A$: Zuordnungen von Komponenten über die Zeit, und
+- $S$: Zuordnungen der Komponenten über den Raum, dh. zusammenhängende Gehirnregionen
+- $E$: Gauß-Rauschen
+
+Im Gegensatz zu GLM ist dieser Ansatz explorativ (keine ausgehende Hypothese) - Gefundene Komponenten müssen interpretiert werden, z.B. Kopfbewegungen können sich auch in einzelnen Komponenten niederschlagen
