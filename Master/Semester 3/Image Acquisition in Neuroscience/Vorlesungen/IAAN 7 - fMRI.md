@@ -64,8 +64,10 @@ Wir wollen eine least-squares-Lösung finden, also $\varepsilon$ minimieren.
 
 Mit einem GLM kann man auch ungewollte Variablen, wie z.B. Kopfbewegungen, "raus-regressieren", indem man sie mit als unabhängige Variable aufnimmt.
 
-## fMRI Processing Pipeline
--> generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
+## Task-fMRI Processing Pipeline
+- generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
+- Probanden werden darum gebeten, eine bestimmte Aufgabe durchzuführen oder werden bestimmten Stimuli ausgesetzt
+- Man möchte herausfinden, ob Aktivität in einer bestimmten Gehirnregion mit einer bestimmten Aktivität / einem bestimmten Stimulus korreliert ("Localisationism")
 
 ### Datenerfassung und -Aufbereitung
 Rohdaten: mehrere fMRI-Bilder über die Zeit
@@ -101,4 +103,10 @@ Verarbeitungsschritte:
 Output des GLMs: t-Scores pro Voxel
 Das können wir jetzt, analog zu vorherigen Kapiteln, in z.B. Gaussian Mixture Models reinpacken
 
-## Group Analysis
+### Group Analysis
+
+## Resting State fMRI
+
+Beobachtungen von Gehirnaktivitäten, wenn der Proband keine besondere Aufgabe durchführt
+- "Globalismus"-Annahme: Gehirn funktioniert als Ganzes
+- Gehirne können bestimmte Funktionen wiedererlernen, wenn andere Gehirnareale beschädigt werden
