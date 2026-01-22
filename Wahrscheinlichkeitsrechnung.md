@@ -46,3 +46,12 @@ $P(A \lor B) = P(A) + P(B) - P(A \land B)$
 
 $P(A,B) = P(A \land B) = P(A|B)\cdot P(B)$
 $P(A,B|C) = P(A|B,C)\cdot P(B|C)$
+
+## Wahrscheinlichkeitsdichtefunktionen
+
+Funktion $p:X \to \mathbb{R}$ mit $\int_{-\infty}^{\infty}p(x)\,dx=1$.
+
+*Modus* (Mode, Maximum Likelihood): Wert $x$ der $p(x)$ maximiert
+*Median*: $x$, sodass $\int_{-\infty}^{x}p(x)\,dx=\int_{x}^{\infty}p(x)\,dx=0.5$
+*Erwartungswert* (mean): $\mathbb{E}(x)=\int_{-\infty}^{\infty}xp(x)\,dx$
+
