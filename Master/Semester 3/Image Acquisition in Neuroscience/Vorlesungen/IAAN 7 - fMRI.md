@@ -64,8 +64,10 @@ Wir wollen eine least-squares-Lösung finden, also $\varepsilon$ minimieren.
 
 Mit einem GLM kann man auch ungewollte Variablen, wie z.B. Kopfbewegungen, "raus-regressieren", indem man sie mit als unabhängige Variable aufnimmt.
 
-## fMRI Processing Pipeline
--> generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
+## Task-fMRI Processing Pipeline
+- generische Pipeline für Durchführung und Auswertung von fMRI-Experimenten
+- Probanden werden darum gebeten, eine bestimmte Aufgabe durchzuführen oder werden bestimmten Stimuli ausgesetzt
+- Man möchte herausfinden, ob Aktivität in einer bestimmten Gehirnregion mit einer bestimmten Aktivität / einem bestimmten Stimulus korreliert ("Localisationism")
 
 ### Datenerfassung und -Aufbereitung
 Rohdaten: mehrere fMRI-Bilder über die Zeit
@@ -101,4 +103,47 @@ Verarbeitungsschritte:
 Output des GLMs: t-Scores pro Voxel
 Das können wir jetzt, analog zu vorherigen Kapiteln, in z.B. Gaussian Mixture Models reinpacken
 
-## Group Analysis
+### Group Analysis
+
+## Resting State fMRI
+
+Beobachtungen von Gehirnaktivitäten, wenn der Proband keine besondere Aufgabe durchführt
+- "Globalismus"-Annahme: Gehirn funktioniert als Ganzes
+- Gehirne können bestimmte Funktionen wiedererlernen, wenn andere Gehirnareale beschädigt werden
+- [[Fourier-Transformation|Fourier-Analyse]] von Gehirnaktivitäten
+	- Herzschlagfrequenz und Atemfrequenz sichtbar, aber eben auch starke Amplituden im niedrigen Frequenzbereich die nicht derart naheliegend sind
+	- Korreliert mit Messungen der *Elektroenzephalographie* (EEG / Gehirnwellen-Voodoo)
+- Unterscheidet sich, je nachdem ob Augen offen oder geschlossen sind
+- Vor Analyse: Signal wieder mit *Bandpassfilter* bereinigen, um Drift des Scanner-Felds sowie hochfrequentes Rauschen zu unterdrücken
+
+**Seed-Voxel**
+Ansatz: nimm ein Voxel heraus (Seed), und färbe alle Voxel ein, deren Aktivierungen mit denen vom Seed korrelieren
+Annahme: korrelierende Gehirnregionen sind miteinander verknüpft
+Beobachtung:
+![[Seeed.png|400]]
+
+"Interrupted Homunculus"-Annahme kann hiermit unterstützt werden
+
+### Independent Component Analysis
+- Wird auf rs-fMRI-Signale angewandt
+- Faktorisierung der fMRI-Daten in eine "geringe Anzahl" von Komponenten
+- Datenmatrix $X \in \mathbb{R}^{p \times N}$: $N$ Voxel aus $p$ fMRI-Scans eines Subjekts
+$$X=AS+E$$
+mit
+- $A$: Zuordnungen von Komponenten über die Zeit, und
+- $S$: Zuordnungen der Komponenten über den Raum, dh. zusammenhängende Gehirnregionen
+- $E$: Gauß-Rauschen
+
+Im Gegensatz zu GLM ist dieser Ansatz explorativ (keine ausgehende Hypothese) - Gefundene Komponenten müssen interpretiert werden, z.B. Kopfbewegungen können sich auch in einzelnen Komponenten niederschlagen
+
+Hyperparameter: Anzahl der Komponenten
+
+Aufdröseln der Daten in Komponenten, die so "un-Gauß'sch" wie möglich sind
+
+Im Gegensatz zu PCA sind die gefundenen Hauptkomponenten nicht unbedingt orthogonal
+
+Erster Schritt: "Whitening"
+- Datenpunkte werden rotiert und skaliert, sodass die *Kovarianz* 0 ist
+- Funktioniert irgendwie mit SVD
+
+Danach: iterativ die Gaußigkeit der Komponenten verringern
