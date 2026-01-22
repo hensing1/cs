@@ -5,4 +5,5 @@ Idee: finde *Primitives* $\mathcal{S}_{i}$, segmentiere Punktwolke in diese Prim
 - Versuche, Linien zu finden
 - nimm zwei Punkte aus der Wolke, male Linie durch
 - zähle "Inlier", Punkte in einer $\varepsilon$-Nachbarschaft der Linie
-- 
+
+Gleicher Ansatz für 3D-Primitives (Ebenen)
