@@ -21,3 +21,14 @@ Prüfung möglicherweise mündlich (falls wenig genug Studenten)
 - Mathematische Modellierung
 
 Lab auch nächstes Semester
+
+## Content!
+[[IAAN 1 - Anatomy of Human Brain]]
+[[IAAN 2 - Fourier]]
+[[IAAN 3 - MRI]]
+[[IAAN 4 - Registration, Normalization]]
+[[IAAN 5 - Image Segmentation]]
+[[IAAN 6 - Statistical Testing]]
+[[IAAN 7 - fMRI]]
+[[IAAN 8 - Diffusion MRI]]
+[[IAAN 9 - Machine Learning]]
