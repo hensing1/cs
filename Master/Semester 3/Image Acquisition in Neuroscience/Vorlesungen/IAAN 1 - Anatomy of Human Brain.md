@@ -140,3 +140,29 @@ Zwei große Klumpen grauer Substanz im Zentrum des Gehirns, die dafür da sind, 
 Hohlräume innerhalb des Gehirns, die Rückenmarksflüssigkeit (Liquor cerebrospinalis, Cerebro-Spinal Fluid, CSF) enthalten
 
 ## Zellen des Nervensystems
+
+Zwei Arten von Zellen:
+- *Neuronen*, die Informationen als elektrische Impulse erhalten und integrieren und als chemische Signale weitergeben
+- *Glia-Zellen*, die Neuronen mit Nährstoffen versorgen, tote Zellen entsorgen, und Axonen isolieren
+
+Ein Neuron hat (normalerweise) *Dentriten*, um Informationen aufzunehmen.
+Die Eingangssignale werden integriert. Wird eine Schwelle erreicht (elektrisches Potential der Zelle erreicht $>-55mV$), steigt die Voltzahl in der Membran schnell auf $+40mV$ und es wird ein Signal über das Axon ausgegeben.
+
+![[Neuron.png|600]]
+
+Nachdem das Neuron auf diese Weise "gefeuert" hat, braucht es eine Weile, um sich zu erholen. Das verhindert, dass das Signal aus dem Axon zurück in die Zelle propagiert wird.
+
+Das Signal wird durch das Myelin beschleunigt, welches sich erst während der Gehirnreife bildet. Das führt zu der "Saltatorischen Erregungsleitung", welche das Signal ca. 10x so schnell weiterleitet wie ein Axon ohne Myelinisierung[^1].
+Bei manchen neurodegenerativen Krankheiten wie Multipler Sklerose wird diese Myelinschicht zerstört.
+
+[^1]: tatsächlicher Name
+
+Die Übertragung von einem Axon zur nächsten Zelle passiert über *Synapsen*. Dabei wird ein chemischer Neurotransmitter freigesetzt, der von den Dendriten der erhaltenen (post-synapitischen) Zelle empfangen wird.
+Diese Verbindungen können entweder erregend (excitatory) oder hemmend (inhibitory)
+
+Dann gibt es auch noch spezielle bidirektionale Verbindungen (nur excitatory) zwischen Neuronen, die schneller sind und zum Beispiel in der Retina vorkommen.
+
+Einzelne Neuronen und Axonen werden in sehr dünn abgeschnittenen Gehirnscheibchen mit Elektronenmikroskopie untersucht. Für MRTs sind sie zu klein.
+
+> **Klausurfragen**
+> Keine, das ist nicht klausurrelevant.
