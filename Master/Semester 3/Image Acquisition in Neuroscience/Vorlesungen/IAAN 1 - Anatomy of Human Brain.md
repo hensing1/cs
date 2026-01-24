@@ -52,12 +52,15 @@ Wir haben die linke und die rechte Hemisphäre. Die Verbindung dazwischen, in de
 	- Brücke (Pons)
 	- Markhirn (Medulla)
 		- Verbindung zum Rückenmark
+- Thalamus
 
 Der Hirnstamm war evolutionär als erstes da. Er verbindet das Gehirn zum Rest des Körpers und reguliert Atmung, Blutdruck und Herzfrequenz. Er sollte besser intakt bleiben.
 
 Das Cerebellum ist nur 10% des Hirnvolumens, enthält aber die Hälfte der Neuronen im zentralen Nervensystem.
 Hauptaufgaben sind Verarbeitung von sensorischen Informationen für Balance und Koordination.
 Außerdem: Beiträge zu Sprache, Treffen von Entscheidungen, Emotionen.
+
+### Cerebrum
 
 Das Cerebrum ist da für Gedächtnis, Aufmerksamkeit, Gedanken, Sprache und Bewusstsein.
 Besteht aus:
@@ -70,15 +73,23 @@ Besteht aus:
 	- zwei kleine Mandeln
 	- emotionale Bewertung, Furcht, sexuelle Lust
 - Basalganglien
-	- hörgerätförmiges Etwas mit weiterem Geöns
+	- hörgerätförmiges Etwas mit weiterem Geöns (mehrere stark verbundene Kerne)
 	- Amygdalae hängen an der Spitze
+	- Bilden von Gewohnheiten, Wahl von Aktionen
 
 Die Großhirnrinde ist in vier Bereiche (Lobes/Lappen) aufgeteilt, getrennt durch Sulci (Furchen):
 ![[Cerebrumlappen.png|500]]
 
 > **Weiße und Graue Zellen**
-> Graue Substanz: besteht hauptsächlich aus den *Hirnzell-Körpern*
-> Weiße Substanz: Axonen, die die Nervenzellen miteinander verbinden
+> - Graue Substanz: besteht hauptsächlich aus den *Hirnzell-Körpern*
+> - Weiße Substanz: Axonen, die die Nervenzellen miteinander verbinden
+> 	- Organisiert in Bündel von Fasern:
+> 		- Association fibers: Axonen innerhalb einer Hemisphäre
+> 		- Commisural fibers: zwischen Hemisphären
+> 			- Corpus Callosum u.a.
+> 		- Projection fibers: richtung Rückenmark oder Thalamus
+> 			- Efferent: für Motorik
+> 			- Afferent: für Optik, Akustik
 
 > **Cortex**
 > Äußere Hülle des Cerebrums, bestehend aus grauen Zellen.
@@ -90,7 +101,7 @@ Die Großhirnrinde ist in vier Bereiche (Lobes/Lappen) aufgeteilt, getrennt durc
 Auf Grundlage dessen, wie dick die jeweiligen Schichten sind und wo sich diese Dicke ändert, hat Herr Brodmann das Gehirn in 52 Felder, die **Brodmann-Areale**, unterteilt.
 Mit MRT-Untersuchungen konnten diese Areale einzelnen Hirnfunktionen zugeordnet werden, daher werden sie (mit kleinen Modifikationen) noch heute verwendet.
 
-### Funktionale Areale
+#### Funktionale Areale
 - Broca-Areal (Brodmann 44/45): Sprache erzeugen
 	- Schädigung: Broca-Aphasie, Opfer kann noch Sprache verstehen, aber (fast) nicht mehr sprechen
 - Wernicke-Areal (Brodmann 22): Sprache verstehen
@@ -99,3 +110,33 @@ Mit MRT-Untersuchungen konnten diese Areale einzelnen Hirnfunktionen zugeordnet 
 Broca- und Wernicke-Areal bilden gemeinsam das Spachzentrum des Hirns und sind entsprechend über Fasern in der weißen Substanz miteinander verbunden.
 Sie kommen nur in einer Gehirnhälfte vor: bei rechtshändern meist links, bei linkshändern entweder links oder rechts.
 
+---
+
+- Visueller Cortex (Sehrinde, Brodmann 17)
+	- Linkes Sichtfeld in der rechten Hirnhälfte, und umgekehrt (kontralateral)
+	- Rezipienten beieinanderliegender Netzhaut-zellen liegen auch hier nebeneinander
+	- Zwei ausgehende Informationsströme:
+		- Dorsal: *wo*, für schnelles, reaktives Handeln
+		- Ventral: *was*, langsamer, für bewusste Wahrnehmung, Erkennung und Wiedererkennung
+- Auditiver Cortex (Brodmann 41/42)
+	- nicht kontralateral beim Menschen, wohl aber bei manch anderen Säugetieren
+	- dorsaler "wo" und ventraler "was"-Strom, ähnlich wie beim visuellen Cortex
+
+---
+- Somatosensorischer Cortex (Brodmann 1/2/3)
+	- Tastsinn, Schmerz, Position der Gliedmaßen
+- Motorischer Cortex (Brodmann 4)
+
+*Homonculus:* verschiedene Bereiche des Körpers findet man nebeneinander im somatosensorischen/motorischen Cortex: Beine/Füße -> Arme/Hände -> Augen/Kiefer/Zunge
+
+Interrupted Homonculus (Gordon et al. 2023): die Körperbereiche werden unterbrochen von Arealen für Ganzkörper-Steuerung, Motor-Effektoren sind konzentrisch aufgebaut
+
+### Thalamus
+
+Zwei große Klumpen grauer Substanz im Zentrum des Gehirns, die dafür da sind, sensorische Wahrnehmugen (außer Gerüchen) an den Rest des Hirns weiterzuleiten
+
+### Ventrikel
+
+Hohlräume innerhalb des Gehirns, die Rückenmarksflüssigkeit (Liquor cerebrospinalis, Cerebro-Spinal Fluid, CSF) enthalten
+
+## Zellen des Nervensystems
