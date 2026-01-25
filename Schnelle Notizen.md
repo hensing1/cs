@@ -1,0 +1,1 @@
+Geodesic Distance := kürzester Pfad von A nach B auf einer (beliebig gekrümmten) 2D-Oberfläche
