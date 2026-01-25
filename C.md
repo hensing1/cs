@@ -1,4 +1,3 @@
-
 ## Datentypen
 - Es gibt kein `bool`
 	- stattdessen: `int`, mit `0` als `false` und allem anderen als `true`
