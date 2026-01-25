@@ -1,4 +1,8 @@
 # Mathematik
+
+## Ableitung über die Zeit
+Für ein [[Glossar#Funktional|Funktional]] $u$, welches sich in irgendeiner Form über die Zeit ändert, bedeutet die Notation $$\dot{u}$$
+die Ableitung von $u$ über die Zeit, also $\dot{u}=\frac{ \partial u }{ \partial t }$.
 ## Funktional
 Ein **Funktional** ist eine [[Lineare Funktionen|lineare Funktion]] vom [[Vektorräume|Vektorraum]] $\mathbb{R}^{n}$ die rellen Zahlen ($f: \mathbb{R}^{n} \to \mathbb{R}$).
 

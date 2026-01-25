@@ -28,7 +28,7 @@ Wir können $\lambda=dt$ interprätieren - je kleiner $\lambda$, desto mehr Zeit
 
 Um die zweite Ableitung effizient zu berechnen: $$\frac{ \partial ^{2}f^{(t)}(x_{i}) }{ \partial x^{2} } \approx \frac{f^{(t)}(x_{i+1})-2f^{(t)}(x_{i})+f^{(t)}(x_{i-1})}{2}$$
 
-Das ist der *Laplace-Operator*.
+Das ist der *[[Laplace-Operator]]*.
 Eingesetzt: $$f^{(t+1)}(x_{i})=f^{(t)}(x_{i})+\lambda \cdot  \frac{f^{(t)}(x_{i+1})-2f^{(t)}(x_{i})+f^{(t)}(x_{i-1})}{2}.$$
 
 ### Smoothing von Polygonen
@@ -64,7 +64,7 @@ $$\nabla u(x_{0})\propto \lim_{ \varepsilon \to 0 } \frac{1}{\varepsilon ^{2}}\l
 
 Dies das Frequenzanalyse
 
-Taubin-Smoothing erlaub das Glätten einer geschlossenen Kurve (bzw. eines Meshes), ohne dass dieses im Limit zu einem Punkt zusammenschrumpft.
+Taubin-Smoothing erlaubt das Glätten einer geschlossenen Kurve (bzw. eines Meshes), ohne dass dieses im Limit zu einem Punkt zusammenschrumpft.
 
 > **Taubin-Smoothing**
 > Sei $V=(v_{1},\dots,v_{n})^{T}.$ Der Glättungsschritt im Taubin-Smoothing ist $$V^{(t+1)}=((I+\mu \cdot L)(I+\lambda \cdot L))V^{(t)},$$

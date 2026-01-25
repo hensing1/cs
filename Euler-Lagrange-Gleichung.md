@@ -1,0 +1,3 @@
+Gegeben ein Vektorfeld $X$ auf einer $n$-dimensionalen Mannigfaltigkeit $M$, finde eine Funktion $\phi: M\to \mathbb{R}$, sodass der [[Funktionen#^5b7264|Gradient]] von $\phi$ das Vektorfeld so gut es geht approximiert: $$\phi=\arg\min_{\phi}\left( \int_{M}|\nabla \phi-X|^{2} \right).$$
+Die minimierende Lösung ist gegeben durch die sog. *Euler-Lagrange-Gleichung*: $$\Delta \phi=\nabla \cdot X$$
+wobei $\Delta$ der [[Laplace-Operator]] ist und $\nabla \cdot X$ die [[Vektoren#^fc6a9b|Divergenz]] von $X$.

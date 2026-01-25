@@ -78,7 +78,7 @@ Aus [[INF 022 - Analysis]]:
 ![[Analysis - VL 17#^71f57b]]
 
 Der Gradient enthält alle [[Analysis - VL 17#^0e4ade|partiellen Ableitungen]] einer Funktion $f: \mathbb{R}^{n}\to \mathbb{R}$. Er liegt also im $\mathbb{R}^{n}$ und zeigt in die Richtung, in die $f$ am steilsten anwächst.
-Es ist gewissermaßen die Verallgemeinerung der ersten Ableitung an der Stelle $a$.
+Es ist gewissermaßen die Verallgemeinerung der ersten Ableitung an der Stelle $a$. ^5b7264
 
 ![[Analysis - VL 17#^c87f05]]
 
