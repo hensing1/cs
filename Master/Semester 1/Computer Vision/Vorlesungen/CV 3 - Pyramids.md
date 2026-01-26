@@ -4,7 +4,7 @@
 
 ## Grundlagen: Fourier und Frequenzraum
 
-Jedes Signal kann als Summe von Sinüssen geschrieben werden. Pro Sinus hat man die Parameter:
+Jedes Signal[^1] kann als Summe von Sinüssen geschrieben werden. Pro Sinus hat man die Parameter:
 $$
 A \sin(\omega x + \phi)
 $$
@@ -12,6 +12,7 @@ $$
 - $\omega$: Frequenz
 - $\phi$: Phase
 
+[^1]: genauer: jede periodische, stückweise monotone, und begrenzte Funktion, an jedem stetigen Punkt
 > **Fourier-Transformation** eines Signals $f$:
 > $$F(\omega)=\int_{x=-\infty}^{\infty}f(x)e^{-2\pi j \omega x}\,dx \in \mathbb{C}$$
 
@@ -78,3 +79,4 @@ Anwendung: *Blending* zwischen zwei Bildern $A,B$.
 - Wir generieren Gaußpyramide $GM$ der Maske
 - Forme gemeinsame Laplacepyramide $L$: auf jedem Level $l$ ist ein Pixel $L_{l}(i,j)=GM_{l}(i,j) \cdot LA_{l}(i,j) + (1-GM_{l}(i,j)) \cdot LB_{l}(i,j)$.
 - Durch abwechselnd hochskalieren/aufaddieren lässt sich aus der Laplacepyramide das Bild in Originalgröße wiederherstellen.
+
