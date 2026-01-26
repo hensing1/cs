@@ -41,7 +41,7 @@ $$x(i+1)=x(i)+a\,(M-x(i))\,x(i)$$
 ### Activator-Inhibitor-Systeme
 
 Man hat zwei Populationen $X$ (Aktivator) und $Y$ (Inhibitor).
-Die Differenzialgleichtung ist $$\begin{align}
+Die Differenzialgleichung ist $$\begin{align}
 X(i+1)=X(i) + aX(i) - bY(i) \\
 Y(i+1)=Y(i) + cX(i) - dY(i)
 \end{align}$$
