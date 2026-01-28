@@ -11,14 +11,14 @@ T2: Lesions besser sichtbar
 
 ## Wer wie was
 
-- Wassermolekül ist in quantum-superposition von zwei Spins (parallel oder antiparallel)
-	- Phase: Position entlang Kreis um Vektor vom extrinsischen Magnetfeld(?) 
+- Protonen (Wasserstoff-Kerne) ist in quantum-superposition von zwei Spins (parallel oder antiparallel)
+	- Phase: Position entlang Kreis um Vektor vom extrinsischen Magnetfeld 
 	- Weniger Energie: paralleler Spin
 	- Mehr Energie: antiparalleler Spin
 	- -> mehr Moleküle im parallelen Spin
 		- genaues Verhältnis: hängt von Temperatur ab, sehr nah an 1, aber eben nicht ganz
 		- Kleine Differenz ist der Grund dafür, dass die Magneten im MRI so stark sein müssen
-	- Richtung des Spins prozessiert um externen Magnetvektor herum wie Gyroskop
+	- Richtung des Spins präzessiert um externen Magnetvektor herum wie Gyroskop
 	- Phasen sind insgesamt random
 	- -> Alle Spinvektoren aufsummiert zeigen in Richtung externen Magnetvektor, weil sich Spin-Phasen aufheben
 - müssen "excited" werden, um in den antiparallelen Zustand zu kommen
