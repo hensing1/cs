@@ -18,7 +18,7 @@ Typisches Ähnlichkeitsmaß: Bildintensität jedes Voxels
 Man kann eine *regressionsbasierte* Registrierung machen (zwei Bilder direkt alignen), z.B. mit Neuronalen Netzwerken
 Man kann auch Registrierung anhand von (manuell markierten) anatomischen *Referenzpunkten* machen. Dann wird der *Target Registration Error* minimiert (durchschnittlicher bzw. maximale Distanz zwischen $m$ Referenzpunkten $r_{i}$ und beweglichen Punkten $p_{i}$): $$\begin{align}
 \text{TRE}_{\text{mean}}&=\frac{1}{m} \sum_{i=1}^{m}\|r_{i}-T(p_{i}\| \\
-\text{TRE}_{\text{max}} &= \max \{ \|r_{i}-T_{i}(p_{i}) \mid i=1,\dots,m \}
+\text{TRE}_{\text{max}} &= \max \{ \|r_{i}-T_{i}(p_{i})\| \mid i=1,\dots,m \}
 \end{align}$$
 Wir können auch ohne Referenzpunkte die Konsistenz unserer Transformation überprüfen: wenn wir Referenz und floating image vertauschen, erwarten wir genau die Inverse der Transformation.
 
