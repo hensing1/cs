@@ -64,10 +64,15 @@ Weitere Kostenfunktionen:
 		- Die Kostenfunktion ist die durchschnittliche, (anhand Anzahl der Bildpunkten und anhand des Mittelwertes) normalisierte Standardabweichung: $$C^{VIR}=\sum_{k=1}^{K} \frac{|Y_{k}|}{N} \frac{\sigma(Y_{k})}{\mu(Y_{k})}$$
 		- Funktioniert (als erster Ansatz) für intermodale Registrierung
 
-Wir können uns bei Registierung *multivariate* Histogramme anschauen, mit einem Bild auf der x- und dem anderen auf der y-Achse.
-Zwei identische Bilder, die perfekt alignt sind, formen darauf eine diagonale Linie.
-
 Gründe, warum $C^{VIR}$ nicht unbedingt für unterschiedliche Bilder funktioniert:
 - Annahme, dass homogene Flächen übereinstimmen, wird z.B. bei CT vs. MRI verletzt (nicht-knöcherne Struktur ist im CT homogen, im MRT sind dort viel mehr Details)
 - Skalierung: wird ein Bild so klein, dass es komplett in ein Voxel vom anderen Bild reinpasst, wird die $C^{VIR}$ minimiert
 
+
+Wir können uns bei Registierung *multivariate* Histogramme anschauen, mit einem Bild auf der x- und dem anderen auf der y-Achse.
+Zwei identische Bilder, die perfekt alignt sind, formen darauf eine diagonale Linie.
+
+Wir wollen also die "Entropie" der überlappten Bilder minimieren.
+Idee der Entropie: "Informationsgehalt" des Auftreten eines Ereignisses $k$ ist höher, je seltener dieses Ereignis auftritt: $I(k)=-\log_{2}p_{k}$ , mit $p_{k}$ der W'keit von $k$.
+Der *Erwartungswert* des Informationsgehaltes für alle Ereignisse, die vorkommen können, ist dann: $$H=-\sum_{k=1}^{K}p_{k}\log_{2}p_{k}$$
+Minimale Entropie wäre ein uniformes Bild
