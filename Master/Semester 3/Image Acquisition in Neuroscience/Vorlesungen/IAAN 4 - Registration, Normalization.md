@@ -54,6 +54,13 @@ Weitere Kostenfunktionen:
 	- Unzureichend für intermodale Registration
 - Local Cross-Correlation
 	- Wie NCC, nur dass von jedem Voxel der lokale Mittelwert (z.B. in 5x5x5-Fenster) abgezogen wird
+	- Gut für inhomogene Bias-Felder im MRT-Bild
 - Variance of Intensity Ratios
 	- In homogenen Bereichen der Referenz sollte das bewegte Bild ebenfalls homogen sein
-	- Wir suchen uns also einen homogenen Bereich, und die Standardabweichung des bewegten Bildes im selben Bereich ist unsere Zielfunktion
+	- Haben wir also eine Intensität im Referenzbild, erwarten wir, dass die Standardabweichung derselben Voxel im angepassten Zielbild ebenfalls gering ist
+	- Definition von VIR:
+		- Partitioniere Intensitäten der Referenz $X$ in $K$ bins
+		- Für bin $k$ enthält die Menge $Y_{k}$ die Intensitäten derselben Voxel im anderen Bild
+		- Die Kostenfunktion ist die durchschnittliche, (anhand Anzahl der Bildpunkten und anhand des Mittelwertes) normalisierte Standardabweichung: $$C^{VIR}=\sum_{k=1}^{K} \frac{|Y_{k}|}{N} \frac{\sigma(Y_{k})}{\mu(Y_{k})}$$
+		- Funktioniert (als erster Ansatz) für intermodale Registrierung
+
