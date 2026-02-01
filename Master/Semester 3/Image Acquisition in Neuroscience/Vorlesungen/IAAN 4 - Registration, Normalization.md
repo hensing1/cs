@@ -64,3 +64,10 @@ Weitere Kostenfunktionen:
 		- Die Kostenfunktion ist die durchschnittliche, (anhand Anzahl der Bildpunkten und anhand des Mittelwertes) normalisierte Standardabweichung: $$C^{VIR}=\sum_{k=1}^{K} \frac{|Y_{k}|}{N} \frac{\sigma(Y_{k})}{\mu(Y_{k})}$$
 		- Funktioniert (als erster Ansatz) für intermodale Registrierung
 
+Wir können uns bei Registierung *multivariate* Histogramme anschauen, mit einem Bild auf der x- und dem anderen auf der y-Achse.
+Zwei identische Bilder, die perfekt alignt sind, formen darauf eine diagonale Linie.
+
+Gründe, warum $C^{VIR}$ nicht unbedingt für unterschiedliche Bilder funktioniert:
+- Annahme, dass homogene Flächen übereinstimmen, wird z.B. bei CT vs. MRI verletzt (nicht-knöcherne Struktur ist im CT homogen, im MRT sind dort viel mehr Details)
+- Skalierung: wird ein Bild so klein, dass es komplett in ein Voxel vom anderen Bild reinpasst, wird die $C^{VIR}$ minimiert
+
