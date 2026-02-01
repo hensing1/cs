@@ -38,10 +38,22 @@ Es kann vorkommen, dass voxel quaderförmig, aber nicht würfelförmig sind. Dan
 
 ## Kostenfunktionen
 
-- Least-Squares (durchschn. quadratische Differenz zwischen Voxeln)
-- Normalized Cross-Correlation (wird maximiert statt minimiert)
+Wir bewerten das Alignment von zwei Bildern allein anhand der Intensitätswerte.
+Wir berechnen die Kostenfunktion nur im Bezug auf den überlappenden Teil der Bilder. Dabei ist es wichtig, dass wir den *Durchschnitt* der pixelweisen Kosten nehmen, weil ansonsten die Bilder einfach voneinander weggeschoben werden (weniger Overlap -> Summe wird geringer).
+
+Einfache Lösung: L2-Kosten (least squares, durchschn. quadratische Differenz zwischen Voxeln): $$C^{LS}=\frac{1}{N}\sum_{i=1}^{N}(x_{i}-y_{i})^{2}$$
+
+*Diskontinuitäten in der Kostenfunktion* können vorkommen, weil Pixel sehr aprupt zur Kostenfunktion beitragen - sie sind entweder Teil der Überlappung oder nicht. 
+Das ist ein großes Problem für Optimierungsalgorithmen, die leicht in lokalen Optima hängen bleiben.
+Daher: Beitrag von Pixeln nahe der Grenze der Überlappung kontinuierlich verringern, um Kostenfunktion zu glätten.
+
+Weitere Kostenfunktionen:
+- Normalized Cross-Correlation (wird maximiert statt minimiert): $$S^{NC}=\frac{\sum_{i=1}^{N}x_{i}\cdot y_{i} }{\sqrt{ \sum_{i=1}^{N}x_{i}^{2} } \cdot \sqrt{\sum_{i=1}^{N}y_{i}^{2}}}$$
+	- "Cosinus-Ähnlichkeit"
+	- Kompensiert ungleichmäßige Bildintensitäten
+	- Unzureichend für intermodale Registration
 - Local Cross-Correlation
 	- Wie NCC, nur dass von jedem Voxel der lokale Mittelwert (z.B. in 5x5x5-Fenster) abgezogen wird
 - Variance of Intensity Ratios
 	- In homogenen Bereichen der Referenz sollte das bewegte Bild ebenfalls homogen sein
-	- Wir suchen uns also einen homogenen Bereich, und die Standardabweichung des bewegten Bildes im selben Bereich ist unsere Zielfunktion 
+	- Wir suchen uns also einen homogenen Bereich, und die Standardabweichung des bewegten Bildes im selben Bereich ist unsere Zielfunktion
