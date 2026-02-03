@@ -116,6 +116,8 @@ Annahme: zu minimierende Zielfunktion $f: \mathbb{R}^{d}\to \mathbb{R}$ ist stet
 #### Downhill Simplex Method
 Wir haben eine Startposition $p_{0}$ und suchen $d$ umliegende Punkte, um einen $d$-dimensionalen *Simplex* aufzubauen (also mit $d+1$ Punkten).
 
+![[downhillsimplex.GIF|500]]
+
 **Initialisierung**
 - $p_{i} = p_{0} + \Delta_{i}e_{i}$
 - $\Delta_{i}$ ist Hyperparameter abhängig von der erwarteten Magnitude der Veränderung entlang $e_{i}$
