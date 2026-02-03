@@ -143,3 +143,13 @@ Wir haben eine Startposition $p_{0}$ und suchen $d$ umliegende Punkte, um einen 
 - falls weder Reflektion noch Kontraktion das Optimum verbessern konnten, verschiebe alle Punkte die Hälfte zum besten Punkt
 
 
+## Nichtlineare Transformation
+
+Erfolgt nach affiner Transformation
+Nur für Intra-Modale Registrierung (sum-of-squares als Kostenfunktion reicht)
+Möchten kontinuierliches [[Vektoren#Vektorfeld|Vektorfeld]] finden, das uns sagt, wie die einzelnen Pixel verschoben werden sollen
+
+- Finde Verschiebungsvektoren auf sehr grobem Gitter
+- Interpoliere mit B-Splines
+
+Wegen der simplen Kostenfunktion können wir einen *Gradienten* berechnen
