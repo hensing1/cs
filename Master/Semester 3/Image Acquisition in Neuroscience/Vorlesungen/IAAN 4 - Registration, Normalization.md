@@ -127,9 +127,13 @@ Wir haben eine Startposition $p_{0}$ und suchen $d$ umliegende Punkte, um einen 
 - "Spiegele" $p_{i}$ an gegenüberliegender Ebene:
 	- $\bar{p}:= \frac{1}{d}\sum_{j \neq i}p_{j}$
 	- $p_{r} := p_{i}+2(\bar{p}-p_{i})$
-- falls $p_{r}$ *nicht* der neue geringste Punkt ist: ersetze $p_{i}$ durch $p_{r}$, reflektiere erneut
-- falls doch: Expansion
+- falls $p_{r}$ *nicht* der neue geringste Punkt ist, aber besser als der Zweitschlechteste: ersetze $p_{i}$ durch $p_{r}$, reflektiere erneut
+- falls $p_{r}$ schlechter als der zweitschlechteste Punkt ist, würde er in der nächsten Iteration zurückreflektiert werden, also: Kontraktion
+- falls $p_{r}$ der beste Punkt: Expansion
 
 **Expansion**
 - $p_{r}$ ist der neue niedrigste Punkt - vielleicht ist $p_{e}=p_{i}+3(\bar{p}-p_{i})$ *noch* niedriger
-- 
+- falls $p_{e}$ besser als $p_{r}$, ersetze $p_{i}$ durch $p_{e}$ und mache die nächste Reflektion
+
+**Kontraktion**
+- setze 
