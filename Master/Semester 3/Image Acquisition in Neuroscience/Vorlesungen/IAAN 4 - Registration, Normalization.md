@@ -136,4 +136,10 @@ Wir haben eine Startposition $p_{0}$ und suchen $d$ umliegende Punkte, um einen 
 - falls $p_{e}$ besser als $p_{r}$, ersetze $p_{i}$ durch $p_{e}$ und mache die nächste Reflektion
 
 **Kontraktion**
-- setze 
+- setze $p_{c}=p_{i}+0.5 (\bar{p}-p_{i})$, um Simplex zu verkleinern
+- falls $p_{c}$ besser als $p_{i}$: ersetze $p_{i}$ durch $p_{c}$
+
+**Multiple Kontraktion**
+- falls weder Reflektion noch Kontraktion das Optimum verbessern konnten, verschiebe alle Punkte die Hälfte zum besten Punkt
+
+
