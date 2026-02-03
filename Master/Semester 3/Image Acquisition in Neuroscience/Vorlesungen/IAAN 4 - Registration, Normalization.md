@@ -38,6 +38,8 @@ Es kann vorkommen, dass voxel quaderförmig, aber nicht würfelförmig sind. Dan
 
 ## Kostenfunktionen
 
+### Intra-Modal
+
 Wir bewerten das Alignment von zwei Bildern allein anhand der Intensitätswerte.
 Wir berechnen die Kostenfunktion nur im Bezug auf den überlappenden Teil der Bilder. Dabei ist es wichtig, dass wir den *Durchschnitt* der pixelweisen Kosten nehmen, weil ansonsten die Bilder einfach voneinander weggeschoben werden (weniger Overlap -> Summe wird geringer).
 
@@ -68,6 +70,7 @@ Gründe, warum $C^{VIR}$ nicht unbedingt für unterschiedliche Bilder funktionie
 - Annahme, dass homogene Flächen übereinstimmen, wird z.B. bei CT vs. MRI verletzt (nicht-knöcherne Struktur ist im CT homogen, im MRT sind dort viel mehr Details)
 - Skalierung: wird ein Bild so klein, dass es komplett in ein Voxel vom anderen Bild reinpasst, wird die $C^{VIR}$ minimiert
 
+### Inter-modal: Shannon-Entropie
 
 Wir können uns bei Registierung *multivariate* Histogramme anschauen, mit einem Bild auf der x- und dem anderen auf der y-Achse.
 Zwei identische Bilder, die perfekt alignt sind, formen darauf eine diagonale Linie.
@@ -75,4 +78,56 @@ Zwei identische Bilder, die perfekt alignt sind, formen darauf eine diagonale Li
 Wir wollen also die "Entropie" der überlappten Bilder minimieren.
 Idee der Entropie: "Informationsgehalt" des Auftreten eines Ereignisses $k$ ist höher, je seltener dieses Ereignis auftritt: $I(k)=-\log_{2}p_{k}$ , mit $p_{k}$ der W'keit von $k$.
 Der *Erwartungswert* des Informationsgehaltes für alle Ereignisse, die vorkommen können, ist dann: $$H=-\sum_{k=1}^{K}p_{k}\log_{2}p_{k}$$
-Minimale Entropie wäre ein uniformes Bild
+Ein "Ereignis" in unserem Fall wäre dann die Wahrscheinlichkeit, dass irgendein Pixel die Intensität $k$ hat.
+Minimale Entropie wäre also ein uniformes Bild.
+
+Die Entropie für ein 2D-Histogramm ist also: $$H(X,Y) = -\sum_{i=1}^{K_{X}}\sum_{j=1}^{K_{Y}}p_{ij}\log_{2}p_{ij}$$
+Als Zielfunktion gefällt uns die **Mutual Information**: wir wollen die Entropie $H(X)$ und $H(Y)$ der einzelnen Bilder *maximieren* (passiert bei großem Overlap) und die gemeinsame Entropie $H(X,Y)$ *minimieren* (passiert wenn die BIlder gut alignt sind) -$$I(X,Y) = H(X)+H(Y) - H(X,Y) \to \max$$
+Variation, die noch besser für unterschiedliche Overlaps funktioniert: **Normalized Mutual Information** - $$NMI(X,Y)=\frac{H(X)+H(Y)}{H(X,Y)} \to \max$$
+**Fuzzy Binning**
+Wir haben durch diskrete 2D-Histogramme *Diskontinuitäten* und dadurch viele kleine lokale Minima die wir nicht möchten.
+Lösung: keinen harten Cutoff, ob eine Intensität zu einem Histogramm-Bin beiträgt, sondern gleichmäßiger Übergang
+
+## Optimierungsprobleme bei der Registrierung
+
+Wir haben nun:
+- Referenz $y$
+- Bewegliches Bild $x$
+- Kostenfunktion $C$
+- Erlaubte Transformationen $w$ in einem Raum $S_{T}$
+
+Unser Optimierungsproblem: $$w^{\ast}=\arg\min_{w}\ C(y,T(x | w)).$$
+
+### Multi-Scale Optimization
+
+- Bild verkleinern und optimieren (z.B. Grid Search (Brute Force))
+- Vergrößern und vorherige Lösung als Ausgangspunkt nehmen, lokal weitersuchen
+
+### Pertubation and Re-Start
+
+- Lokales Minimum finden
+- Zufällig pertubieren und weitersuchen
+- mit vorherigem Optimum vergleichen
+
+### Ableitungsfreie Optimierung
+
+Annahme: zu minimierende Zielfunktion $f: \mathbb{R}^{d}\to \mathbb{R}$ ist stetig, nicht unbedingt differenzierbar
+
+#### Downhill Simplex Method
+Wir haben eine Startposition $p_{0}$ und suchen $d$ umliegende Punkte, um einen $d$-dimensionalen *Simplex* aufzubauen (also mit $d+1$ Punkten).
+
+**Initialisierung**
+- $p_{i} = p_{0} + \Delta_{i}e_{i}$
+- $\Delta_{i}$ ist Hyperparameter abhängig von der erwarteten Magnitude der Veränderung entlang $e_{i}$
+
+**Reflektion**
+- sei $p_{i}$ der Punkt mit dem höchsten $f$
+- "Spiegele" $p_{i}$ an gegenüberliegender Ebene:
+	- $\bar{p}:= \frac{1}{d}\sum_{j \neq i}p_{j}$
+	- $p_{r} := p_{i}+2(\bar{p}-p_{i})$
+- falls $p_{r}$ *nicht* der neue geringste Punkt ist: ersetze $p_{i}$ durch $p_{r}$, reflektiere erneut
+- falls doch: Expansion
+
+**Expansion**
+- $p_{r}$ ist der neue niedrigste Punkt - vielleicht ist $p_{e}=p_{i}+3(\bar{p}-p_{i})$ *noch* niedriger
+- 
