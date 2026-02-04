@@ -67,13 +67,14 @@ Um in einzelnen Slices eine Kontur zu finden, nehmen wir [[CV 6 - Snake 🐍|Sna
 	- Verschiebe Vertex ein Stückchen entlang Tangentenrichtung, hin zur durchschn. Position der Nachbarn -> uniform spacing
 	- Verschiebe Vertex auch ein bisschen entlang der Normalenrichtung -> geringere Krümmung
 
-## Segmentierung
+## Intensitätsbasierte Segmentierung
 
-### Mit Clustering
+Wir möchten Cluster im (3D-)Histogramm eines Bilds finden. Als weitere Dimensionen können wir noch die XY(Z)-Koordinaten dazunehmen.
+
 Güte-Term für $k$ Kluster: mit $\gamma(i)$, der einem Vertex-Index $i$ einen Cluster zuweist, und Cluster-Zentren $\mu_{1}$ bis $\mu_{k}$, minimiere $$D=\sum_{i}\|v_{i}-\mu_{\gamma(i)}\|^{2}.$$
 $D$ heißt *Distortion*. Genaue Lösungen sind aber schon für $k=2$ #NP-schwer, also müssen wir approximieren.
 
-#### k-Means Clustering
+### k-Means Clustering
 - $k$ Cluster-Zentren zufällig wählen
 - Wiederhole bis Konvergenz:
 	- jeden Punkt dem nächsten Zentrums-Punkt zuweisen
@@ -85,7 +86,7 @@ Probleme:
 - Annahme: Cluster sind gleich groß und kugelförmig
 - $k$ empirisch zu wählen
 
-#### Gaussian Mixture Models
+### Gaussian Mixture Models
 Mehrere Gauß-Verteilungen als Grundlage für Daten annehmen, z.B. Intensitätswerte:
 ![[GMM-Gehirn.png]]
 
@@ -97,9 +98,13 @@ $$G_{k} = \pi_{k} \cdot \frac{1}{\sqrt{ 2 \pi }\sigma_{k}} \exp\left( -\frac{(x-
 
 Es ist $\sum_{k=1}^{K}\pi_{k}=1$. Die Gesamtverteilung $p(x)$ ist die Summe über alle $G_{k}$.
 
+Es ist $\rho_{ik}$ die Wahrscheinlichkeit, dass der Datenpunkt $i$ zum Cluster $k$ gehört - also die "Verantwortung" von $k$ für $i$.
 
+Die zwei Schritte von Expectation Maximization:
+- E-Schritt: Gegeben $\pi,\mu,\sigma$, schätze $\rho$
+- M-Schritt: Gegeben $\rho$, schätze $\pi,\mu,\sigma$.
 
-## Segmentierung mit Gaussian Mixture Models
-
-Expectation Maximization
+E/M kann auch verschieden große Cluster finden, brauch aber länger als k-meas.
+Wie k-means hängt auch E/M von der Initialisierung ab.
+E/M ist empfindlich ggü. Ausreißern.
 
