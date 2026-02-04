@@ -153,3 +153,29 @@ Möchten kontinuierliches [[Vektoren#Vektorfeld|Vektorfeld]] finden, das uns sag
 - Interpoliere mit B-Splines
 
 Wegen der simplen Kostenfunktion können wir einen *Gradienten* berechnen
+
+Optimieren also mit
+- Gradient Descent
+- Gauss-Newton Methode mit Taylorapproximation zweiten Grades nahe des Optimum
+- Levenberg-Marquardt-Methode als Interpolation zwischen Gradient Descent und Gauss-Newton
+
+### Regularisierung
+
+Was wir nicht wollen: 
+- anatomisch unsinnige Deformationen
+- mehrere Voxel werden auf denselben Punkt gemappt (nicht umkehrbar)
+- Reihenfolge der Voxel wird vertauscht
+
+Feststellen mit *Jacobian* $J$ ($n \times n$ Ableitungsmatrix für $n$-dimensionales Vektorfeld)
+- $|J|=1$: Voxelvolumen bleibt gleich
+- $|J|>1$: Voxelvolumen wird größer
+- $|J|<1$: Voxelvolumen wird kleiner
+- $|J|=0$: nicht invertierbar
+- $|J|<0$: Umkehrung der Orientierung
+
+PASHA-Algorithmus:
+- Teile Optimierung in Deformations-Vektorfeld und Regularisierungs-Vektorfeld
+- Optimiere Deformation (wie oben) plus Regularisierung plus Kopplungsterm zwischen Deformation und Regularisierung
+- Deformation und Regularisierung werden abwechselnd optimiert, beide male zusammen mit Kopplungsterm
+
+#### Optical Flow
