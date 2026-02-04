@@ -166,16 +166,30 @@ Was wir nicht wollen:
 - mehrere Voxel werden auf denselben Punkt gemappt (nicht umkehrbar)
 - Reihenfolge der Voxel wird vertauscht
 
-Feststellen mit *Jacobian* $J$ ($n \times n$ Ableitungsmatrix für $n$-dimensionales Vektorfeld)
+Feststellen mit *Jacobi-Matrix* $J$ ($n \times n$ Ableitungsmatrix für $n$-dimensionales Vektorfeld)
 - $|J|=1$: Voxelvolumen bleibt gleich
 - $|J|>1$: Voxelvolumen wird größer
 - $|J|<1$: Voxelvolumen wird kleiner
 - $|J|=0$: nicht invertierbar
 - $|J|<0$: Umkehrung der Orientierung
+Regularisierung basierend auf Jacobi-Matrix: **Elastic Registration**
 
 PASHA-Algorithmus:
 - Teile Optimierung in Deformations-Vektorfeld und Regularisierungs-Vektorfeld
-- Optimiere Deformation (wie oben) plus Regularisierung plus Kopplungsterm zwischen Deformation und Regularisierung
+- Optimiere Deformation (wie oben) plus Regularisierung (Frobeniusnorm der Jacobi-Matrix) plus Kopplungsterm zwischen Deformation und Regularisierung
 - Deformation und Regularisierung werden abwechselnd optimiert, beide male zusammen mit Kopplungsterm
 
 #### Optical Flow
+Demons Algorithm:
+- Berechne den Optimierungsschritt in Richtung des Optical Flows (der hat kleine Vektoren, höchstens 0,5 Pixel)
+- Glätte das resultierende Vektorfeld mit Gauss
+
+#### Diffeomorphic Registration
+- erlaubt lokal auch größere Verschiebungsvektoren
+
+Wir möchten, dass das Verschiebungs-Vektorfeld differenzierbar, invertierbar und die Inversion differenzierbar ist (per Definition von Diffeomorphism)
+
+gut für Gehirne mit z.B. starker Neurodegeneration (große Ventrikel)
+
+## Labeling
+Anwendungsfall für Registrierung: Voxel dorthinschieben, wo auf der Template die korrekten Label sind
