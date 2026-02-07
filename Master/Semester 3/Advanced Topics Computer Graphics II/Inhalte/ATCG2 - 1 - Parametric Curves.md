@@ -16,7 +16,7 @@ Interpretation als Partikel, das sich mit fortschreitendem $t$ entlang der Kurve
 - Geschwindigkeit: $\|p'(t)\|$
 
 ### Kurvenbasen
-Die *Polynomkurven* bilden eine Basis, und die Monome $1,\,t,\,t^{2},\,\dots,t^{n}$ sind eine [[LA - VL 9#^567731|Basis]] dafür. Allerdings beeinflussen die Koeffizienten dieser Basis direkt nur die Ableitungen bei 0, weswegen diese Basis für unsere Zwecke ungeeignet ist.
+Die *Polynomkurven* bilden einen Vektorraum, und die Monome $1,\,t,\,t^{2},\,\dots,t^{n}$ sind eine [[LA - VL 9#^567731|Basis]] dafür. Allerdings beeinflussen die Koeffizienten dieser Basis direkt nur die Ableitungen bei 0, weswegen diese Basis für unsere Zwecke ungeeignet ist.
 
 #### Lagrange-Polynome
 *Interpolation von $n$ Kontrollpunkten $P_{i}$ mit Polynomkurven*

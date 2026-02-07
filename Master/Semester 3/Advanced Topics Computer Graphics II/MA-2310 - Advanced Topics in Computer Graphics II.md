@@ -14,3 +14,4 @@
 
 ### Shape Modeling
 ***Kurven, Oberflächen, Differenzielle Geometrie***
+[[ATCG2 - 1 - Parametric Curves]]
