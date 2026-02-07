@@ -9,3 +9,8 @@
 ## Prüfung
 
 - mündlich
+
+## Themen
+
+### Shape Modeling
+***Kurven, Oberflächen, Differenzielle Geometrie***
