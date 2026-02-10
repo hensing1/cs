@@ -40,6 +40,7 @@ H_{2}^{3}(t) &= -t^{2}(1-t) \\
 H_{3}^{3}(t) &= (3-2t)t^{2}
 \end{align}$$
 
+![[Hermite.png|200]]
 Es ist $H_{0}^{3}+H_{3}^{3}=1$.
 
 $H_{0}^{3}$ und $H_{3}^{3}$ interpolieren die Punkte $p_{0}$ und $p_{1}$, $H_{1}^{3}$ und $H_{2}^{3}$ die Ableitungen $m_{0}$ und $m_{1}$: $$p(t)=p_{0}H_{0}^{3}+m_{1}H_{1}^{3}(t)+m_{2}H_{2}^{3}(t)+p_{1}H_{3}^{3}(t)$$
@@ -80,7 +81,7 @@ Die Polynomkurven treffen sich an den Knoten, haben aber dort nicht notwendigerw
 **$C^{n}$-Continuity:** die ersten $n$ Ableitungen stimmen überein, dh. $$q_{1}^{(k)}(b_{1})=q_{2}^{(k)}(a_{2}) \; \forall k=0,\dots,n$$
 für zwei Kurven $q_{1}: [a_{1},b_{1}] \to \mathbb{R}^{n}$, $q_{2}: [a_{2},b_{2}] \to \mathbb{R}^{3}$.
 
-**$G^{n}$-Continuity:** es existiert eine Kurve mit derselben Trace, die $C^{n}$-kontinuierlich ist (tatsächlich benötigt muss man bloß die erste Kurve umparametrisieren).
+**$G^{n}$-Continuity:** es existiert eine Kurve mit derselben Trace, die $C^{n}$-kontinuierlich ist (man mus bloß die erste Kurve umparametrisieren).
 
 ### Catmull-Rom-Spline
 Die Catmull-Rom-Spline erhalten wir, indem wir kubische Hermite-Polynome aneinanderhängen. Die Ableitung an einem Punkt ist $m_{i}=\frac{1}{2}\,\overrightarrow{P_{i-1} P_{i+1}}$ .
