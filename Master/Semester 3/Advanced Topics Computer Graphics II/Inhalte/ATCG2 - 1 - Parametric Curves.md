@@ -44,6 +44,7 @@ H_{3}^{3}(t) &= (3-2t)t^{2}
 Es ist $H_{0}^{3}+H_{3}^{3}=1$.
 
 $H_{0}^{3}$ und $H_{3}^{3}$ interpolieren die Punkte $p_{0}$ und $p_{1}$, $H_{1}^{3}$ und $H_{2}^{3}$ die Ableitungen $m_{0}$ und $m_{1}$: $$p(t)=p_{0}H_{0}^{3}+m_{1}H_{1}^{3}(t)+m_{2}H_{2}^{3}(t)+p_{1}H_{3}^{3}(t)$$
+Einfluss eines Punkts (links) und einer Ableitung (rechts) auf die Kurve:![[Hermite2.png]]
 #### Bernstein-Basis und Bézierkurven
 Mit Bernstein-Polynomen des Grades $n$ erhält man im Intervall $[0,1]$ eine *Zerlegung der 1* mit $n+1$ Polynomen.
 Mit diesen $n+1$ Polynomen und $n+1$ *Kontrollpunkten* kann man die Bézierkurven definieren:
