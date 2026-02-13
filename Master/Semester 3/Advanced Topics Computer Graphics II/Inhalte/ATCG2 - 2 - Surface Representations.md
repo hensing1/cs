@@ -29,5 +29,13 @@ Sind $q_{u}$ und $q_{v}$ *immer linear Unabhängig*, heißt die Oberfläche *reg
 
 Das normierte Kreuzprodukt von $q_{u}$ und $q_{v}$ ist der *Normalenvektor*. Er ist unabhängig von der Parametrisierung.
 
+## Tensorproduktoberflächen
 
+Man nehme zwei parametrisierte Kurven mit Basisfunktionen (z.B. Bernsteinpolynome vom Grad $m$ und $n$, dh. zwei Kurven mit $m+1$ bzw. $n+1$ Basisfunktionen ).
+Jede *Kombination* dieser Basisfunktionen liefert uns eine neue Basisfunktion, welche ein bivariates Polynom ist: $$B_{i}^{m}B_{j}^{n}(u,v)=B_{i}^{m}(u) \cdot B_{j}^{n}(v)$$
+Der Raum aller Bezierkurven vom Grad $n$ ist ein $n+1$-dimensionaler Vektorraum $P^{n}$, jedes Bernsteinpolynom ist ein Basiselement.
+Die obenstehende Kombination ist ein **Tensorprodukt**. Sein Resultat $P^{m}\otimes P^{n}$ ist ein $(m+1) \cdot (n+1)$-dimensionaler Vektorraum.
+
+Man kann nun also eine *Oberfläche* mit $(m+1) \cdot (n+1)$ Kontrollpunkten machen: $$q(u,v)=\sum_{i=0}^{m}\sum_{j=0}^{n}c_{ij}B_{i}^{m}(u) \cdot B_{j}^{n}(v).$$
+![[Tensorproduktfläche.png|400]]
 
