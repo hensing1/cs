@@ -39,3 +39,7 @@ Die obenstehende Kombination ist ein **Tensorprodukt**. Sein Resultat $P^{m}\oti
 Man kann nun also eine *Oberfläche* mit $(m+1) \cdot (n+1)$ Kontrollpunkten machen: $$q(u,v)=\sum_{i=0}^{m}\sum_{j=0}^{n}c_{ij}B_{i}^{m}(u) \cdot B_{j}^{n}(v).$$
 ![[Tensorproduktfläche.png|400]]
 
+"Twist Vector" eines Quads an einem Vertex: der pinke Vektor
+![[Twist Vector.png|300]]
+
+## Rationale Bézier-Oberfläche
