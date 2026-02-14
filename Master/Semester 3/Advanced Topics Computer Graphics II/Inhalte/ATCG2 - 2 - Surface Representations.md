@@ -43,3 +43,5 @@ Man kann nun also eine *Oberfläche* mit $(m+1) \cdot (n+1)$ Kontrollpunkten mac
 ![[Twist Vector.png|300]]
 
 ## Rationale Bézier-Oberfläche
+Wir *gewichten* unsere Kontrollpunkte und normalisieren über die Gewichte. Damit erhalten wir folgende Basisfunktionen: $$B(u,v)=\frac{w_{ij}B_{i}^{m}(u)B_{j}^{n}(v)}{\sum_{i=0}^{m}\sum_{j=0}^{n}w_{ij}B_{i}^{m}(u)B_{j}^{n}(v)}$$
+
