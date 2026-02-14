@@ -8,7 +8,7 @@ Funktion $g(x,y,z)$, sodass:
 - $\{ p \in \mathbb{R}^{3} \mid g(p) >0 \}$ das Äußere des Objekts ist.
 
 > [!abstract] Definition *Quadrik*
-> Sei $$g(x,y,z)=\sum_{i+j+k=2}a_{ijk}x^{i}y^{j}z^{k}.$$
+> Sei $g$ ein multivariates Polynom  $$g(x,y,z)=\sum_{i+j+k=2}a_{ijk}x^{i}y^{j}z^{k}.$$
 > Dann erhält man durch $$Q:= \{ p \in \mathbb{R}^{2} \mid g(p)=0 \}$$
 > äh, was?
 
