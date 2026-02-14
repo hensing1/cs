@@ -8,16 +8,17 @@ Funktion $g(x,y,z)$, sodass:
 - $\{ p \in \mathbb{R}^{3} \mid g(p) >0 \}$ das Äußere des Objekts ist.
 
 > [!abstract] Definition *Quadrik*
-> Sei $g$ ein multivariates Polynom  $$g(x,y,z)=\sum_{i+j+k=2}a_{ijk}x^{i}y^{j}z^{k}.$$
+> Sei $g: \mathbb{R}^{2}\to \mathbb{R}$ ein multivariates Polynom $$g(x,y)=\sum_{i+j=2}a_{ij}x^{i}y^{j}\ + a_{00}.$$
 > Dann erhält man durch $$Q:= \{ p \in \mathbb{R}^{2} \mid g(p)=0 \}$$
-> äh, was?
+> eine **Quadrik**, also die implizite Darstellung von einem *Kegelschnitt* (Conic Section).
 
-Eine Parabel oder eine Ellipse und das heißt dann Quadrik oder so
+Ein Kegelschnitt ist eine Parabel oder eine Ellipse.
+Haben wir das Argument von $g$ in [[Homogene Koordinaten|homogenen Koordinaten]], können wir auch schreiben: $$g(x,y,w)=\sum_{i+j+k=2}a_{ijk}x^{i}y^{j}w^{k}.$$
 
 Allgemein:
 
-> **Algebraische Oberfläche**
-> Für homogene Koordinaten: $$g(x,y,z,w)=\sum_{i+j+k+l=n}a_{ijk}x^{i}y^{j}z^{k}w^{l}$$
+> **Algebraische Oberfläche** (von Grad $n$)
+> Für homogene Koordinaten: $$g(x,y,z,w)=\sum_{i+j+k+l=n}a_{ijkl}x^{i}y^{j}z^{k}w^{l}$$
 
 Damit kann man Oberflächen darstellen aber das zu modellieren ist sehr schwierig.
 
