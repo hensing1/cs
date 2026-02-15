@@ -79,4 +79,9 @@ Approximative Lösung:
 
 ## Explizit -> Implizit: Fast Marching
 
-???
+Gegeben: ungeordnete Punktwolke $\mathcal{P} = \{ p_{1},\dots,p_{n} \},\ p_{i} \in \mathbb{R}^{3}$ von einer Oberfläche $F$.
+
+Gewünschter Output: Triangulierung von $F$.
+
+Idee: Punktwolke -> SDF -> Marching Cubes -> Dreiecksnetz.
+
