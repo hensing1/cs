@@ -110,3 +110,4 @@ Gegeben: Punktwolke mit Punkten $x_{i}$ im $\mathbb{R}^{d}$ und irgendeinem Skal
 
 Gesucht: Multivariates Polynom $f: \mathbb{R}^{d}\to \mathbb{R}$ mit Grad $m$, sodass so gut wie möglich $f(x_{i})\approx f_{i}$.
 
+Man bringt gerne noch eine *Gewichtung* für einen Referenzpunkt $\bar{x}$ ein, sodass die Rekonstruktion um $\bar{x}$ herum möglichst gut ist.
