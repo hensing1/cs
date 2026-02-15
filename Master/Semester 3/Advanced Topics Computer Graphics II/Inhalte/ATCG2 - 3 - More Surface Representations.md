@@ -85,3 +85,28 @@ Gewünschter Output: Triangulierung von $F$.
 
 Idee: Punktwolke -> SDF -> Marching Cubes -> Dreiecksnetz.
 
+**Fast Marching**
+Wir möchten das SDF an Grid-Punkten berechnen, damit wir Marching Cubes ausführen können.
+Für jeden Grid-Punkt $g$ sei $c$ der nächstgelegene Punkt in $\mathcal{P}$.
+
+Dann ist die Distanz: $$d(g,\mathcal{P})=(g-c)^{T}n(c)$$
+wobei $n(c)$ die Oberflächennormale bei $c$ ist. Wir brauchen also einen Weg, um die Normalen zu schätzen.
+Das machen wir mit der *Nachbarschaft*: $\mathcal{N}(p)=\{ p_{i} \mid p_{i} \text{ ist nahe } p\}$.
+
+Die Normale ist dann das Minimierungsproblem $$\arg\min_{n,d} \frac{1}{|\mathcal{N}|}\sum_{p_{i} \in \mathcal{N}}\|n^{T}p_{i}-d\|$$
+mit $d$ der Distanz der Zugehörigen Ebene vom Ursprung (analog zu der implziten Ebenengleichung $n^{T}x=d$).
+Die Optimierung dieser Zielfunktion reduziert sich auf ein Eigenwertproblem.
+Wir machen letztendlich **Principal Component Analysis**: finde den Vektor, in dessen Richtung die Punkte $p_{i}$ die geringste Streuung haben.
+Konkret haben wir eine Kovarianzmatrix $C$, und der Normalenvektor ist der Eigenvektor zum *kleinsten Eigenwert*.
+
+**Einheitliche Orientierung**
+Wir wissen danach aber noch nicht, in welche Richtung die einzelnen Normalen zeigen müssen.
+Wir wissen aber, dass nahegelegene Normalen in eine ähnliche Richtung zeigen müssten ($n_{i}^{T}n_{j} \approx 1$).
+Problem: das zu optimieren ist NP-schwer. Approximative Lösungen funktionierten irgendwie mit der Berechnung eines MST und laufen in $\mathcal{O}(n \log n)$.
+
+## Least-Squares für Punktwolken
+
+Gegeben: Punktwolke mit Punkten $x_{i}$ im $\mathbb{R}^{d}$ und irgendeinem Skalar $f_{i}$ definiert an jedem Punkt.
+
+Gesucht: Multivariates Polynom $f: \mathbb{R}^{d}\to \mathbb{R}$ mit Grad $m$, sodass so gut wie möglich $f(x_{i})\approx f_{i}$.
+
