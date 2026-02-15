@@ -40,7 +40,12 @@ Wir haben irgendein Objekt gegeben, z.B. als Mesh, implizite Funktion - irgendwa
 Wenn wir aber irgendwo auf dem Objekt feine Details haben und global regelmäßig samplen, haben wir sehr schnell sehr viele Daten.
 
 **Adaptively Sampled Distance Fields (ADFs)**
+- Dichtere Samples, je näher man an der Oberfläche ist
+- Beispiel: [[Quadtree]] / Octree, bei dem Zelle geteilt wird, wenn die Objektoberfläche hindurch verläuft
+- unzählige Optimierungen
 
+**Neuronale Netze**
+NN auf SDF trainieren -> lernt effiziente Darstellung von selbst
 
 ## Implizit -> Explizit: Marching Cubes
 
