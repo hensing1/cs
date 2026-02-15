@@ -27,7 +27,18 @@ Man kann für diese Funktionen aber den Gradienten berechnen. *Die Normale einer
 Vereinigung von $n$ impliziten Volumen: $\bigcup_{i=1}^{n}g_{i}(p):=\min_{i=1,\dots,n}g_{i}(p)$
 Schnitt von $n$ impliziten Volumen: $\bigcap_{i=1}^{n}g_{i}(p):=\max_{i=1,\dots,n}g_{i}(p)$
 
-Smooth blending: $$f \cup g=\frac{1}{1+\alpha}\left(f+g-\sqrt{ f^{2}+g^{2}-2 \alpha fg }\right)$$
+Smooth blending: $$\begin{align}
+f \cup g&=\frac{1}{1+\alpha}\left(f+g-\sqrt{ f^{2}+g^{2}-2 \alpha fg }\right) \\
+f \cap g &= \frac{1}{1+\alpha}\left(f+g+\sqrt{ f^{2}+g^{2}-2 \alpha fg }\right)
+\end{align}$$
+Für $\alpha=1$ erhält man dadurch $\min$ und $\max$ (also kein Smoothing), für kleinere $\alpha$ bekommt man größeres Smoothing.
+
+Die SDFs von mehreren Primitives kann man damit zu immer komplexeren Formen zusammensetzen.
+
+### Sampling von SDFs
+Um herauszufinden, wie das Objekt einer gegebenen SDF aussieht, müssen wir diese SDF *samplen*. Wenn wir sie in regelmäßigen Abständen 
+
+
 ## Implizit -> Explizit: Marching Cubes
 
 Der Marching Cubes-Algorithmus wandelt eine implizit gegebene Oberfläche (Isosurface) in eine explizite Darstellung (Dreiecks-Mesh) um.
