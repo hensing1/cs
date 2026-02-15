@@ -36,7 +36,10 @@ Für $\alpha=1$ erhält man dadurch $\min$ und $\max$ (also kein Smoothing), fü
 Die SDFs von mehreren Primitives kann man damit zu immer komplexeren Formen zusammensetzen.
 
 ### Sampling von SDFs
-Um herauszufinden, wie das Objekt einer gegebenen SDF aussieht, müssen wir diese SDF *samplen*. Wenn wir sie in regelmäßigen Abständen 
+Wir haben irgendein Objekt gegeben, z.B. als Mesh, implizite Funktion - irgendwas für das wir ein SDF berechnen können. Das wollen wir jetzt auf effiziente Weise *speichern*, indem wir das SDF *samplen*.
+Wenn wir aber irgendwo auf dem Objekt feine Details haben und global regelmäßig samplen, haben wir sehr schnell sehr viele Daten.
+
+**Adaptively Sampled Distance Fields (ADFs)**
 
 
 ## Implizit -> Explizit: Marching Cubes
