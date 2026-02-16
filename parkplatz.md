@@ -17,3 +17,15 @@ $$\begin{align}
 &\approx [f(x+1)- f(x)] - [f(x) - f(x-1)] \\
 &= f(x+1)-2f(x)+f(x).
 \end{align}$$
+
+$$
+\begin{align}
+\Delta f(u,v) &= \nabla \cdot \nabla f(u,v) = \begin{pmatrix}
+        \frac{ \partial  }{ \partial u }  & \frac{ \partial  }{ \partial v } 
+    \end{pmatrix} \begin{pmatrix}
+\frac{ \partial  }{ \partial u } f \\
+\frac{ \partial  }{ \partial v } f
+\end{pmatrix} \\
+&\approx \frac{1}{2}(f(u+1,v)+f(u,v+1)-4f(u,v)+f(u-1,v)+f(u,v-1))
+\end{align}
+$$
