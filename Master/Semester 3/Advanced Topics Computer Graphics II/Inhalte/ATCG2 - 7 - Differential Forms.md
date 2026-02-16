@@ -95,6 +95,7 @@ Wir haben mit $\langle v \mid w \rangle : T_{p}(M) \times T_{p}(M) \to \mathbb{R
 > mit der Matrix $G=\begin{bmatrix}g_{ij}\end{bmatrix}$.
 
 In kartesischen Koordinaten und der euklidischen Metrik ist $G$ die *Identität*.
+Die Basis kann sonstwie durch die Gegend zeigen - mit zwei Vektoren $v,w$ in der wilden Basis erhalten wir mit $v^{T}Gw$ dasselbe Skalarprodukt wie wenn wir $v$ und $w$ in den gewöhnlichen kartesischen Koordinaten darstellen und das gewöhnliche Skalarprodukt berechnen.
 ## One-Form
 
 > [!abstract] Definition *Differential One-Form* (Pfaffsche Form)
