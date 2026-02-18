@@ -31,13 +31,36 @@ $$\begin{align}
 \omega_{2} &\to J \omega_{2} \\
 \langle J \omega_{1} \mid J \omega_{2} \rangle &= (J \omega_{1})^T (J \omega_{2}) = \omega_{1}^T J^T J \omega_{2} = \omega_{1} M_{1} \omega_{2}.
 \end{align}$$
+
+$E$ sagt uns die quadrierte Länge von $q_{u}$ und $G$ die quadrierte Länge von $q_{v}$.
+$F$ sagt uns den Winkel zwischen $q_{u}$ und $q_{v}$.
+
+### Bogenlänge berechnen
+Für eine Kurve $q(u(t), v(t))$ auf der durch $q$ definierten Oberfläche ist deren Bogenlänge, ab einem Startpunkt $a$: $$s(t)=\int_{a}^{t}\left\| \frac{dq(u(\tau),v(\tau))}{d \tau}\right\|\,d\tau .$$
+Das Differenzial von $q \circ u$ ist also ebenfalls proportional zur Länge, die man mit einem Zeitschritt zurücklegt.
+Mit $u_{t}:=\frac{du}{dt}$ und $v_{t}:=\frac{dv}{dt}$ ist die Bogenlänge der Kurve: $$s(a,b)=\int_{a}^{b} \sqrt{ (u_{t},v_{t})M_{1}(u_{t},v_{t})^{T} }\,dt$$
+dh. $\left\| \frac{dq(u(\tau),v(\tau))}{d \tau}\right\| = \sqrt{ (u_{t},v_{t})M_{1}(u_{t},v_{t})^{T} }$.
+
+### Fläche berechnen
+Für eine Fläche $\mathcal{D}$ definiert als Intervall von $u$ und $v$, von wo bis wo die Fläche reichen soll, ist die Fläche: $$A = \iint_{\mathcal{D}}\|q_{u} \times q_{v}\|\,du\,dv = \iint_{\mathcal{D}}\sqrt{ EG-F^{2} }\,du\,dv.$$
+
 ## Shape Operator
 
-$$\begin{align}
-W_{p}&: TP_{p} \to TP_{p} \\
-W_{p}(v) &= -d_{p}n(v)
-\end{align}$$
-Sagt aus, wie sich der Normalenvektor verändert, wenn man sich ein bisschen entlang der Tangentialebene bewegt
+An einem Punkt $u,v$ ist $n(u,v)$ der Normalenvektor auf der Oberfläche $q$. Eine Fläche ist *orientierbar*, wenn $n$ im gesamten Parameterraum kontinuierlich ist.
+
+Die Richtungsableitung in Richtung $w$ (Vektor im Parameterraum) für die Normale ist $dn_{w}(u,v)=w_{1}n_{u}(u,v)+w_{2}n_{v}(u,v)$.
+
+> Die Richtungsableitung der Normale ist immer rechtwinklich zur Normalen.
+
+Das Mapping, das einem Vektor auf der Tangenzialebene am Oberflächenpunkt $p$ die entsprechende Änderung vom Normalenvektor in diese Richtung sagt, nennen wir $d_{p}n: TP_{p} \to TP_{p}$.
+
+> [!abstract] Definition **Shape Operator** (Weingarten Map)
+> $$\begin{align}
+> W_{p}&: TP_{p} \to TP_{p} \\
+> W_{p}(v) &= -d_{p}n(v)
+> \end{align}$$
+
+Sagt aus, wie sich der Normalenvektor verändert, wenn man sich ein bisschen entlang der Tangentialebene bewegt (nicht im Parameterraum, sondern auf der Oberfläche!).
 
 $$W_{p}(\omega_{1})^{T}\begin{pmatrix}
 E & F \\
