@@ -12,7 +12,8 @@ Beispiel für einen Kreis: $p(t)=r \begin{pmatrix}\cos(t) & \sin(t)\end{pmatrix}
 Beispiel Kreis: $f(x)=x^{2}+y^{2}-r^{2}$
 
 **Parametrisierte Oberfläche**
-Explizite Darstellung $$\begin{align}
+Explizite Darstellung
+$$\begin{align}
 q: D &\to \mathbb{R}^{d},\ D \subseteq \mathbb{R}^{2} \\ \\
 
 (u,v) &\mapsto \begin{pmatrix}
