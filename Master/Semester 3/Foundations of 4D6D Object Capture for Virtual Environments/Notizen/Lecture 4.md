@@ -1,4 +1,0 @@
-# Scene Representations
-
-## Volumetric Fusion
-
