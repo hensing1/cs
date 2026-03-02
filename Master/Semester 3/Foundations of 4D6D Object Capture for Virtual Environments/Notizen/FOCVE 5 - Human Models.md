@@ -4,10 +4,11 @@
 - pro Punkt die Bewegung
 
 Bewegung von Punkt $x$:
-$$T_{\text{warp}}(x)=\begin{bmatrix}
-R(x) & t(x) \\
-0 & 1
-\end{bmatrix}$$
-
-$$T_{\mathrm{{warp}}}(x)=\left[\frac{R(x)}{\Omega}{\Omega}{\textsf{}}_{\Omega}^{}\right]\;,$$
-$$T_{\mathrm{{warp}}}(x)=\left[\frac{R(x)}{\Omega}{\Omega}{\textsf{}}\right]t(x)\mathop{{\left|\begin{array}{l}{A}\\ {\Omega}\end{array}\right|}}$$
+$$T_{\text{warp}}(x)=\left[
+\begin{array}{ccc|c}
+\\
+& R(x) & & t(x) \\
+\\ \hline
+& \mathbf{0} & & 1
+\end{array}
+\right]$$
