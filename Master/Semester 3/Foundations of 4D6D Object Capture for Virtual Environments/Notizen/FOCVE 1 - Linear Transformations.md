@@ -1,4 +1,4 @@
-[[FOCVE___01_Motivation_and_Linear_Transformations.pdf]]
+[[FOCVE_01_Motivation_and_Linear_Transformations.pdf]]
 
 **Plenoptic Function**
 $$P(\theta,\phi,\lambda,t,V_{x},V_{y},V_{z})$$

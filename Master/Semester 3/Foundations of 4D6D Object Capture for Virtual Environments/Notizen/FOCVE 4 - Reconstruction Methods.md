@@ -1,4 +1,4 @@
-[[FOCVE___04_Reconstruction_Methods.pdf]]
+[[FOCVE_04_Reconstruction_Methods.pdf]]
 ## Volumetric Fusion
 Wir haben aus verschiedenen Richtungen vom selben Objekt *Depth Maps* gegeben und möchten diese gerne zusammensetzen.
 Vereinfachende Annahme: wir haben bereits alle Daten im *globalen Koordinatensystem*, müssen also nicht mehr kalibrieren/registrieren.

@@ -1,4 +1,4 @@
-[[FOCVE___02_Cameras.pdf]]
+[[FOCVE_02_Cameras.pdf]]
 
 ## Pinhole Model
 

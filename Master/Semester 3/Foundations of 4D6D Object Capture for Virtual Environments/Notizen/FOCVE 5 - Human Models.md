@@ -1,4 +1,4 @@
-[[FOCVE___05_Human_Models.pdf]]
+[[FOCVE_05_Human_Models.pdf]]
 
 - Einzelne statische Pose schätzen
 - pro Punkt die Bewegung
