@@ -58,4 +58,13 @@ Homography für Kamerakalibrierung: 8 Freiheitsgrade (3x3-Matrix, Skalierung ega
 Disparity: Differenz in Koordinaten desselben Punkts in zwei verschiedenen Kamerabildern $l$ und $r$, dh. $x_{l}-x_{r}$
 Optische Zentren der Kameras: $o_{l}$ bzw. $o_{r}$
 
-$z$-Koordinate: $$z=f \cdot (o_{l}-o_{r})$$
+$z$-Koordinate: $$z=\frac{f \cdot (o_{l}-o_{r})}{x_{l}-x_{r}}$$
+Korrespondenz wird dann entlang Epipolarlinie gesucht
+
+
+## Normal Maps
+
+Mit Belichtungsgradienten: $d_{x}=\frac{g_{x}^{+}-g_{x}^{-}}{g_{x}^{+}+g_{x}^{-}}$
+
+Normale: $N=\frac{d}{\|d\|}$
+
