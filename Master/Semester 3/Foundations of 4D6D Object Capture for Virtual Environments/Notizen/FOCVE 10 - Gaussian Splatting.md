@@ -15,4 +15,38 @@ Schritte im Volume Splatting:
 	- perspektivische Projektion ist nicht affin
 	- -> linear approximeren mit Taylor-Entwicklung
 
-Gaussians zusammenmischen: statt voller volumetrischer Integration
+Gaussians zusammenmischen: statt voller volumetrischer Integration, dings
+
+**Rekonstruktion**
+SfM-Punkte -> Gaussians Initialisieren -> mit Kamera und Rasterisierer zu einem Bild machen
+Aus dem Bild mit differenziellem Rendering (weil alle Schritte diff.bar sind) die Gaussians updaten
+
+*Initialisieren*
+- Man hat zwei Kameras
+- Man findet Korrespondenzen (mit COLMAP)
+- Für means $\mu$: 3D-Punktwolke der Korrespondenzen, eine Gaussian pro Punkt
+- Für Kovarianzen $\Sigma$: für jeden Punkt seine 3 nächsten Nachbaren finden, mit mittlerer Distanz $\bar{d_{3}}$: $\Sigma = \bar{d_{3}}\cdot I$
+
+*Density Control*
+Wir haben eventuell nicht die korrekte Anzahl von Gaussians
+
+- Zu wenige Gaussians in einer Region:
+	- Unter-Rekonstruktion (Gaussian zu klein): Gaussian klonen
+		- wir optimieren mit ADAM
+		- für den Klon setzen wir das Adam-Momentum auf 0, für das Original nicht
+	- Über-Rekonstruktion (Gaussian zu groß): Gaussian teilen
+		- zwei kleinere Gaussians statt der größeren
+		- Heuristischer Faktor: $\Sigma$ durch $1.6$ teilen
+- Zu viele Gaussians:
+	- Gaussians mit geringer Opazität entfernen ($o<0.005$)
+
+*Rasterisierung*
+- Gaussians in 16x16 Tiles sortieren
+- $\alpha$ Blending zum Zusammenfassen
+
+
+Andere Loss-Funktion die ist besser
+
+Verbesserung für Sortierung
+Erweiterung für bewegte Szenen
+Optimierung für Mensch
