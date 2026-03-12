@@ -6,3 +6,4 @@ Weil man von Kontinuität ausgehen kann, reicht es auch, in geringerem Abstand K
 
 Für Tracking kann man Marker an dem Objekt befestigen, oder man erschließt das Skelett aus RGB(D)-Bildern, oder oder oder.
 
+Das Skelett beschreiben wir als *kinematische Kette*.
