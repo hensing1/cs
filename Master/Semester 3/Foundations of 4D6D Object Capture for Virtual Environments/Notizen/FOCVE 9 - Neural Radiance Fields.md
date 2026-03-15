@@ -42,7 +42,7 @@ notiert als $c(t)$,
 *Akkumulierte Leuchtkraft* an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$
 notiert als $\hat{C}(t)$.
 
-Differenzial: $$\frac{d\hat{C}(t)}{dt}=\sigma(t)\hat{C}(t)-\sigma(t)c(t).$$
+Radiative Transfer Equation: $$\frac{d\hat{C}(t)}{dt}=\sigma(t)\hat{C}(t)-\sigma(t)c(t).$$
 Der Term für $c$ ist negativ, weil die Leuchtkraft entlang des Strahls *abnimmt* (wir starten ja bei der Kamera).
 
 Lichtdurchlässigkeit (Transmittance) von Punkt $a$ nach Punkt $b$: $$T(a \to b)=\exp\left( -\int_{a}^{b}\sigma(u)\,du \right)$$
@@ -51,3 +51,10 @@ Lichtdurchlässigkeit (Transmittance) von Punkt $a$ nach Punkt $b$: $$T(a \to b)
 > $$\hat{C}(t)=\int_{t}^{t_{\text{end}}}\underbrace{T(t \to s) }_{\text{Sichtbarkeit von }r(s)}\ \ \underbrace{\sigma(s)c(s)}_{\text{Emission von }r(s)}\,ds + T(t\to t_{\text{end}})\underbrace{C_{\text{const}}}_{\text{Hintergrundfarbe}}$$
 
 
+Für einen Strahl durch zwei durchscheinende Objekte sieht der Integrand dann so aus:
+![[NeRF-Integrand.png|465]]
+
+## Volume Rendering mit NeRFs
+
+Wir können das Integral für $\hat{C}$ nicht analytisch lösen.
+Wir nehmen also an, dass die Dichte $\sigma(t)$ und die Farbe $c(t)$ *stückweise konstant* sind.
