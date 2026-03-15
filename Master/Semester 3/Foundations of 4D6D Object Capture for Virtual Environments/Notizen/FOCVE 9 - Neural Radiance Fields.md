@@ -35,8 +35,8 @@ Scattering ist (wie die Renderinggleichung für Oberflächen) rekursiv, deshalb 
 - Lichtstrahl geht von der Kamera aus, also in die *andere Richtung*
 
 Lichtstrahl: $r(t):=x(-z)$
-Emission: $\sigma(r(t)):=\mu_{a}(x(-z))$, notiert kürzer als $\sigma(t)$
-Leuchtkraft an einem Punkt in Richtung $d$: $\hat{C}(r(t), d):=L(x(-z),v)$, notiert als $\hat{C}(t)$
+*Dichte:* $\sigma(r(t)):=\mu_{a}(x(-z))$, notiert kürzer als $\sigma(t)$
+*Leuchtkraft* an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$notiert als $\hat{C}(t)$
 
 Lichtdurchlässigkeit (Transmittance) von Punkt $a$ nach Punkt $b$: $$T(a \to b)=\exp\left( -\int_{a}^{b}\sigma(u)\,du \right)$$
 
