@@ -9,7 +9,8 @@ Betrachtung von **Differenziellem Lichtstrahl** und dessen Interaktion mit Mater
 - Lichstrahl parametrisiert mit $z$
 - Position: $x(z)$
 - Richtung: $v$
-- Leuchtkraft: $L(x(z), v)$
+- (Akkumulierte) Leuchtkraft: $L(x(z), v)$
+- An einem Punkt abgegebene Leuchtkraft: $L_{e}(x(z), v)$
 
 - Absorption
 	- Lichstrahl wird um Faktor $\mu_{a}$ abgeschwächt (W.keitsdichte der Absorption)
@@ -27,7 +28,7 @@ Betrachtung von **Differenziellem Lichtstrahl** und dessen Interaktion mit Mater
 
 Die **Radiative Transfer Equation** ist die Summe aus diesen vier Termen und beschreibt die Veränderung des Lichtstrahls an einem Punkt vollständig.
 
-## Volume Rendering
+## Notation für NeRFs
 
 Scattering ist (wie die Renderinggleichung für Oberflächen) rekursiv, deshalb schmeißen wir die weg und beschränken uns bei Neural Radience Fields (NeRFs) nur auf Emission und Absorption.
 
@@ -35,8 +36,18 @@ Scattering ist (wie die Renderinggleichung für Oberflächen) rekursiv, deshalb 
 - Lichtstrahl geht von der Kamera aus, also in die *andere Richtung*
 
 Lichtstrahl: $r(t):=x(-z)$
-*Dichte:* $\sigma(r(t)):=\mu_{a}(x(-z))$, notiert kürzer als $\sigma(t)$
-*Leuchtkraft* an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$notiert als $\hat{C}(t)$
+*Dichte:* $\sigma(r(t)):=\mu_{a}(x(-z))$, notiert kürzer als $\sigma(t)$,
+*Leuchtkraft* an einem Punkt in Richtung $d$: $$c(r(t), d):=L_{e}(x(-z),v)$$
+notiert als $c(t)$,
+*Akkumulierte Leuchtkraft* an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$
+notiert als $\hat{C}(t)$.
+
+Differenzial: $$\frac{d\hat{C}(t)}{dt}=\sigma(t)\hat{C}(t)-\sigma(t)c(t).$$
+Der Term für $c$ ist negativ, weil die Leuchtkraft entlang des Strahls *abnimmt* (wir starten ja bei der Kamera).
 
 Lichtdurchlässigkeit (Transmittance) von Punkt $a$ nach Punkt $b$: $$T(a \to b)=\exp\left( -\int_{a}^{b}\sigma(u)\,du \right)$$
+
+> **Volume Rendering Equation** (NeRF-Version):
+> $$\hat{C}(t)=\int_{t}^{t_{\text{end}}}\underbrace{T(t \to s) }_{\text{Sichtbarkeit von }r(s)}\ \ \underbrace{\sigma(s)c(s)}_{\text{Emission von }r(s)}\,ds + T(t\to t_{\text{end}})\underbrace{C_{\text{const}}}_{\text{Hintergrundfarbe}}$$
+
 
