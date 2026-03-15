@@ -3,5 +3,5 @@ Datum: 11.06.
 
 # Neuronale Netze
 
-Guten Tag, [[Neuronale Netze]].
+Guten Tag, [[Neuronales Netz]].
 

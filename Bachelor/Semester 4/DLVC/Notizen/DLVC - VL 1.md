@@ -19,4 +19,4 @@ Herausforderungen in der Computergrafik:
 Maschinelles Lernen bezeichnet einen Vorgang, durch welchen sich ein Computerprogramm durch Erfahrung beim Ausführen einer Aufgabe gemäß eines gegebenen Performanz-Maßes verbessert.
 
 ## Künstliche Neuronale Netze
-![[Neuronale Netze#Neuron]]
+![[Neuronales Netz#Neuron]]

@@ -47,7 +47,7 @@ Der Term für $c$ ist negativ, weil die Leuchtkraft entlang des Strahls *abnimmt
 
 Lichtdurchlässigkeit (Transmittance) von Punkt $a$ nach Punkt $b$: $$T(a \to b)=\exp\left( -\int_{a}^{b}\sigma(u)\,du \right)$$
 
-> **Volume Rendering Equation** (NeRF-Version):
+> **Volume Rendering Equation** (NeRF-Notation):
 > $$\hat{C}(t)=\int_{t}^{t_{\text{end}}}\underbrace{T(t \to s) }_{\text{Sichtbarkeit von }r(s)}\ \ \underbrace{\sigma(s)c(s)}_{\text{Emission von }r(s)}\,ds + T(t\to t_{\text{end}})\underbrace{C_{\text{const}}}_{\text{Hintergrundfarbe}}$$
 
 
@@ -58,3 +58,32 @@ Für einen Strahl durch zwei durchscheinende Objekte sieht der Integrand dann so
 
 Wir können das Integral für $\hat{C}$ nicht analytisch lösen.
 Wir nehmen also an, dass die Dichte $\sigma(t)$ und die Farbe $c(t)$ *stückweise konstant* sind.
+Pro Segment samplen wir einmal: $\delta_{i}=t_{i+1}-t_{i}$
+
+Dann wird die Durchlässigkeit zum $i$-ten Segment: $$T_{i}=\prod_{j=1}^{i-1}e^{-\sigma_{j}\delta_{j}}$$
+> **Approximative Volume Rendering Equation** (für NeRFs):
+> $$\hat{C}=\sum_{i=1}^{N}T_{i} \cdot (1-e^{-\sigma_{i}\delta_{i}})c_{i}+T_{N+1}\hat{C}_{\text{bg}}$$
+
+Jetzt möchten wir unser $\sigma$ und $c$ mit einem [[Neuronales Netz|KNN]] schätzen. Dann können wir für jeden Pixel im Kamerabild dieses Integral ausrechnen und neue Blickwinkel ausrechnen.
+
+> [!info] *Positional Encoding*
+> Wir haben in Bildern oft starke Diskontinuitäten. Um nahegelegene Punkte für das KNN besser unterscheidbar zu machen, encoden wir jede Achsenposition $p$ mit extra Sinus- und Kosinus-Bändern: $$\gamma(p)=(\sin(2^{0}\pi p), \cos(2^{0}\pi p),\dots,\sin(2^{L-1}\pi p),\cos(2^{L-1}\pi p))^{T}$$
+
+Die Position können wir mit 10 Frequenzen encoden, die Richtung mit 4.
+
+Architektur:
+![[NeRF-Architektur.png|450]]
+
+Die Richtung wird erst am Ende eingespeist, weil sie keinen Einfluss auf die Dichte $\sigma$ haben soll.
+
+### Training
+
+**Forward Pass:** Integral ausrechnen
+1. $K$ Kamera-Strahlen marchen
+2. (Uniform) Punkte samplen
+3. MLP an diesen Punkten für Dichte und Farbe auswerten
+4. Werte akkumulieren -> $\hat{C}_{k}$
+
+**Backward Pass:** Loss berechnen und Differenzial für KNN-Parameter bestimmen
+$$\mathcal{L}(\Theta)=\sum_{k}\|C_{k}-\hat{C}_{k}(\Theta)\|^{2}$$
+

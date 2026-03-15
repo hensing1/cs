@@ -1,5 +1,3 @@
-# Künstliche Neuronale Netze (KNNs)
-
 ## Feed-Forward Networks
 
 ### Neuron

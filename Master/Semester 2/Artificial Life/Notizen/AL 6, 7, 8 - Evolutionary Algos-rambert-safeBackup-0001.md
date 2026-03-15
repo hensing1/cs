@@ -39,7 +39,7 @@ Hierfür gibt es verschiedene Möglichkeiten:
 	- Alle Individuen $p$ mit Performance $f(s_p) > t$ für Threshold $t$
 - Stochastisch (fitnessbasiert):
 	- Wahrscheinlichkeit proportional zur Fitness (Wheel of fortune)
-	- Wahrscheinlichkeit proportional zu [[Neuronale Netze#^04fda6|Softmax]] der Fitness
+	- Wahrscheinlichkeit proportional zu [[Neuronales Netz#^04fda6|Softmax]] der Fitness
 	- Wahrscheinlichkeit invers proportional zum Rang
 	- Turnier: wähle zufällig Individuen aus, vergleiche Fitness von jeweils zweien, die Gewinner kommen in die nächste Runde - höre auf, wenn genug ausgedünnt
 

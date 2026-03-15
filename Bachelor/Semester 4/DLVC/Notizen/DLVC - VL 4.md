@@ -2,15 +2,15 @@ Datum: 08.05.
 [[Slides 04.pdf|Folien]]
 # Feed-Forward-Netzwerke
 
-![[Neuronale Netze#Neuron]]
+![[Neuronales Netz#Neuron]]
 
-![[Neuronale Netze#Multilayer Perceptron]]
+![[Neuronales Netz#Multilayer Perceptron]]
 
-![[Neuronale Netze#Layer]]
+![[Neuronales Netz#Layer]]
 
-![[Neuronale Netze#Aktivierungsfunktionen]]
+![[Neuronales Netz#Aktivierungsfunktionen]]
 
-![[Neuronale Netze#Symmetrien und Universal Approximation Theorem]]
+![[Neuronales Netz#Symmetrien und Universal Approximation Theorem]]
 
 # Backpropagation
 
