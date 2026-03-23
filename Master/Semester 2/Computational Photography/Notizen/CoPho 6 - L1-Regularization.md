@@ -1,3 +1,5 @@
+[[06-L1Regularization.pdf]]
+
 # Nichtlineare Filterung
 
 Bitte Rauschen loswerden.
