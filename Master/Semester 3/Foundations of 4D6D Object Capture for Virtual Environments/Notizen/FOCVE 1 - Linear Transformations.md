@@ -39,3 +39,22 @@ Dann ist die Rotation um $r_{0}$ und $\theta$ gegeben durch die
 
 Mit $[r_{0}]_{\times}$ der [[Vektoren#^adaeb8|Kreuzproduktmatrix]] ergibt sich: $$R_{\text{axis-angle}}=I+\sin(\theta)[r_{0}]_{\times}+(1-\cos(\theta))[r_{0}]_{\times}^{2}.$$
 
+## Homogene Koordinaten
+
+[[Homogene Koordinaten]]
+
+> [!abstract] Definition *Rigide Transformation*
+> Eine Transformation $T$ heißt rigide (rigid), wenn sie Distanzen zwischen Punkten erhält: $$\|T(x)-T(y)\|=\|x-y\|\ \forall x, y.$$
+
+Es gibt: Rotationen, Reflektionen, Translationen (und Kombinationen davon).
+
+## Koordinatentransformation
+
+Mit $b_{x},b_{y},b_{z}$ den Koordinatenachsen von $b$ in $a$, und $t$ dem Ursprung von $b$ in $a$, ist $$T=\begin{bmatrix}
+b_{x} & b_{y} & b_{z} & t \\
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+die homogene Transformationsmatrix von $b$ nach $a$.
+Man kann diese Matrix invertieren und erhält die Transformationsmatrix von $a$ nach $b$.
+
+Im Kontext dieser Vorlesung brauchen wir das für Skelette, bei denen wir jedes Gelenk in Relation eines übergeordneten Gelenks definieren: $$T_{\text{Welt} \to \text{Knie}}=T_{\text{Hüfte}\to \text{Knie}} \cdot T_{\text{Pelvis}\to \text{Hüfte}} \cdot T_{\text{Welt}\to \text{Pelvis}}.$$
