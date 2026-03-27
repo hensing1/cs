@@ -47,7 +47,7 @@ Es gilt:
 Rechte-Hand-Regel:
 ![[Kreuzprodukt_rechte_Hand.png|150]]
 
-Als lustige Matrix: ![[Robotik - VL 6#^a9b165]]
+Als lustige Matrix: ![[Robotik - VL 6#^a9b165]] ^adaeb8
 
 ## Vektorfeld
 

@@ -27,6 +27,8 @@ ist der rotierte Punkt:
 $$q_{x,\text{rot}}=q_{r_{0}} \cdot q_{x} \cdot q_{r_{0}}^{-1}.$$
 Das Resultat $q_{x,\text{rot}}$ ist, genau wie $q_{x}$, rein imaginär (kein reeller Part).
 
+Wir mögen Quarternionen, weil sie keine singuläre Konfiguration haben, mit 
+
 ### Achs-Winkel-Repräsentation
 
 Definiere eine Rotationsachse mit (Einheits-)vektor $r_{0}$ und einen Rotationswinkel $\theta$.
@@ -34,3 +36,6 @@ Dann ist die Rotation um $r_{0}$ und $\theta$ gegeben durch die
 
 > **Rodriguez-Formel**
 > $$a_{\text{rot}}=a + \sin(\theta)(r_{0} \times a) + (1-\cos(\theta))(r_{0}\times (r_{0} \times a))$$
+
+Mit $[r_{0}]_{\times}$ der [[Vektoren#^adaeb8|Kreuzproduktmatrix]] ergibt sich: $$R_{\text{axis-angle}}=I+\sin(\theta)[r_{0}]_{\times}+(1-\cos(\theta))[r_{0}]_{\times}^{2}.$$
+
