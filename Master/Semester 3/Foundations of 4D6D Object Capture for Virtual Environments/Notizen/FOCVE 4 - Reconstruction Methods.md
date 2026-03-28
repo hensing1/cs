@@ -27,4 +27,17 @@ $$\text{tsdf}(p)=\begin{cases}
 ![[TSDF.png|697]]
 
 **Projective Signed Distance Field**
-Haben wir eine Messung (RGBd-Bild), können wir die Punkte un-projizieren. Daraus können wir sehr simpel ein Signed Distance Field machen, 
+Haben wir eine Messung (RGBd-Bild), können wir die Punkte un-projizieren. Daraus können wir sehr simpel ein Signed Distance Field machen, indem wir die Tiefe vom Punkt von (relativ zur Kamera) von der gemessenen Tiefe abziehen.
+
+Das ist kein "echtes" SDF, weil: 
+![[PSDF.png|402]]
+
+Es stimmt aber für $\text{sdf}_{i}(x)=0$. Die Genauigkeit wird besser, wenn wir mehrere SDFs zusammenfügen (von mehreren Kameras).
+
+Online-Update für mehrere gewichtete TSDFs: $$\begin{align}
+\text{TSDF}_{n+1}(x)&=\frac{W_{n}(x)\text{TSDF}_{n}(x)+w_{n+1}(x)\text{tsdf}_{n+1}(x)}{W_{n}(x)+w_{n+1}(x)} \\
+W_{n+1}&=W_{n}(x)+w_{n+1}(x)
+\end{align}$$
+### Voxel Hashing
+
+Statt ein komplettes dreidimensionales Voxel-Grid zu speichern, speichern wir 8x8x8-Blöcke
