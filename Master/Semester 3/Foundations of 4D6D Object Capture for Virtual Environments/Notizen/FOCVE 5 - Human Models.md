@@ -34,15 +34,26 @@ $$T_{\text{warp}}(x)=\left[
 Wir starten mit einem *Template Model* $\overline{T}$ (von einem Künstler erstellt).
 Es gibt ein männliches, ein weibliches, und ein geschlechtsneutrales mit je $N \approx 7000$ Vertices, in einer Ruhepose $\theta_{\text{rest}}$.
 
-Zuerst verformen wir $\overline{T}$ bzgl. der Körperparameter $\beta$
+Zuerst verformen wir $\overline{T}$ bzgl. der Körperparameter $\beta$: Vertices werden additiv verschoben mit $$\overline{T}+B_{S}(\beta)= \overline{T} + \mathcal{S}\beta.$$
+[^1]
+Dadurch verschieben sich die $K$ Gelenkpositionen. Diese recovern wir mit einer gelernten Matrix $\mathcal{J} \in \mathbb{R}^{3K \times 3N}$: $$J(\beta)=\mathcal{J}(\overline{T}+B_{S}(\beta))$$
+Die Gelenkpositionen können wir jetzt mit den Parametern $\theta$ verschieben und erhalten mit Vorwärtskinematik pro Gelenk $k$ die globale Verschiebung & Rotation $T_{k}$ zum globalen Frame.
 
-Die Matrix $\mathcal{W} \in \mathbb{R}^{N \times K}$ sagt für jeden Punkt, welche Gewichtung jedes Gelenk für diesen Punkt hat. Sie ist sparse (Schultergelenk hat keinen Einfluss auf Vertices am Knie).
-Die Gelenkposition
+Damit können wir jetzt schon *linear blend skinning* (LBS) machen, in dem wir jedem Vertex des Modells ein paar Gelenke zuweisen, die auf ihn Einfluss nehmen:
+$$v_{i}'=\sum_{k=1}^{K}w_{ik}T_{k}v_{i}.$$
 
-Wir wenden die Shape-Parameter $\beta$ an, um neue Gelenk-Koordinaten zu erhalten.
-Wir haben ein zugrundeliegendes Skelett, dessen Node-Positionen wir mit Vorwärtskinematik bestimmen.
-- $\mathcal{J}$: Zusammengenommene Gewichtungen:
-	- $\mathcal{W} \in \mathbb{R}^{N \times K}$: Überblendungs-Gewichte pro Punkt
-	- $\mathcal{P} \in \mathbb{R}^{3N \times 9K}$: Linear Blend Skinning: Pose
-	- $\mathcal{S} \in \mathbb{R}^{3N \times 10}$
+Die Gewichtungen können wir in der Matrix $\mathcal{W} \in \mathbb{R}^{N \times K}$ zusammenfassen.
 
+Das reicht aber noch nicht, weil mit LSB va. bei großen Gelenkwinkeln oder Twist-Bewegungen Artefakte auftreten können. Die müssen wir vor LBS noch korrigieren: 
+$$B_{P}(\theta)=\mathcal{P} \cdot (R(\theta)-R(\theta_{\text{rest}}))$$
+mit einer erlernten Matrix $\mathcal{P}$.
+Die Vertices, die wir mit LBS in ihre Pose verschieben können, sind dann gegeben durch $$\overline{T}_{S,P}=\overline{T}+B_{S}(\beta)+B_{P}(\theta).$$
+$B_{S}$ und $B_{P}$ heißen **Blend Shapes**.
+
+![[SMPL.png]]
+
+[^1]: $\mathcal{S}$ ist die Basis für die linearen Körperparameter, die mit PCA bestimmt wurden.
+
+## SMPL-X
+
+Dasselbe Spiel können wir jetzt nochmal für das Gesicht (FLAME-Modell) und für die Hand (MANO-Modell) spielen. SMPL, FLAME und MANO bilden zusammengenommen SMPL-X.
