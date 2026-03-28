@@ -26,3 +26,5 @@ $$\text{tsdf}(p)=\begin{cases}
 
 ![[TSDF.png|697]]
 
+**Projective Signed Distance Field**
+Haben wir eine Messung (RGBd-Bild), können wir die Punkte un-projizieren. Daraus können wir sehr simpel ein Signed Distance Field machen, 
