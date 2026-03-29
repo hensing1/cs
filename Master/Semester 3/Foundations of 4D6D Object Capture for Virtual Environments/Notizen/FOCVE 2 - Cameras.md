@@ -47,6 +47,7 @@ $y_{\text{tangential}}=y+(2p_{2}xy+p_{1}(r^{2}+2y^{2}))$
 Homography für Kamerakalibrierung: 8 Freiheitsgrade (3x3-Matrix, Skalierung egal)
 - ist intrinsische mal extrinsische Kameramatrix
 - extrinsischer Teil ist $3 \times 3$-Matrix $\begin{bmatrix}r_{1} & r_{2} & t\end{bmatrix}$
+	- $r_{1}$ und $r_{2}$ sind orthonormal
 - man braucht mind. 4 Punkte (je mit x, y-Koordinaten)
 - $s \cdot \begin{pmatrix}p_{x,i} \\ p_{y,i} \\ 1\end{pmatrix} = H \begin{pmatrix}v_{x,i} \\ v_{y,i} \\ 1\end{pmatrix}$
 	- $v_{i}$ ist 3d-Punkt auf dem Kalibrierungs-Target, mit $z=0$
