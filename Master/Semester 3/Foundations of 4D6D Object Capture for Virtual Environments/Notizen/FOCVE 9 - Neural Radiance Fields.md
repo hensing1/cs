@@ -39,7 +39,7 @@ Lichtstrahl: $r(t):=x(-z)$
 *Dichte:* $\sigma(r(t)):=\mu_{a}(x(-z))$, notiert kürzer als $\sigma(t)$,
 *Leuchtkraft* an einem Punkt in Richtung $d$: $$c(r(t), d):=L_{e}(x(-z),v)$$
 notiert als $c(t)$,
-*Akkumulierte Leuchtkraft* an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$
+*Akkumulierte **verbleibende** Leuchtkraft* eines Strahls an einem Punkt in Richtung $d$: $$\hat{C}(r(t), d):=L(x(-z),v)$$
 notiert als $\hat{C}(t)$.
 
 Radiative Transfer Equation: $$\frac{d\hat{C}(t)}{dt}=\sigma(t)\hat{C}(t)-\sigma(t)c(t).$$
