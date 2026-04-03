@@ -32,11 +32,11 @@
 
 # Stundenplan
 
-| h     | Mo                   | Di                            | Mi  | Do                       | Fr  |
-| ----- | -------------------- | ----------------------------- | --- | ------------------------ | --- |
-| 8-10  | BioMed               |                               |     |                          |     |
-| 10-12 |                      | OMP<br>VDA<br>ABE             | VDA |                          |     |
-| 12-14 | OMP<br>Reinforcement | ~~Chip Design~~<br>ATCG1      |     | ~~Chip Design~~<br>ATCG1 |     |
-| 14-16 |                      | ApproxAlgos<br>Robot Learning |     | ApproxAlgos              |     |
-| 16-18 | Animation<br>ASMCP   |                               |     | Animation<br>PMASP       |     |
-| 18-20 |                      |                               |     |                          |     |
+| h     | Mo                           | Di                                | Mi  | Do                           | Fr  |
+| ----- | ---------------------------- | --------------------------------- | --- | ---------------------------- | --- |
+| 8-10  | BioMed                       |                                   |     |                              |     |
+| 10-12 |                              | ~~OMP~~<br>VDA<br>ABE             | VDA |                              |     |
+| 12-14 | ~~OMP~~<br>~~Reinforcement~~ | ~~Chip Design~~<br>ATCG1          |     | ~~Chip Design~~<br>ATCG1     |     |
+| 14-16 |                              | ~~ApproxAlgos~~<br>Robot Learning |     | ~~ApproxAlgos~~              |     |
+| 16-18 | Animation<br>ArraySignal     |                                   |     | Animation<br>PatternMatching |     |
+| 18-20 |                              |                                   |     |                              |     |
