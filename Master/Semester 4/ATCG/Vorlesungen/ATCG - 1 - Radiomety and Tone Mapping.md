@@ -23,3 +23,14 @@ Die Fläche, die ein Objekt im Sichtfeld einnimmt, wird in **Raumwinkel** (solid
 > Der Raumwinkel dieser Fläche: $$\omega=4 \pi    \frac{A}{A_{\text{Kugel}}}=\frac{A}{r^{2}}\ [\text{sr}]$$
 > Einheit: $\text{sr}$ (Steradian).
 
+## HDR
+**Camera Response Curve**
+Doppelt so viel Licht in die Kamera -/-> Doppelt so hoher Pixelwert
+Camera Response Curve (CRF): Einfallendes Licht auf der x-Achse (z.B. Belichtungszeit), Pixelwert auf der y-Achse
+
+### HDR-Algorithmus nach Robertson
+
+Gegeben: eine Serie von (LDR-)Bildern derselben Szene mit unterschiedlichen Belichtungszeiten
+Gesucht: floating point HDR-Bild dieser Szene
+
+$I_{m}$
