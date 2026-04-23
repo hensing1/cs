@@ -34,3 +34,14 @@ Luminence des $i$-ten Elements: Step-Funktion, die nur auf dem $i$-ten Element p
 
 $G(x \leftrightarrow x')$: Light exchange zwischen $x$ und $x'$
 
+diagonally dominant Matrix: Hauptgewichtung auf Diagonale, Summe der übrigen Elemente auf derselben Zeile ist größer -1
+Deshalb $\|T\|<1$ und deshalb $\lim_{ n \to \infty }T^{n}=0$
+$T^{0}L_{e}=L_{e}$: direkte Emission, $T^{1}L_{e}$: nach einer Reflektion, $T^{2}L_{e}$ nach zwei Reflektionen, ...
+
+Vergleich mit analytischer Lösung: $T^{n}$ ist ein $2n$-dimensionales Integral
+
+> We work in path space
+
+Integration über Pfade
+
+$TL_{e}$ enthält keine Geometrie, also keine Schatten
