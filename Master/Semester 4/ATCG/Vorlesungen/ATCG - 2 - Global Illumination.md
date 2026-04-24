@@ -45,3 +45,9 @@ Vergleich mit analytischer Lösung: $T^{n}$ ist ein $2n$-dimensionales Integral
 Integration über Pfade
 
 $TL_{e}$ enthält keine Geometrie, also keine Schatten
+
+Notation für Pfade (LSDSE usw)
+
+## Tray Racing
+
+Ray-Dreieck-Intersection
