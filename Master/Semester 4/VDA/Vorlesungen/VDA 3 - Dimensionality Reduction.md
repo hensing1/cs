@@ -45,3 +45,10 @@ Weil wir die Daten vorher zentrieren, verlieren wir einen Freiheitsgrad in der V
 Falls sehr hohe Dimensionalität: Eigenwertproblem ist nicht lösbar (Matrix zu groß)
 irgendein $\alpha$ aus den Datenpunkten berechnen
 
+## Nichtlineare PCA
+
+Neue Dimension erfinden, dort normale lineare PCA machen
+Feature space mapping: $x \mapsto \Phi(x)$
+
+Kernel Trick
+
