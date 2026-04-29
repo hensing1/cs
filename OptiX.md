@@ -3,6 +3,11 @@
 API-Schnittstellen in grün:
 ![[OptiX-API.png|404]]
 
+OpenGL-Interop möglich
+
+Logging interface:
+`optixDeviceContextSetLocCallback( )`
+
 ## Ray Generation
 
 - `extern "C"` um name mangling zu vermeiden
@@ -14,4 +19,13 @@ extern "C" __global__ void __raygen__rg() {
 
 }
 ```
+
+
+
+weitere:
+- `__miss__`
+- `__closesthit__`
+- `__intersection__`
+- `__anyhit__`
+
 
