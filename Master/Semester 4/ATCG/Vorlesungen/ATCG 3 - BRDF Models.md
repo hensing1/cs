@@ -29,6 +29,31 @@ Kamera: bei jeder Linse 4% zurückreflektiert -> Lens Flare
 
 *Phong-BRDF:*
 - Kosinus von Abweichung vom idealen Reflektanzwinkel hoch irgendeine Potenz
+	- $f_{\text{BRDF}}(l, v)=\kappa_{s}\cdot \frac{\langle r \mid v \rangle^{m}}{\cos(\theta_{i})}=\kappa_{s} \cdot \frac{\langle r \mid v \rangle^{m}}{\langle l \mid n \rangle}$
+	- $r$ ist der genau reflektierte Vektor von $l$ an der Oberfläche
 - nicht physikbasiert
 - nicht reziprok
-- 
+
+reziproke Phong-BRDF:
+$$f_{\text{BRDF}}(l, v)=\kappa_{s} \cdot \langle r \mid v \rangle ^{m}$$
+
+
+$r=(I-2nn^{t})l$
+
+damit reziprok: "reflektanz"-Matrix muss symmetrisch sein
+
+$f_{\text{BRDF}}(l, v)=\kappa_{s} \cdot (l^{T}Mv)^{m}$
+
+Lafortune-BRDF: Wahrscheinlichkeiten beliebig entlang Achsen anpassen - W'keit für Reflektion innerhalb Ebene wesentlich höher
+
+### Microfacet-based BRDF
+
+Annahme: Oberfläche besteht aus ganz vielen kleinen, perfekt spiegelnden, irregulär angeordneten Facetten
+
+Drei Effekte:
+- Normale der Facette weicht von der Oberflächennormale ab
+	- Damit von $\omega_{i}$ nach $\omega_{o}$ reflektiert wird, muss die Facette die Normale $h=\frac{\omega_{i}+\omega_{o}}{\|\omega_{i}+\omega_{o}\|}$ (halfway vector)
+- Manche in die richtige richtung reflektierten Strahlen werden von anderen Facetten *maskiert*
+- Manche Facetten sind im *Schatten* (inverser Effekt von Maskierung)
+
+insgesamt: $$w(\omega_{i},\omega_{o}) \,d \omega_{o}=Pr(\text{orientation}) \cdot Pr(\text{no shadowing or masking}) \cdot Pr(\text{reflection})$$
