@@ -15,3 +15,8 @@ Power spectrum: $|\mathbf{X}|^{2}$
 Log of power spectrum: $10 \log_{10}|\mathbf{X}|^{2}= 20 \log_{10}|\mathbf{X}|$
 
 slide 14 example exam relevant
+
+## Wiener Khinchin Theorem
+
+- Autocorrelation
+	- scalar product of two signals, one of which is cyclically shifted
