@@ -63,3 +63,9 @@ $Pr(\text{no masking}) = \frac{\cos(\beta)+\cos(\beta+2 \alpha)}{\cos(\beta)}$ u
 
 hängt nicht vom Winkel der Mikrofacette ab, sondern von Normale $n$ und Einfalls- und Ausgangswinkel $\omega_{i},\ \omega_{o}$
 
+## Oren-Nayar
+
+Der Mond zum Beispiel ist überhaupt nicht Lambertsch, da die Oberfläche sehr rauh ist.
+
+Unterschied zu Microfacets: Oberfläche ist *diffus*, kein Spiegel
+
