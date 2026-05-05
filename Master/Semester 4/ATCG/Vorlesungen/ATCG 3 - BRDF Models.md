@@ -57,3 +57,9 @@ Drei Effekte:
 - Manche Facetten sind im *Schatten* (inverser Effekt von Maskierung)
 
 insgesamt: $$w(\omega_{i},\omega_{o}) \,d \omega_{o}=Pr(\text{orientation}) \cdot Pr(\text{no shadowing or masking}) \cdot Pr(\text{reflection})$$
+#### Cook-Torrance shadowing function
+
+$Pr(\text{no masking}) = \frac{\cos(\beta)+\cos(\beta+2 \alpha)}{\cos(\beta)}$ und Gedöns
+
+hängt nicht vom Winkel der Mikrofacette ab, sondern von Normale $n$ und Einfalls- und Ausgangswinkel $\omega_{i},\ \omega_{o}$
+
