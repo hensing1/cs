@@ -45,10 +45,42 @@ Weil wir die Daten vorher zentrieren, verlieren wir einen Freiheitsgrad in der V
 Falls sehr hohe Dimensionalität: Eigenwertproblem ist nicht lösbar (Matrix zu groß)
 irgendein $\alpha$ aus den Datenpunkten berechnen
 
-## Nichtlineare PCA
+inneres Produkt statt äußeres Produkt verwenden
+
+## Kernel PCA
 
 Neue Dimension erfinden, dort normale lineare PCA machen
 Feature space mapping: $x \mapsto \Phi(x)$
 
-Kernel Trick
+Kernel Trick: impiziter höherdimensionaler Featurespace, wieder mit innerem Produkt
+
+**Nicht einfach zu interpretieren.**
+Es ist nicht so, dass a priori die Hauptkomponenten zu irgendeiner Linearkombination der ursprünglichen Attribute haben.
+
+Idee für Visualisierung:
+- zeige Daten im KernelPCA-Koordinatensystem als Scatterplot
+- lasse User interaktiv die ursprünglichen Dimensionen auswählen
+- Für jeden Datenpunkt: zeige *Gradientenvektor* im Bezug auf die ursprüngliche Dimension
+	- schaue nach Dimensionen, in denen diese Gradienten alle halbwegs in dieselbe Richtung zeigen
+
+## Multidimensional Scaling (MDS)
+
+- braucht keine Vektormäßige Beschreibung (z.B. Gensequenz)
+- man braucht nur paarweise Distanzen
+
+Input: große symmetrische Matrix mit paarweisen Distanzen (*dissimilarity matrix*)
+muss nicht unbedingt Dreiecksungleichung erfüllen
+
+Samples: $x_{1},\dots,x_{n}$
+Distanzen: $\delta_{ij}=\delta(x_{i},x_{j})$
+
+Output: Einbettung der Punkte in euklidischen Raum $y_{1},\dots,y_{n}$, sodass euklidische Distanz $d_{ij}=d(y_{i},y_{j}) \approx \delta_{ij}$
+
+Mögliche Fehlerfunktionen:
+- absolute Abweichungen minimieren: $$J_{ee}=\frac{\sum_{i < j}(d_{ij}-\delta_{ij})^{2}}{\sum_{i<j}\delta_{ij}^{2}}$$
+	- Cluster schrumpfen gerne zusammen
+- relative Abweichungen minimieren: $$J_{ff}=\sum_{i<j}\left( \frac{d_{ij}-\delta_{ij}}{\delta_{ij}} \right)^{2}$$
+- Kompromiss zwischen den beiden: $J_{ef}$
+
+Lösen mit gradient descent
 
