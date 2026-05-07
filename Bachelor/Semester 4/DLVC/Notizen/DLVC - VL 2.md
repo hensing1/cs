@@ -128,7 +128,7 @@ Daten $x_{1},x_{2},x_{3},\ldots$ werden *unabhängig und identisch verteilt (u.i
 
 > [!abstract] Definition *Varianz* und *Standardabweichung*
 > Die Varianz ist die erwartete quadrierte Abweichung zum Mittelwert einer Funktion $f(x)$ unter der Berücksichtigung einer Verteilung $p(x)$:$$\begin{align*}\\
-Var(f(x)) &= \mathbb{E}[f(x)-\mathbb{E}[f(x)]^{2}]\\
+\mathbb{V}[f(x)] &= \mathbb{E}[f(x)-\mathbb{E}[f(x)]^{2}]\\
 &=\mathbb{E}[f(x)^{2}]-\mathbb{E}[f(x)]^{2}
 \end{align*}$$
 > Die Standardabweichung ist die Quadratwurzel der Varianz und hat dieselbe Einheit wie die Zufallsvariable $x$.

@@ -36,6 +36,8 @@ Aus der Vorlesung [[INF 153 - Einführung in Deep Learning für Visual Computing
 
 ![[DLVC - VL 2#Erwartungswert und Varianz]]
 
+$$\mathbb{V}[\alpha f]=\alpha ^{2} \mathbb{V}[f]$$
+
 ![[DLVC - VL 2#Shannon-Entropie]]
 
 ![[DLVC - VL 2#Kreuzentropie]]
