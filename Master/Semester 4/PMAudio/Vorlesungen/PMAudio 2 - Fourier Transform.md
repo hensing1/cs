@@ -1,3 +1,5 @@
+## Discrete Fourier Transform (DFT)
+
 Basisfunktion: $$u_{k}(n)=\exp\left( 2 \pi i \frac{kn}{N} \right)$$
 
 - $N$: Länge des Signalvektors
