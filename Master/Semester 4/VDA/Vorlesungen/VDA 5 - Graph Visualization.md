@@ -27,7 +27,7 @@ Rekursive Defintion:
 - zentriere Elternknoten zwischen ihnen
 
 Threading:
-- 
+- Kontouren links und rechts verfolgen mit virtuellen Kanten von einem Kontourknoten zum nächsten
 
 ## Indentation
 
