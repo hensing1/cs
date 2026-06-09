@@ -1,7 +1,26 @@
 [[atcg1-02-Global_Illumination_Problem.pdf]]
 
-- BSSRDF - 12dimensionale Funktion
-	- sehr schwer zu messen -> Messungen parallelisieren
+**BSSRDF**
+*Bidirectional Scattering Surface Reflectance Distribution Function*
+- 12-dimensionale Funktion:
+	- Eingangs- und Ausfallspunkt auf der Oberfläche (2x2 Freiheitsgrade)
+	- Richtung des Lichtvektors (2x2 Freiheitsgrade)
+	- Wellenlänge (2x1 Freiheitsgrad)
+	- Zeitpunkt des Eintritts/Ausfalls (2x1 Freiheitsgrad)
+- sehr schwer zu messen -> Messungen parallelisieren
+
+Für BSDF: ignorieren von Zeitdifferenz (keine Phosphoreszenz), Wellenlängendifferenz (keine Fluoreszenz), Beschränkung der Wellenlängen (z.B. RGB), und Eingangspunkt = Ausfallspunkt (kein subsurface scattering)
+-> 6-dimensional
+
+$$f_{\text{BSDF}}(\theta_{i}, \phi_{i}, \mathbf{x}, \theta_{o}, \phi_{o})=\frac{dL_{o}(\theta_{i},\phi_{i},\mathbf{x},\theta_{o},\phi_{o})}{dE_{i}(\theta_{i},\phi_{i},\mathbf{x})} \left[ \frac{1}{\mathbf{sr}} \right]$$
+mit:
+- $\theta \in [0, 180°]$ Winkel zur Normalen (eingeschlossen Transmittance)
+- $\phi \in [0, 360°)$ Himmelsrichtung
+- $\mathbf{x}$ Punkt auf der Oberfläche
+- $L_{o}$ reflektierte Radianz
+- $E_{i}$ eingehende Irradianz
+
+Aufteilen der BSDF in Reflektionsteil (BRDF) und Transmittance-Teil (BTDF).
 
 **Beschreibung von BSDF/BRDF/BTDF**
 

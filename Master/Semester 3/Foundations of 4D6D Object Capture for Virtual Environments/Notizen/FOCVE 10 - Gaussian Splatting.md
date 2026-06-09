@@ -44,6 +44,22 @@ Wir haben eventuell nicht die korrekte Anzahl von Gaussians
 - Gaussians in 16x16 Tiles sortieren
 - $\alpha$ Blending zum Zusammenfassen
 
+## Farben
+Wir parametrisieren die Farbe eines Splats mit [[Spherical Harmonics]] (SH).
+Mit spherical harmonics erhalten wir eine Funktion, die *parametrisiert nach Richtung* ist, und wir optimieren die Farbe je nach Blickrichtung.
+
+Mit SH nullter Ordnung haben wir nur eine einzelne Farbe pro Splat.
+Je höher die Ordnung, desto mehr Detail können wir in die einzelnen Richtungen erfassen.
+
+## Optimierung (Loss)
+
+- Ground Truth $C_{k}$: Referenzbild
+- Output $\hat{C}_{k}$: gerenderte (rasterisierte) Gaussian Splats aus derselben Perspektive wie die Kamera
+
+Pixelweiser Loss:
+- L1-Loss: $L_{1}(C_{k}, \hat{C}_{k}) = \|C_{k}-\hat{C}_{k}\|$
+- Dissimilarity Loss (DSSIM): $\text{DSSIM}(C_{k},\hat{C}_{k})=\frac{1-\text{SSIM}(C_{k},\hat{C}_{k})}{2}$
+	- SSIM: Structured Similarity
 
 Andere Loss-Funktion die ist besser
 

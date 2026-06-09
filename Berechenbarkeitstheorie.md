@@ -1,5 +1,3 @@
-# Berechenbarkeitstheorie
-
 ## Probleme (formal)
 
 > [!abstract] Definition *Problem*

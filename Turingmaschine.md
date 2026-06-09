@@ -1,4 +1,3 @@
-# Turingmaschine
 ## Definition
 Eine Turingmaschine (abgekürzt mit TM) ist ähnlich zu einem [[Endliche Automaten|endlicher Automaten]] mit einem Band mit unendlich vielen Speicherzellen.
 
