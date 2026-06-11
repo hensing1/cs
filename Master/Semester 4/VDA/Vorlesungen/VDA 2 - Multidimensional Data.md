@@ -21,7 +21,11 @@ Fähigkeit, in eine bestimmte Zeile reinzuzoomen
 Wir haben ein *Histogramm*, welches irgendeine Verteilung angibt (eine Probability Distribution Function (PDF)).
 Eine Kernel Density Estimation (KDE) ist eine *geglättete Schätzung* der PDF.
 
-
+Jeder Datenpunkt wird durch einen Kernel $K$ ersetzt, z.B. Gauss-Funktion (zentriert am Datenpunkt).
+Die kontinuierliche Version ist die (normierte) Summe aus all diesen Kerneln:
+$$f(x)=\frac{1}{n}\sum_{i}K(x-x_{i}).$$
+Die Größe des Kernels ist ein Hyperparameter. Zu klein, und das Resultat ist sehr verrauscht - zu klein, und der Plot ist zu sehr geglättet.
+"Scott's rule of thumb" für Gauss-Kernel $K(x)=\frac{1}{h\sqrt{ 2\pi }}\exp\left( -\frac{x^{2}}{2h^{2}} \right)$:  $h \approx 1.06 \frac{\hat{\sigma}}{\sqrt[5]{ n }}$
 
 ## Distribution Consistency
 ?
