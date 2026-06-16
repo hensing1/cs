@@ -52,4 +52,6 @@ Die Autokorrelation direkt zu berechnen (also das Skalarprodukt von oben), benö
 Da der DFT aber nur $\mathcal{O}(N \log N)$ Operationen braucht, ist (folgend aus Wiener Khinchin) der folgende Weg schneller (ebenfalls $\mathcal{O}(N \log N)$): $$x \mapsto X \mapsto |X|^{2} \mapsto \text{DFT}_{N}^{-1}|X|^{2}=\text{ACF}[x].$$
 ## Fast Fourier Transform (FFT)
 
-Falls $N$ eine Zweierpotenz ist, gilt: $x \mapsto X=\text{DFT}_{N}\,x$ kann mit $1.5 N \log N-N$
+Falls $N$ eine Zweierpotenz ist, gilt: $x \mapsto X=\text{DFT}_{N}\,x$ kann mit $1.5 N \log N-N+1$ Operationen berechnet werden.
+Für beliebige $N$ braucht man höchstens $8 N \log N$.
+
