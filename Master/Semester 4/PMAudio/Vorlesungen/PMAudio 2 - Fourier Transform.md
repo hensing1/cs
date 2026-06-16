@@ -46,7 +46,5 @@ slide 14 example exam relevant
 > *Das Spektrum der Autokorrelation eines Signals ist das Power-Spektrum dieses Signals.*
 > $$\widehat{\text{ACF}[x]}=|X|^{2}$$
 
+Daraus folgt: $\text{ACF}[x]=\text{DFT}_{N}^{-1}|X|^{2}.$
 
-
-- Autocorrelation
-	- scalar product of two signals, one of which is cyclically shifted
