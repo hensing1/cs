@@ -1,3 +1,4 @@
+[[2.PM2L4Audio_handout.pdf]]
 ## Discrete Fourier Transform (DFT)
 
 Basisfunktion: $$u_{k}(n)=\exp\left( 2 \pi i \frac{kn}{N} \right)$$
@@ -63,4 +64,22 @@ Signal:
 	$X=(p(\omega^{0}), p(\omega^{1}), p(\omega ^{2}), \dots)$
 
 Denn: $\omega=\exp\left( -\frac{2\pi i}{N} \right)$, und $\omega^{k}=\exp\left( -2\pi i \frac{k}{N} \right)$, und $(\omega^{k})^{n}=\exp\left( -2\pi i \frac{kn}{N} \right)$ -> Frequenzbasis von $\mathbb{C}^{N}$
+
+naja und dann teilt man dieses Polynom in gerade und ungerade koeffizienten und irgendwie ist das schneller
+
+## Audio Denoising
+
+Einfacher Ansatz: alle Frequenzen, deren Amplituden unterhalb von einem bestimmten Wert liegen, rauswerfen (*hard thresholding*)
+
+Konvolutionstheorem
+hier soll die Konvolution *zyklisch* sein
+
+## Short-Time Fourier Transform (STFT)
+
+FT über das gesamte Audio-Sample verschleiert zeitgenaue Information
+STFT: mehrere FTs über jeweils kleine aufeinanderfolgende Zeitfenster anwenden
+
+Nur kurzen Zeitraum rausschneiden: äquivalent zu Multiplikation mit Box-Filter -> unschönes Gibbs ringing in Frequenzbild
+
+Deshalb: Dreiecks-Fenster, oder besser Gauss (aka. "Hann Window")
 
