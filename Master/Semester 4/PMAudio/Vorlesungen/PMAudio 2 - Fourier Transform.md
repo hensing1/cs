@@ -55,3 +55,12 @@ Da der DFT aber nur $\mathcal{O}(N \log N)$ Operationen braucht, ist (folgend au
 Falls $N$ eine Zweierpotenz ist, gilt: $x \mapsto X=\text{DFT}_{N}\,x$ kann mit $1.5 N \log N-N+1$ Operationen berechnet werden.
 Für beliebige $N$ braucht man höchstens $8 N \log N$.
 
+Signal:
+	$x=(x_{0},x_{1},\dots,x_{N-1})$
+-> Polynom: 
+	$p(z)=\sum_{n=0}^{N-1}x_{n}z^{n}$
+-> Frequenzraum, wenn man für $z$ die Werte $\omega^{0}$, $\omega^{1}$, $\omega ^{2},\dots$ einsetzt
+	$X=(p(\omega^{0}), p(\omega^{1}), p(\omega ^{2}), \dots)$
+
+Denn: $\omega=\exp\left( -\frac{2\pi i}{N} \right)$, und $\omega^{k}=\exp\left( -2\pi i \frac{k}{N} \right)$, und $(\omega^{k})^{n}=\exp\left( -2\pi i \frac{kn}{N} \right)$ -> Frequenzbasis von $\mathbb{C}^{N}$
+
