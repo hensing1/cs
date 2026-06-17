@@ -45,3 +45,5 @@ Laplacian Smoothing + HC extension
 
 ### Mesh Decimation
 
+Vertices raus
+
