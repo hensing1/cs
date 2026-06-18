@@ -83,3 +83,8 @@ Nur kurzen Zeitraum rausschneiden: äquivalent zu Multiplikation mit Box-Filter 
 
 Deshalb: Dreiecks-Fenster, oder besser Gauss (aka. "Hann Window")
 
+Für (potentiell komplexwertiges) Fenster $w \in \mathbb{C}^{N}$ und step size $H \in [1,N-1]$ ist der $m$-te Frame $x_{m}(n):=x(n+Hm) \overline{w(n)}.$
+
+Der STFT hat jetzt zwei Indizes: $X(m, k)$, mit $m$ frame index und $k$ Frequenz-Index. Wenn man ihn in der Ebene plottet, nimmt man das power spectrogram: $(m,k) \mapsto |X(m,k)|^{2}.$
+
+Üblicherweise ist die Zeit auf der x-Achse, und der Logarithmus der Frequenzen auf der y-Achse.
