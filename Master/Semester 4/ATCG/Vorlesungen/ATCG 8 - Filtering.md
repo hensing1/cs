@@ -6,3 +6,5 @@
 	- lineare Interpolation führt zu reconstruction error
 	- unzureichendes Sampling führt zu Aliasing
 - Fourier-Transformation
+- Konvolution
+- Konvolutionstheorem
