@@ -1,3 +1,4 @@
+[[atcg1-06-Photon_Mapping.pdf]]
 
 Aus der Übung:
 > Instead of simply tracing rays through the camera and accumulating radiance, the photon mapping ray generator is more complex.
