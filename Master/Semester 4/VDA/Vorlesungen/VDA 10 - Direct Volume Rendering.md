@@ -9,3 +9,12 @@ Mehrdimensionale Funktionen: zusätzlich Gradienten, zweite Ableitungen, Output 
 
 1D Problem: wenn wir interpolieren (insb. zwischen Kanten), können Farben auftreten die wir nicht wollten
 
+
+## Volume Rendering Integral
+
+Ray Casting
+Opacity Integral
+siehe FOCVE
+
+Opacity Peeling: statt early ray termination, zweites Bild anfangen zu rendern sobald sich Opazität ändert -> zeigt nur, was anderenfalls verborgen wäre
+
