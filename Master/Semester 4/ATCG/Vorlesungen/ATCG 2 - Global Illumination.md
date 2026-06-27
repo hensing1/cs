@@ -52,20 +52,23 @@ Weitere Zutaten:
 Die LTE in diesem Kontext ausgedrückt: $$L(x' \to x)=L_{e}(x' \to x) + \int_{S}f_{\text{BSDF}}(x'' \to x' \to x)L(x' \leftarrow x'') G(x'' \leftrightarrow x') \, dA(x'').$$
 Wir integrieren also über jeden einzelnen Punkt $x''$ in der Szene $S$.
 
-
+Als kompakte Schreibweise fassen wir das Integral über die Szene als Integral-Operator $T$ zusammen. $L$ ist alles Licht in der Szene, und $TL$ ist das reflektierte Licht:
 
 $$L=L_{e}+TL$$
-$T$: Integral-Operator
-$TL$: Function on the surface in space - the reflected part
+Umgeschrieben: $L=(I-T)^{-1}L_{e}$ - um den gesamten Lichttransport zu bestimmen, müssen wir also $(I-T)$ bestimmen und invertieren.
 
 ### Radiocity Method
-Alle Oberflächen diffus
-Für diffuse Oberflächen (*lambertsch*) ist die BSDF *unabhängig von Eingangs- und Ausgangswinkel*: 
+
+Wir wollen $I-T$ als Matrix darstellen.
+
+Wir nehmen dafür erst mal an, dass alle Oberflächen diffus sind - die BSDF hängt also nur vom Oberflächenpunkt $x$ ab, aber nicht von Eingangs- oder Ausgangswinkel.
 $$f_{\text{BSDF}}(\omega_{i},x,\omega_{o})=f_{\text{BSDF}}(x)$$
+[^1]
+Das machen wir, damit wir den BSDF-Term aus dem Integral der Renderinggleichung rausziehen können. Dann beschreibt das Integral nämlich nur noch einfallende *Radiocity* (Irradianz) ($\frac{W}{m^{2}}$).[^2]
 
-In der Renderinggleichung gibt es den Cosinus-Term für den Einfallswinkel natürlich trotzdem.
+Damit alles die Einheit der Radianz hat (Gesamtlichtmenge, die von einem Punkt in die gesamte Halbkugel abgestrahlt wird), mutliplizieren wir den Rest einmal mit $\pi$ (Halbkugel in Einheit Steradian ($sr$)): 
+$$L(x)\pi=L_{e}(x)\pi+f_{\text{BSDF}}(x)\pi \int_{S}L(x')G(x \leftrightarrow x')\,dA(x')$$
 
-Radiosity $M$: total radiant power per unit area leaving a surface
 
 Radiance in diffusen Oberflächen: 2-Dimensional (nur Oberfläche, kein Ausfallswinkel)
 
@@ -94,3 +97,7 @@ Notation für Pfade (LSDSE usw)
 ## Tray Racing
 
 Ray-Dreieck-Intersection
+
+[^1]: (In der Renderinggleichung gibt es den Cosinus-Term für den Einfallswinkel natürlich trotzdem.)
+
+[^2]: normalerweise beschreibt die Renderinggleichung die Radianz ($\frac{W}{m^{2}sr}$).
