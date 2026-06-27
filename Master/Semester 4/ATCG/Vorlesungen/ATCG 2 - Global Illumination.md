@@ -24,11 +24,22 @@ Aufteilen der BSDF in Reflektionsteil (BRDF) und Transmittance-Teil (BTDF).
 
 **Beschreibung von BSDF/BRDF/BTDF**
 
-Renderinggleichung
-Cosinus-Term: Differenzieller Lichtstrahl verteilt sich über eine größere Fläche, je nach Winkel
+Renderinggleichung:
+![[CG - VL 4#^b35b91]]
 
-Light Transport Equation: irgendwie mit Punkten
+Raumrichtung $\omega$ besteht aus den Winkeln $\theta$ und $\phi$ (s.o.).
+
+$f$ ist die BSDF von oben, hier also zusätzlich abhängig von $\vec{x}$.
+$\langle \vec{w_{i}} \mid \vec{n} \rangle$ ist der *Cosinus-Term* abhängig vom Winkel des einfallenden Lichts ($\cos(\theta_{i})$). Denn: der differenzielle Lichtstrahl verteilt sich über eine größere Fläche, je nach Winkel.
+
 ## Light Transport Equation
+
+Grundlegende Annahme: *Licht verändert sich entlang des Strahls nicht*, also ist das einfallende Licht aus einer Richtung das ausgehende Licht am anderen Ende des Strahls: $$L_{i}(x, \omega_{i})=L_{o}(h(x, \omega_{i}), -\omega_{i}).$$
+$h(x, \omega_{i})$ ist die *ray casting function*, die uns den Punkt gibt (auf einer Oberfläche in der Szene), von dem aus der Strahl losgeschickt werden muss, damit er am Punkt $x$ aus der Richtung $\omega_{i}$ ankommt. 
+
+Die Renderinggleichung umformuliert, sodass nur noch ausgehendes Licht darin vorkommt, heißt **Light Transport Equation** (LTE): $$L_{o}(x, \omega_{o})=L_{e}(x, \omega_{o})+ \int_{\Omega}f_{\text{BSDF}}(\omega_{i},x,\omega_{o})L_{o}(h(x, \omega_{i}), -\omega_{i})\cos(\theta_{i})d \,\omega_{i}.$$
+Anstatt 
+
 
 $$L=L_{e}+TL$$
 $T$: Integral-Operator
