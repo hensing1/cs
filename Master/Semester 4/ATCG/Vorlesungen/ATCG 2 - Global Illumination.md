@@ -38,7 +38,7 @@ Grundlegende Annahme: *Licht verändert sich entlang des Strahls nicht*, also is
 $h(x, \omega_{i})$ ist die *ray casting function*, die uns den Punkt gibt (auf einer Oberfläche in der Szene), von dem aus der Strahl losgeschickt werden muss, damit er am Punkt $x$ aus der Richtung $\omega_{i}$ ankommt. 
 
 Die Renderinggleichung umformuliert, sodass nur noch ausgehendes Licht darin vorkommt, heißt **Light Transport Equation** (LTE): $$L_{o}(x, \omega_{o})=L_{e}(x, \omega_{o})+ \int_{\Omega}f_{\text{BSDF}}(\omega_{i},x,\omega_{o})L_{o}(h(x, \omega_{i}), -\omega_{i})\cos(\theta_{i})d \,\omega_{i}.$$
-Anstatt 
+Wir können das ganze jetzt umschreiben als Lichtmenge, die von einem Punkt $x'$ zu einem anderen Punkt $x$ geworfen wird: $$L_{o}(x', \omega_{o})=L_{o}(x', x-x') =: L_{o}(x' \to x)$$
 
 
 $$L=L_{e}+TL$$
