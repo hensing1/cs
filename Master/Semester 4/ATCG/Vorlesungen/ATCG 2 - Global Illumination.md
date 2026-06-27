@@ -30,7 +30,7 @@ Renderinggleichung:
 Raumrichtung $\omega$ besteht aus den Winkeln $\theta$ und $\phi$ (s.o.).
 
 $f$ ist die BSDF von oben, hier also zusätzlich abhängig von $\vec{x}$.
-$\langle \vec{w_{i}} \mid \vec{n} \rangle$ ist der *Cosinus-Term* abhängig vom Winkel des einfallenden Lichts ($\cos(\theta_{i})$). Denn: der differenzielle Lichtstrahl verteilt sich über eine größere Fläche, je nach Winkel.
+$\langle \vec{w_{i}} \mid \vec{n} \rangle$ ist der *Kosinus-Term* abhängig vom Winkel des einfallenden Lichts ($\cos(\theta_{i})$). Denn: der differenzielle Lichtstrahl verteilt sich über eine größere Fläche, je nach Winkel.
 
 ## Light Transport Equation
 
@@ -39,6 +39,19 @@ $h(x, \omega_{i})$ ist die *ray casting function*, die uns den Punkt gibt (auf e
 
 Die Renderinggleichung umformuliert, sodass nur noch ausgehendes Licht darin vorkommt, heißt **Light Transport Equation** (LTE): $$L_{o}(x, \omega_{o})=L_{e}(x, \omega_{o})+ \int_{\Omega}f_{\text{BSDF}}(\omega_{i},x,\omega_{o})L_{o}(h(x, \omega_{i}), -\omega_{i})\cos(\theta_{i})d \,\omega_{i}.$$
 Wir können das ganze jetzt umschreiben als Lichtmenge, die von einem Punkt $x'$ zu einem anderen Punkt $x$ geworfen wird: $$L_{o}(x', \omega_{o})=L_{o}(x', x-x') =: L_{o}(x' \to x)$$
+Mit dem einfallenden Licht $L_{i}(x', \omega_{i}) = L_{i}(x', x'-x'') =: L_{i}(x' \leftarrow x'')$ ist es ganauso. Die BSDF können wir dann auch schreiben als $f_{\text{BSDF}}(x'' \to x' \to x) := f_{\text{BSDF}}(\omega_{i},x',\omega_{o})$.
+
+Weitere Zutaten:
+- Anstatt differenzieller Richtung brauchen wir eine differenzielle *Fläche*, die Licht abgibt und über die wir integrieren können. Die Umwandlung ist: $$d \omega_{i}=\frac{\cos(\theta_{i})}{\|x''-x'\|^{2}}dA(x'')$$
+	- $dA(x'')$ ist die Fläche, die mit dem abgebenden Punkt $x''$ assoziiert ist
+	- Kosinusterm wegen siehe oben
+	- Raumwinkel, den die Oberfläche einnimmt, wird proportional zur quadrierten Distanz kleiner
+- Wir nennen $V(x'' \leftrightarrow x')$ den Term, der uns sagt, ob $x''$ von $x'$ aus überhaupt sichtbar ist (kann mit ray casting function $h(x', x''-x')$ ausgewertet werden)
+- Für Lesbarkeit definieren wir den Geometrieterm $$G(x'' \leftrightarrow x'):= V(x'' \leftrightarrow x')  \frac{\cos(\theta_{i})\cos(\theta_{o})}{\|x''-x'\|^{2}}$$
+
+Die LTE in diesem Kontext ausgedrückt: $$L(x' \to x)=L_{e}(x' \to x) + \int_{S}f_{\text{BSDF}}(x'' \to x' \to x)L(x' \leftarrow x'') G(x'' \leftrightarrow x') \, dA(x'').$$
+Wir integrieren also über jeden einzelnen Punkt $x''$ in der Szene $S$.
+
 
 
 $$L=L_{e}+TL$$
