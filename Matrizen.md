@@ -1,6 +1,3 @@
-# Matrizen
-
-
 > [!abstract] Definition *Matrix*
 > Eine **$(n \times m)$-Matrix** über $\mathbb{K}$ besteht aus $n \cdot m$ Elementen mit Indizes $i \in \set{1,\ldots,n}$ und $j \in \set{1,\ldots,m}$ in folgendem Schema: $$M=\begin{pmatrix}a_{11}&a_{12}&\ldots&a_{1m}\\a_{21}&a_{22}&\ldots&a_{2m}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&\ldots&a_{nm}\end{pmatrix}$$
 > $n$ beschreibt also die Anzahl der Zeilen und $m$ beschreibt die Anzahl der Spalten.
@@ -41,7 +38,7 @@ Die Matrix-Vektor-Multiplikation $Av=b$ mit $A \in \text{Mat}(n\times m), v \in 
 
 #### Linearkombination
 
-Das Produkt ist eine [[Vektorräume#Linearkombination|Linearkombination]] der Spaltenvektoren der Matrix:
+Ein Matrix-Vektorprodukt ist eine [[Vektorräume#Linearkombination|Linearkombination]] der Spaltenvektoren der Matrix:
 ![[Matrix-Vektor-Produkt.png]]
 
 Dasselbe gilt für Matrix-Matrix-Multiplikation: für $B=A \cdot C$ ist die Spalte $b_{j}=A \cdot c_{j}$, d.h. eine Linearkombination der Spalten von $A$, deren Koeffizienten in der Spalte $c_{j}$ stehen.
@@ -110,7 +107,7 @@ Eine *Permutationsmatrix* erhält man, indem man die Zeilen (bzw. Spalten) der E
 #### Sätze
 
 - Eine elementare Permutationsmatrix ist selbstinvers: $P_{i,j}^{2}=I$.
-- Jede beliebige Permutationsmatrix lässt sich als Produkt aus beliebigen elementaren Permutationsmatrizen $P_{i,j}$ darstellen.
+- Jede beliebige Permutationsmatrix lässt sich als Produkt aus elementaren Permutationsmatrizen $P_{i,j}$ darstellen.
 
 ## Determinante
 > [!abstract] Definition *Laplace'scher Entwicklungssatz*
