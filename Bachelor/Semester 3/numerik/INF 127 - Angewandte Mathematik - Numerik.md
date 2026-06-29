@@ -1,5 +1,3 @@
-# Angewandte Mathematik - Numerik
-
 ## Orga
 *Klausurtermine:*
 1. Do. 22.02.2024 13:00-15:00
