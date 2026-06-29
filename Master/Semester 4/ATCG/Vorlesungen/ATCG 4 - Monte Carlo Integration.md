@@ -15,7 +15,11 @@ Für eine doppelt so gute Approximierung braucht man also $2^{2l/k}$-mal so viel
 
 > [!abstract] Definition *Monte Carlo Estimator*
 > Der Monte-Carlo Estimator löst das Integral $F=\int_{D}f(x)\,d\mu(x)$ mit $$\langle F \rangle_{N}=\frac{1}{n}\sum_{i=1}^{n} \frac{f(x_{i})}{q(x_{i})}$$
-> wobei $q(x)$ eine Wahrscheinlichkeitsdichtefunktion über $D$ ist, nach der auch die Samples $x_{i}$ gezogen werden.
+> wobei $q(x)$ eine [[Wahrscheinlichkeitsrechnung#Wahrscheinlichkeitsdichtefunktionen|Wahrscheinlichkeitsdichtefunktion]] über $D$ ist, nach der auch die Samples $x_{i}$ gezogen werden.
+
+Ist jetzt $q=f$ (so normiert, dass das Integral von $q$ gleich 1 ist), dann benötigt man also nur ein einzelnes Sample.
+Da wir das Integral aber natürlich nicht kennen, hilft uns das erst einmal nichts.
+Aber: je besser $q$ $f$ approximiert, desto schneller konvergiert unser MC-Estimator.
 
 In 1D: 
 zu sampelnde Funktion -> CDF -> Inverse CDF uniform samplen -> gesampelte y-Werte als x-Werte für ursprüngliche Funktion verwenden
