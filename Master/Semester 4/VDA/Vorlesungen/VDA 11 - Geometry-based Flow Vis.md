@@ -17,3 +17,7 @@ Kann auf einem Grid oder auf unstrukturierten Punkten definiert sein
 
 Flow-Daten bekommen: mit Messungen, oder per Simulation (Navier-Stokes-Gleichungen lösen)
 
+Diskretes -> Kontinuierliches Vektorfeld mittels Interpolation
+Interpolation für scattered data: *radial basis functions* (?)
+
+Die Ableitung von einem Vektorfeld
