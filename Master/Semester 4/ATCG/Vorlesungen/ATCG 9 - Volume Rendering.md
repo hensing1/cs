@@ -30,3 +30,8 @@ das ist dann drin in der *radiative transfer equation* (RTE)
 stückweise konstante Opazität
 -> alpha blending
 
+lösen mit path integral
+
+## Estimating Transmittance along a ray
+
+### Distance sampling
