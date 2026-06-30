@@ -91,3 +91,5 @@ Anders gesagt enthält sie alle ersten partiellen Ableitungen des Gradienten $\n
 > [!abstract] Definition *Jacobi-Matrix*
 > Die Jacobi-Matrix $J_{f}$ einer Funktion $f: \mathbb{R}^{m} \to \mathbb{R}^{n}$ enthält alle partiellen Ableitungen von $f:$ $$(J_{f}(\theta))_{i,j} = \frac{\partial}{\partial \theta_{j}}f(\theta)_{i}.$$
 
+^a487cd
+

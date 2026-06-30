@@ -24,10 +24,10 @@ mit $\epsilon_i=1$ und $\bar{\epsilon}_i=0$ für Lineargelenke, andersherum für
 Mit dem Vektor $q$ beschreiben wir die Gesamtheit aller Gelenkparameter: $q=(q_1,q_2,\ldots,q_n)^T$.
 
 
-## Jakobi-Matrizen
+## Jacobi-Matrizen
 
 Als Berechnung für einen Vektor von Endeffektorparametern $x$ aus Gelenkparametern $q$ sei die Funktion $f(q)=x$ gegeben: $$\begin{pmatrix}f_1(q) \\ f_2(q) \\ \vdots \\ f_m(q)\end{pmatrix}=\begin{pmatrix}x_1 \\ x_2 \\ \vdots \\ x_m\end{pmatrix}.$$
-Die **Jakobi-Matrix** $J \in \mathbb{R}^{m\times n}$ enthält alle partiellen Ableitungen nach den jeweiligen Gelenkparametern: $$\delta x = J(q) \cdot \delta q = \begin{pmatrix}\frac{\partial f_{1}}{\partial q_{1}}(q) & \ldots & \frac{\partial f_{1}}{\partial q_{n}}(q) \\ \vdots & & \vdots \\ \frac{\partial f_{m}}{\partial q_{1}}(q) & \ldots & \frac{\partial f_{m}}{\partial q_{n}}(q)\end{pmatrix}\cdot \delta q.$$
+Die **Jacobi-Matrix** $J \in \mathbb{R}^{m\times n}$ enthält alle partiellen Ableitungen nach den jeweiligen Gelenkparametern: $$\delta x = J(q) \cdot \delta q = \begin{pmatrix}\frac{\partial f_{1}}{\partial q_{1}}(q) & \ldots & \frac{\partial f_{1}}{\partial q_{n}}(q) \\ \vdots & & \vdots \\ \frac{\partial f_{m}}{\partial q_{1}}(q) & \ldots & \frac{\partial f_{m}}{\partial q_{n}}(q)\end{pmatrix}\cdot \delta q.$$
 Diese Matrix funktioniert sowohl für differenzielle Kinematik als auch für Geschwindigkeiten.
 *Die Werte der Jacobi-Matrix hängen von der momentanen Gelenkkonfiguration ab*.
 
