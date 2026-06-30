@@ -48,4 +48,11 @@ zB. interaktive Initialisierung/Platzierung
 
 ## Charakteristische Kurven
 
-- **Stream Line:** Kurve, die in jedem Punkt 
+- **Stream Line:** Kurve, die in jedem Punkt tangenzial zum Vektorfeld ist (generiert für einen fixen Zeitpunkt)
+	- für jeden Punkt gibt es genau eine Tangenziallinie, die durch ihn hindurch führt
+	- schneiden sich nicht (außer an kritischen Punkten)
+	- parametrische Beschreibung normalerweise nicht möglich
+- **Path Line:** Pfad, den ein Partikel über die Zeit in einem unstetigem Vektorfeld zurücklegt
+- **Streak Line:** Ort aller Partikel, die über die Zeit hinweg am selben Punkt in das Vektorfeld geworfen wurden
+- **Time line:** Ort aller Partikel, die zum selben Zeitpunkt entlang einer Linie in das Vektorfeld geworfen wurden
+
