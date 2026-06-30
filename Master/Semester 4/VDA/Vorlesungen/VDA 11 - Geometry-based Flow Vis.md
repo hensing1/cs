@@ -21,4 +21,5 @@ Diskretes -> Kontinuierliches Vektorfeld mittels Interpolation
 Interpolation für scattered data: *radial basis functions* (?)
 
 Die Ableitung von einem Vektorfeld ist ein Tensorfeld.
-Der Wert von einem Tensorfeld an einem Punkt $(x,y)$ ist die [[Funktionen#^a487cd|Jacobimatrix]] 
+Der Wert von diesem Tensorfeld an einem Punkt $(x,y)$ ist die [[Funktionen#^a487cd|Jacobimatrix]] vom dazugehörigen Vektor.
+
