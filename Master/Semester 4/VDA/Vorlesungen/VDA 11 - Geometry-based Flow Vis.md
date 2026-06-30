@@ -53,6 +53,9 @@ zB. interaktive Initialisierung/Platzierung
 	- schneiden sich nicht (außer an kritischen Punkten)
 	- parametrische Beschreibung normalerweise nicht möglich
 - **Path Line:** Pfad, den ein Partikel über die Zeit in einem unstetigem Vektorfeld zurücklegt
+	- genau ein Pfad pro Punkt $(x,t)$ in Raum-Zeit
 - **Streak Line:** Ort aller Partikel, die über die Zeit hinweg am selben Punkt in das Vektorfeld geworfen wurden
+	- viele pro Punkt, je nach Seeding
 - **Time line:** Ort aller Partikel, die zum selben Zeitpunkt entlang einer Linie in das Vektorfeld geworfen wurden
+	- viele pro Punkt, je nach Seeding
 
