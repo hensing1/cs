@@ -23,3 +23,6 @@ Interpolation für scattered data: *radial basis functions* (?)
 Die Ableitung von einem Vektorfeld ist ein Tensorfeld.
 Der Wert von diesem Tensorfeld an einem Punkt $(x,y)$ ist die [[Funktionen#^a487cd|Jacobimatrix]] vom dazugehörigen Vektor.
 
+![[Vektoren#^fc6a9b]]
+
+Ist die Divergenz überall gleich 0, ist das Vektorfeld *inkomprimierbar*.

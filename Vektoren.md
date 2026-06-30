@@ -55,11 +55,13 @@ Ein Vektorfeld ist ein $\mathbb{R}^{n}$, bei dem für jeden Punkt in diesem $n$-
 Im Kontext der differenziellen Geometrie: 
 ![[ATCG2 - 7 - Differential Forms#^eb5f09]]
 
-
+### Divergenz
 > **Divergenz**
 > Die Divergenz eines $n$-dimensionalen Vektorfelds $F=\begin{bmatrix}F_{1}(x) \\ F_{2}(x) \\ \vdots \\ F_{n}(x)\end{bmatrix}$ im $\mathbb{R}^{n}$ ist definiert als $$\nabla \cdot F=\frac{ \partial F_{1} }{ \partial x_{1} } + \frac{ \partial F_{2} }{ \partial x_{2} } +\dots+\frac{ \partial F_{n} }{ \partial x_{n} }. $$
 
 ^fc6a9b
+
+Es ist die [[Matrizen#Spur|Spur]] der [[Funktionen#^a487cd|Jacobimatrix]] des Vektorfelds an diesem Punkt.
 
 Intuitiv sagt einem die Divergenz, wie sehr an einem bestimmten Punkt die Vektoren auseinanderlaufen.
 $\nabla \cdot F >0$: man befindet sich nahe einer "Quelle", die Vektoren laufen auseinander
@@ -69,3 +71,9 @@ $\nabla \cdot F<0$: man befindet sich nahe einer "Senke", die Vektoren laufen zu
 Es ist gewissermaßen das Skalarprodukt zwischen einem Vektor aus dem Vektorfeld, und dem Vektor $\nabla$ mit den partiellen Ableitungsoperatoren - $\nabla = \begin{bmatrix}\frac{ \partial  }{ \partial x_{1} }&\frac{ \partial  }{ \partial x_{2} }& \dots\end{bmatrix}^{T}$. 
 
 Die punktweise Multiplikation von $\nabla$ mit $F$ ergäbe den [[Analysis - VL 17#^71f57b|Gradienten]], deshalb schreibt man $\nabla F$ für den Gradienten und $\nabla \cdot F$ für die Divergenz.
+
+### Curl
+
+Die *Rotation* oder der *Rotor* $\text{curl} \ v$ eines Vektorfelds ist die Achse, entlang der sich ein Golfball dreht, wenn man ihn in das Vektorfeld wirft.
+$|\text{curl}\ v|$ ist die Rotationsgeschwindigkeit.
+
