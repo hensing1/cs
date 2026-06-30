@@ -26,3 +26,7 @@ innerhalb des Integrals: Lichtverlust von $t$ bis $s$
 aber noch kein In-Scattering
 
 das ist dann drin in der *radiative transfer equation* (RTE)
+
+stückweise konstante Opazität
+-> alpha blending
+
