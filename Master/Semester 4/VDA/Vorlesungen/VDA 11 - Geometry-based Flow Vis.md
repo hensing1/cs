@@ -67,6 +67,16 @@ Ziel: stückweise lineare Approximierung von Stream Line
 $s$ ist die step size.
 Der Fehler ist in $\mathcal{O}(s^{2})$.
 
-**Runge Kutta Integration:** Halben (Euler-)Schritt machen, den Vektor von dort nehmen, und diesen Vektor am Startpunkt für den nächsten Schritt setzen: $$x_{i+1}=x_{i}+s \cdot v\left( x_{i}+\frac{s}{2} v(x_{i}) \right)$$
+**Second-Order Runge Kutta Integration:** Halben (Euler-)Schritt machen, den Vektor von dort nehmen, und diesen Vektor am Startpunkt für den nächsten Schritt setzen: $$x_{i+1}=x_{i}+s \cdot v\left( x_{i}+\frac{s}{2} v(x_{i}) \right)$$
 Fehler von $\mathcal{O}(s ^{3})$.
 
+**Fourth-Order Runge Kutta Integration** (Standard in vielen Anwendungen): Vektor ist konvexe Kombination von vier Vektoren: $$x_{i+1}=\text{RK4}(x_{i})=x_{i}+s \cdot \left( \frac{v_{1}}{6}+\frac{v_{2}}{3}+\frac{v_{3}}{3}+\frac{v_{4}}{6} \right)$$
+mit $v_{1}=v(x_{i}),\quad v_{2}=v\left( x_{i}+\frac{s}{2}v_{1} \right),\quad v_{3}=v\left( x_{i}+\frac{s}{2}v_{2} \right),\quad v_{4}=v(x_{i}+sv_{3}).$
+
+Fehler von $\mathcal{O}(s ^{5})$.
+
+**Adaptive Step Size:** Zwei Punkte samplen: einmal zwei Schritte gehen mit $x_{2}=\text{RK4}(\text{RK4}(x,s),s)$, einmal doppelt so großen Schritt machen mit $x_{1}\text{RK4}=(x, 2s)$.
+Falls Fehler $\Delta=\|x_{2}-x_{1}\|$ größer als Toleranz $\tau$, Schrittgröße verkleinern
+Sonst: Schritt gehen und $s$ neu schätzen mit $s'=s \cdot \rho \cdot \sqrt[5]{\frac{\tau}{\Delta}}$, mit $\rho<1$ Hyperparameter
+
+**Embedded Runge-Kutta:** 
