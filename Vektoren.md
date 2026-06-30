@@ -77,3 +77,4 @@ Die punktweise Multiplikation von $\nabla$ mit $F$ ergäbe den [[Analysis - VL 1
 Die *Rotation* oder der *Rotor* $\text{curl} \ v$ eines Vektorfelds ist die Achse, entlang der sich ein Golfball dreht, wenn man ihn in das Vektorfeld wirft.
 $|\text{curl}\ v|$ ist die Rotationsgeschwindigkeit.
 
+Mit dem Nabla Operator schreibt man $$\text{curl}\ v=\nabla \times v.$$

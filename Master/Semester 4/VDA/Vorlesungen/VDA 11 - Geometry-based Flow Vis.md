@@ -26,3 +26,9 @@ Der Wert von diesem Tensorfeld an einem Punkt $(x,y)$ ist die [[Funktionen#^a487
 ![[Vektoren#^fc6a9b]]
 
 Ist die Divergenz überall gleich 0, ist das Vektorfeld *inkomprimierbar*.
+
+![[Vektoren#Curl]]
+
+## Vektor Field Glyphs
+
+**Pfeile**
