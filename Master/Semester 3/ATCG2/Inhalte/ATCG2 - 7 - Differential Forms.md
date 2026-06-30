@@ -42,6 +42,8 @@ Beispiel: $$\begin{bmatrix}
 > Sei $M$ eine Mannigfaltigkeit. Ein *Vektorfeld* hat pro Punkt $p \in M$ *einen* Vektor $v_{p}$ aus dem jeweiligen Tangentialraum $T_{p}\,M$.
 > Gibt es für all diese Vektoren eine diff.bare Kurve durch $M$, zu der sie tangential sind, heißt das Vektorfeld *glatt* (smooth).
 
+^eb5f09
+
 ### Richtungsableitungen
 
 Sei $f: \mathbb{R}^{n} \to \mathbb{R}$ eine Funktion auf der Mannigfaltigkeit $\mathbb{R}^{n}$.
