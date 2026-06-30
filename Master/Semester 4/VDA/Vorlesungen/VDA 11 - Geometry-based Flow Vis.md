@@ -59,3 +59,14 @@ zB. interaktive Initialisierung/Platzierung
 - **Time line:** Ort aller Partikel, die zum selben Zeitpunkt entlang einer Linie in das Vektorfeld geworfen wurden
 	- viele pro Punkt, je nach Seeding
 
+## Stream Line Integration
+
+Ziel: stückweise lineare Approximierung von Stream Line
+
+**Euler-Integration:** Immer den aktuellen Vektor draufaddieren, um zum nächsten Punkt zu kommen: $$x_{i+1}=x_{i}+s \cdot v(x_{i})$$
+$s$ ist die step size.
+Der Fehler ist in $\mathcal{O}(s^{2})$.
+
+**Runge Kutta Integration:** Halben (Euler-)Schritt machen, den Vektor von dort nehmen, und diesen Vektor am Startpunkt für den nächsten Schritt setzen: $$x_{i+1}=x_{i}+s \cdot v\left( x_{i}+\frac{s}{2} v(x_{i}) \right)$$
+Fehler von $\mathcal{O}(s ^{3})$.
+
