@@ -32,3 +32,20 @@ Ist die Divergenz überall gleich 0, ist das Vektorfeld *inkomprimierbar*.
 ## Vektor Field Glyphs
 
 **Pfeile**
+Richtung des Vektorfelds: Richtung des Pfeils
+Magnitude des Vektorfelds: Länge/Dicke des Pfeils
+Weitere Attribute: Farbe des Pfeils
+
+Man kann mehrere Attribute auch mittels **Layering** darstellen, z.B. Skalarfeld farblich im Hintergrund, Pfeile des Vektorfelds im Vordergrund
+
+**In 3D**
+3D-Pfeile mit entsprechendem Shading, damit man weiß in welche Richtung sie zeigen
+Vorsicht mit zu vielen Pfeilen im 3D, sonst wird es unübersichtlich
+
+**Gekrümmte Pfeile** mit Extra-Gizmos für mehr Information (die z.B. aus der Jacobi-Matrix abgeleitet wurden)
+Mehr Kram pro Pfeil -> noch mehr Vorsicht bei vielen Pfeilen
+zB. interaktive Initialisierung/Platzierung
+
+## Charakteristische Kurven
+
+- **Stream Line:** Kurve, die in jedem Punkt 
