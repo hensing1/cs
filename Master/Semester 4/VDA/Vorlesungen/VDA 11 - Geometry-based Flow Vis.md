@@ -79,4 +79,6 @@ Fehler von $\mathcal{O}(s ^{5})$.
 Falls Fehler $\Delta=\|x_{2}-x_{1}\|$ größer als Toleranz $\tau$, Schrittgröße verkleinern
 Sonst: Schritt gehen und $s$ neu schätzen mit $s'=s \cdot \rho \cdot \sqrt[5]{\frac{\tau}{\Delta}}$, mit $\rho<1$ Hyperparameter
 
-**Embedded Runge-Kutta:** 
+**Embedded Runge-Kutta:** Zwei verschieden genaue Integrationsschemata nehmen und deren Differenz nehmen, z.B. $\text{RK5}$ vs. $\text{RK4}$
+Effizienter, weil man Zwischenergebnisse vom einen Schema im anderen Schema wiederverwenden kann.
+
