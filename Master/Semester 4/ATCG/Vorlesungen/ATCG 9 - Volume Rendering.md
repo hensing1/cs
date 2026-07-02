@@ -46,6 +46,8 @@ Schreiben wir nun das Integral für In-Scattering rechts in der RTE als $L_{s}(x
 Wir schätzen die Helligkeit eines Pixels $j$ als $$L_{j}\approx \frac{1}{N}\sum_{i=1}^{N} \frac{f_{j}(\bar{x}_{i})}{p(\bar{x}_{i})}$$
 wobei $\bar{x}_{i}$ ein Pfad durch die Szene von $j$ aus durch die Szene ist, $f_{j}(\bar{x}_{i})$ dessen Lichtfluss, und $p$ die dazugehörige W'keitsdichtefunktion.
 
+delta tracking: fügt imaginäre Partikel hinzu mit albedo=1, dadurch wird $\sigma$ "spacially invariant"
+
 stückweise konstante Opazität
 -> alpha blending
 
