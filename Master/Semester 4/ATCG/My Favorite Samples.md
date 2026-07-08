@@ -40,7 +40,7 @@ i=\sum_{j=0}^{\infty}a_{j}(i)b^{j} &\mapsto \Phi_{b}(i) := \sum_{j=0}^{\infty}a_
 	- maximal korreliert
 	- alle $2^{k}$ Samples sind perfekt stratifiziert
 
-#### Halton- und Hammersley Point Sets
+##### Halton- und Hammersley Point Sets
 
 Man hat mehrere Dimensionen. Für jede Dimension führt man stratified Sampling durch, jede Dimension mit einer anderen Basis $b$
 Die Basen müssen jeweils **teilerfremd** (co-prime) sein
@@ -49,7 +49,7 @@ Die Basen müssen jeweils **teilerfremd** (co-prime) sein
 
 **Hammersley-Sequenz:** $x_{i}=\left( \frac{i}{n}, \Phi_{b_{1}}(i), \dots, \Phi_{b_{s-1}}(i)\right)$, wobei $n$ die Anzahl der Samples ist
 
-#### Scrambling
+##### Scrambling
 Problem mit Halton-Punkten: wenn die Basen groß sind, aber man wenige Dimensionen hat, sind die Punkte zunächst sehr nah beieinander. 
 
 Also würfelt jede Axis separat durcheinander:
@@ -62,3 +62,9 @@ Also würfelt jede Axis separat durcheinander:
 -> Stratifizierung durch radical inversion wird dadurch nicht beeinflusst, es ist aber zwischendurch gleichmäßiger (& zufälliger) verteilt
 
 Effizienter machen: Paare von Ziffern nehmen und Lookup-Tabelle verwenden
+
+#### Rank-1 Lattices
+
+- man braucht einen generator vector $(g_{0},\dots,g_{s-1}) \in \mathbb{N}^{s}$
+- man multipliziert ihn und nimmt den Modulus, sodass er im Einheitswürfel landet: $$x_{i}=\frac{i}{n}(g_{0},\dots,g_{s-1}) \text{ mod } [0,1)^{s}$$
+Um daraus eine Sequenz zu machen, kann man $\frac{i}{n}$ mit dem radical inverse ersetzen
