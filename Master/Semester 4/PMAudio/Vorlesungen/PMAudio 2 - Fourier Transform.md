@@ -39,7 +39,7 @@ slide 14 example exam relevant
 ## Wiener Khinchin Theorem
 
 > [!abstract] Definition **Autokorrelation**
-> Sei $x \in \mathbb{C}^{N}$. Dann ist die Autokorrelation von $x$ für $m \in [0, N-1]$ definiert als $$\text{ACF}[x](m)=\langle x \mid T_{m}x \rangle =\sum_{n=1}^{N-1}x(n) \overline{x(n-m \mod N)},$$
+ Sei $x \in \mathbb{C}^{N}$. Dann ist die Autokorrelation von $x$ für $m \in [0, N-1]$ definiert als $$\text{ACF}[x](m)=\langle x \mid T_{m}x \rangle =\sum_{n=0}^{N-1}x(n) \overline{x((n-m) \!\!\!\!\!\mod N)},$$
 > wobei $T_{m}x$ der $m$-fache zyklische Shift von $x$ ist.
 
 > **Wiener Khinchin-Theorem**
