@@ -57,3 +57,16 @@ Wir nennen das $\text{CENS}_{d}^{\ell}$, mit $d$ dem Downsampling-Faktor und $\e
 
 ## Dynamic Time Warping
 
+Wir möchten ein (möglicherweise nonlineares) Mapping von zwei Audiosignalen (allgemeiner: Feature-Sequenzen).
+
+Beide Signale sind Sequenzen in einem *Feature Space* $\mathcal{F}$ (im Beispiel Chroma: $\mathcal{F}=\{ x \in [0,1]^{12} | \|x\|_{2}=1 \}$).
+
+Wir brauchen eine Distanzfunktion zwischen zwei Feature-Punkten: $c: \mathcal{F}\times \mathcal{F}\to R_{\geq_{0}}$ (Beispiel Chroma: $c(x,y)=1-\langle x \mid y \rangle$).
+
+Für zwei Signale $X \in \mathcal{F}^{N}$ und $Y \in \mathcal{F}^{M}$ haben wir eine Kostenmatrix $C \in \mathbb{R}^{N \times M}$.
+Ein Matching zwischen $X$ und $Y$ ist nun ein *Pfad* $P=(p_{1},\dots,p_{L})$ durch $C$ mit geringsten Kosten, unter den Randbedingungen
+- $p_{1}=(1,1)$, $p_{L}=(N,M)$   (Start- und Endpunkt)
+- $p_{\ell+1}-p_{\ell} \in \{ (1,0),\ (0,1),\ (1,1) \}$   (Monotonie).
+
+Wir lösen das hier mit "dynamischer Programmierung" und einer akkumulierten Kostenmatrix. Es ist am Ende aber nur ein kürzeste-Wege-Problem.
+
