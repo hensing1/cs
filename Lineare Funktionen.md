@@ -1,6 +1,3 @@
-# Lineare Funktionen
-
-
 > [!abstract] Definition *Lineare Funktion*
 > Für zwei $\mathbb{K}$-[[Vektorräume]] $V$ und $W$ heißt eine Abbildung $f : V \to W$ **linear**, wenn $$f(x)+f(y)=f(x+y)$$ und $$f(\lambda\cdot x)=\lambda \cdot f(x)$$ mit $\lambda \in \mathbb{K}$ gilt. Dann heißt $f$ auch **Homomorphismus**. 
 
