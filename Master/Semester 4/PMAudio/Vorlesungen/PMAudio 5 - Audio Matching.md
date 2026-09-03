@@ -29,3 +29,31 @@ Ein **Chromagramm** rechnet alle Werte des Spektrogramms mit derselben Chroma zu
 Um leisere Töne besser zu erkennen, können wir eine Art Gammakorrektur mit dem Chromagramm machen: $$(\Gamma \circ \mathcal{C})(n, c):=\log(1 + \gamma \cdot \mathcal{C}(n, c))$$
 Chromagramme sind einigermaßen immun gegen verschiedene Klangfarben.
 
+### Normalisierung
+Wir können den Vektor $x=\mathcal{C}(n, \cdot) \in \mathbb{R}^{12}$ normalisieren, um ihn gegen Dynamikveränderungen immun zu machen - zum Beispiel mit der 2- oder 1-Norm.
+
+Man muss aufpassen bei Stille (z.B.) am Anfang oder Ende eines Stücks. Fällt $\|x\|$ unter einen bestimmten Wert, kann man die normalisierte Version z.B. durch einen uniformen Vektor mit Norm=1 ersetzen.
+
+### Quantisierung
+
+Sei $x_{n}$ der normalisierte, $n$-te Chroma-Vektor.
+Jede Komponente von $x_{n}$ ist also in $[0,1]$. Wir quantisieren jede Komponente (grob logarithmisch): $$Q(a)=\begin{cases}
+0 & a \in [0,0.05)\\
+1 & a \in [0.05,0.1)\\
+2 & a \in [0.1,0.2)\\
+3 & a \in [0.2,0.4)\\
+4 & a \in [0.4,1]\\
+\end{cases}$$
+### CENS
+Die quantisierten Vektoren $(Q(x_{1}),\dots,Q(x_{N}))$ werden weiter downgesamplet (glätten -> subsamplen).
+
+Nach dem Subsampling wird nochmal normalisiert.
+Das Resultat ist eine Sequenz von CENS-Features. CENS-Features sind relativ grob (z.B. 1 pro Sekunde), aber resistent gegenüber leichten Veränderungen im Tempo, Trillern, und Arpeggios.
+
+Wir nennen das $\text{CENS}_{d}^{\ell}$, mit $d$ dem Downsampling-Faktor und $\ell$ der Anzahl der Samples.
+
+> Man kann nun auch verschieden schnelle Stücke miteinander vergleichen, indem man $d$ variiert (wesentlich günstiger als das Tempo am Anfang der Bearbeitung zu variieren).
+
+
+## Dynamic Time Warping
+
