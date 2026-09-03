@@ -27,6 +27,8 @@ Für das Log-Frequenz-Spektrogramm rechnen wir dann die Power Spektren der einze
 Die Note $p\ \text{mod}\ 12$, die ein Midi-Ton $p$ hat, nennen wir *Chroma*. 
 Ein **Chromagramm** rechnet alle Werte des Spektrogramms mit derselben Chroma zusammen: $$\mathcal{C}(n, c) := \sum_{p \in [0, 127]:\ p \ \text{mod}\ 12=c}\mathcal{X}_{\text{LF}}(n, p).$$
 Um leisere Töne besser zu erkennen, können wir eine Art Gammakorrektur mit dem Chromagramm machen: $$(\Gamma \circ \mathcal{C})(n, c):=\log(1 + \gamma \cdot \mathcal{C}(n, c))$$
+mit Hyperparameter $\gamma$.
+
 Chromagramme sind einigermaßen immun gegen verschiedene Klangfarben.
 
 ### Normalisierung
