@@ -1,5 +1,3 @@
-# Komplexe Zahlen
-
 > [!abstract] Definition
 > Der **[[Ringe und Körper#Körper|Körper]] der komplexen Zahlen** ist definiert als $(\mathbb{R}^{2},+,\cdot)$, mit den Verknüpfungen definiert wie folgt:$$\begin{align*}(a,b)+(x,y)&:=(a+x,b+y)\\(a,b)\cdot(x,y)&:=(ax-by,bx+ay).\end{align*}$$
 
