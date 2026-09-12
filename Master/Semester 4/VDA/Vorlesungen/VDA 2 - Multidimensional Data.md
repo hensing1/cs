@@ -31,6 +31,9 @@ $$f(x)=\frac{1}{n}\sum_{i}K(x-x_{i}).$$
 Die Größe des Kernels ist ein Hyperparameter. Zu klein, und das Resultat ist sehr verrauscht - zu klein, und der Plot ist zu sehr geglättet.
 "Scott's rule of thumb" für Gauss-Kernel $K(x)=\frac{1}{h\sqrt{ 2\pi }}\exp\left( -\frac{x^{2}}{2h^{2}} \right)$:  $h \approx 1.06 \frac{\hat{\sigma}}{\sqrt[5]{ n }}$
 
+### Violin Plot
+Kombination aus Boxplot und KDE - Boxplot ist senkrecht zur KDE
+
 ## Distribution Consistency
 ?
 
