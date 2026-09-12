@@ -15,6 +15,8 @@ Die Zeilen und Spalten dieser Tabelle kann man 1:1 visualisieren, z.B. weist man
 - Reine Farbe repräsentiert einen bestimmten Wert
 - Wert dazwischen wird mit zweifarbigem Farbbalken dargestellt
 	- Wert $0.75 \cdot a+0.25 \cdot b$ bekommt einen Balken, der 75% mit der Farbe von $a$ und 25% der Farbe von $b$ gefüllt ist
+	
+![[Two tone coloring.png|531]]
 
 **Table Lens**
 Fähigkeit, in eine bestimmte Zeile reinzuzoomen
