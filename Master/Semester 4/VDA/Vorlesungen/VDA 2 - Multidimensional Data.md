@@ -1,3 +1,5 @@
+[[vda-02-Multidimensional-Data.pdf]]
+
 "Multidimensional Data" := diskrete Datenpunkte mit jeweils $d$ Attributen.
 $d$ ist die Dimensionalität der Daten.
 
