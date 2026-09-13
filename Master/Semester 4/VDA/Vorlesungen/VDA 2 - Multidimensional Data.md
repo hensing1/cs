@@ -34,6 +34,14 @@ Die Größe des Kernels ist ein Hyperparameter. Zu klein, und das Resultat ist s
 ### Violin Plot
 Kombination aus Boxplot und KDE - Boxplot ist senkrecht zur KDE
 
-## Distribution Consistency
-?
+## Scatterplots
+halt scatterplots
 
+**Bubble Charts:** man kann die Punkte verschieden groß machen gemäß eines dritten Attributs; skalieren nach Fläche, nicht Radius
+
+Gegen Overdraw: z.B. 2D-Histogramm
+
+**SPLOM:** bei $p$ Dimensionen, alle Kombinationen von 2 Dimensionen darstellen als Matrix (Scatterplot Matrix -> SPLOM)
+- Attribute sortieren für bessere Lesbarkeit
+- ähnliche Scatterplots nebeneinander; Ähnlichkeit mit Korrelationskoeffizienten nach Pearson messen
+	- alle Möglichkeiten ggf. zu aufwändig - Heuristik mit zufälligem Vertauschen
