@@ -144,6 +144,8 @@ Bei kleiner Complexity geht auch die Distanz zwsichen Clustern verloren.
 
 Resultat hängt zusätzlich auch von Lernparametern, Initialisierung etc. ab.
 
+Initialisierung mit PCA sehr gut
+
 ## UMAP
 Uniform Manifold Approximation and Embedding
 
@@ -151,3 +153,8 @@ Uniform Manifold Approximation and Embedding
 
 - fängt an mit kNN-Graph
 - similarity scores für Kanten
+- Laplacian Eigenmaps initialization
+- Complexity ersetzt durch "number of neighbors", die im Embedding erhalten bleiben sollen
+- Min distance: wie komprimiert sollen die Cluster sein?
+
+Software-Paket verfügbar, sehr schnell va. für große Datensätze
