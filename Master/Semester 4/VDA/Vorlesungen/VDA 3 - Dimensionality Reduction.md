@@ -1,3 +1,4 @@
+[[vda-03-Dimensionality-Reduction.pdf]]
 
 Motivierendes Beispiel: 3D-Scan von einem Gesicht
 
@@ -12,7 +13,7 @@ Weiterer Effekt: *Dekorrelation*
 
 - Ursprung des neuen Koordinatensystems: Durchschnitt der Punkte
 - Summe der äußeren Produkte von $(x_{i}-\bar{x})$ (skaliert mit $\frac{1}{n-1}$)
-- Eigendekomposition der resultierenden Matrix - höchste Varianz entlang Eigenvector mit größtem Eigenwert
+- Eigendekomposition der resultierenden Matrix - höchste Varianz entlang Eigenvektor mit größtem Eigenwert
 
 Die Anzahl der großen Eigenwerte sagt einem etwas über die Dimensionalität der Verteilung
 
@@ -27,7 +28,7 @@ Kleinstes $k$ auswählen, sodass 90% der Varianz abgedeckt ist
 "look for elbow in the curve"
 
 ### Statistical Shape Models
-
+Man hat eine Menge von Shapes, die sich leicht voneinander unterscheiden (z.B. ein Knochen von mehreren Individuen derselben Spezies)
 - Shapes alginen
 - Jede Shape mit fester Anzahl von Datenpunkten beschreiben
 - Durchschnitts-Shape daraus machen
@@ -52,7 +53,7 @@ inneres Produkt statt äußeres Produkt verwenden
 Neue Dimension erfinden, dort normale lineare PCA machen
 Feature space mapping: $x \mapsto \Phi(x)$
 
-Kernel Trick: impiziter höherdimensionaler Featurespace, wieder mit innerem Produkt
+Kernel Trick: impliziter höherdimensionaler Featurespace, wieder mit innerem Produkt
 
 **Nicht einfach zu interpretieren.**
 Es ist nicht so, dass a priori die Hauptkomponenten zu irgendeiner Linearkombination der ursprünglichen Attribute haben.

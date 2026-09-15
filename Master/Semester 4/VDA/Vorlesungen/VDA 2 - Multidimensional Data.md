@@ -97,3 +97,23 @@ Man kann ein glyph daraus machen, um einem Datenpunkt eine direkt wiedererkennba
 ### Charnoff Faces
 Idee: Menschen sind gut darin, Gesichter zu unterscheiden
 -> jedem Attribut ein Gesichtsattribut zuweisen, um ein Glyph (Gesicht) für einen Datenpunkt zu erstellen
+
+### Star Coordinates
+Achsen werden angeordnet wie in Radar Charts, aber die Vektoren zu den jeweiligen Attributswerten werden einfach aufaddiert
+Interaktivität: Achsen können skaliert und rotiert werden
+
+### RadViz
+Jede Dimension hat einen Ankerpunkt und eine spring force proportional zum Attributswert
+Nachteilig im Vergleich zu Star Coordinates wegen Nichtlinearität
+
+### X-RadViz
+Verbreitert Ankerpunkte und fügt angedeutete Linien zum Datenpunkt hinzu, deren Länge proportional zum Attributswert ist
+
+### Grand Tours
+Sequenz von orthogonalen Projektionen (durch den Ursprung), die
+- möglichst gut alle möglichen Projektionen abdeckt ("dicht" ist)
+- unvoreingenommen ist (keine bestimmten Projektionen werden bevorzugt)
+- schnell zu neuen Projektionen wechselt
+- kontinuierlich ist
+- später reproduzierbar ist
+
