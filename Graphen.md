@@ -72,7 +72,7 @@ Ist aus dem Kontext klar, dass $G$ ungerichtet ist, schreibt man oft für eine K
 ### Weitere Begriffe
 - Ein Weg (bzw. Kreis) $v_{0},\ldots,v_{l}$ heißt **einfach**, wenn alle Knoten auf dem Weg paarweise verschieden sind (bzw. verschieden von $v_{0}=v_{l}$).
 - Ein Graph, der keinen Kreis enthält, heißt **kreisfrei**, **azyklisch** oder **Wald**.
-- Ein ungerichteter Graph heißt **zusammenhängend**, wenn es zwischen jedem Paar von Knoten einen Weg gibt. Ein zusammenghängender Graph, der keinen Kreis besitzt, heißt **Baum**.
+- Ein ungerichteter Graph heißt **zusammenhängend**, wenn es zwischen jedem Paar von Knoten einen Weg gibt. Ein zusammenghängender Graph, der keinen Kreis besitzt, heißt **Baum**. ^fca076
 	- Man kann einen ungerichteten Graphen $G$ in **Zusammenhangskomponenten** einteilen.
 	  Formal definiert man dafür eine [[Relationen#Äquivalenzrelation|Äquivalenzrelation]] $v \rightsquigarrow u :\iff \text{ Es gibt einen Weg von } v \text{ nach }u.$
 	  Die [[Äquivalenzklassen]] von $\rightsquigarrow$ sind die Zusammenhangskomponenten von G. ^9c3af1

@@ -94,7 +94,14 @@ Auf einer Mannigfaltigkeit haben wir geodätische Distanzen (geodesics), nicht d
 
 Schätzung der geodätischen Distanz: Summe der euklidischen Distanzen nahegelegener Punkte
 Man muss also einen Nachbarschaftsgraph aufbauen.
-- $$
+- $\varepsilon$-Graph: alle Punkte mit Distanz $<\varepsilon$ werden verbunden
+- kNN-Graph: alle Punkte verbinden sich mit ihren $k$ nächsten Nachbarn
+
+Man kann Nachbarschaftssuche mit KD-Baum erleichtern
 
 ### ISOMAP
-
+Algorithmus fürs Finden einer Mannigfaltigkeit in mehrdimensionalen Daten
+1. Baue einen Nachbarschaftsgraphen auf (z.B. kNN)
+	1. muss sicherstellen dass er [[Graphen#^fca076|zusammenhängend]] ist
+2. Berechne [[Kürzeste Wege#All-Pairs Shortest Path Problem (APSP)|APSP]]
+3. MDS auf der resultierenden Distanzmatrix performen

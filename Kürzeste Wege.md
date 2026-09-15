@@ -1,4 +1,3 @@
-# Kürzeste Wege
 ## Single-Source Shortest Path Problem (SSSP)
 Gegeben: gerichteter Graph $G=(V,E)$ mit Kantengewichten $w : E \rightarrow \mathbb{R}$, sowie ein Startknoten $s \in V$. Gesucht ist ein kürzester Weg von $s$ nach $v$ für jeden Knoten $v \in V$ und die Entfernung $\delta(s,v)$.
 
