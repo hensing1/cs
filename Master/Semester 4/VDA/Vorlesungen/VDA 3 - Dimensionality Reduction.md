@@ -105,3 +105,46 @@ Algorithmus fürs Finden einer Mannigfaltigkeit in mehrdimensionalen Daten
 	1. muss sicherstellen dass er [[Graphen#^fca076|zusammenhängend]] ist
 2. Berechne [[Kürzeste Wege#All-Pairs Shortest Path Problem (APSP)|APSP]]
 3. MDS auf der resultierenden Distanzmatrix performen
+
+Isomap versucht, im Embedding globale Distanzen im kNNN-Graph zu erhalten.
+
+### Laplacian Eigenmaps
+
+Laplacian Eigenmapping findet einen Vektor $Y \in \mathbb{R}^{n \times k}$, wobei $n$ die Anzahl der Datenpunkte und $k$ die Dimensionalität des Embeddings ist. In jeder Zeile von $Y$ stehen die neuen Koordinaten von einem Punkt im Embedding.
+
+- Man startet wieder mit dem Nachbarschaftsgraph
+- Man gewichtet jede Kante gemäß der Kantenlänge: $w_{ij}=\exp\left(- \frac{\|x_{i}-x_{j}\|^{2}}{2 \sigma ^{2}}\right)$ 
+- Man berechnet den graph laplacian $L$ vom Nachbarschaftsgraph mit diesen Gewichtungen
+- Für $n=1$ ist $Y$ der Eigenvektor von $L$ zum zweit-kleinsten Eigenwert (kleinster Eigenwert ist immer 0 für Eigenvektor $\mathbb{1}$)
+	- Constraints: $Y^{T}\mathbb{1}=0$ (Orthogonalität) und $Y^{T}Y=1$ (Normalisierung)
+	- für $n=2$ sind es der zweit- und drittkleinste Eigenwert, usw.
+
+Laplacian Eigenmapping versucht, die lokalen Distanzen in der Mannigfaltigkeit zu erhalten (lokale Strukturen wie Cluster bleiben erhalten), die globalen Distanzen sind nicht so wichtig.
+
+## Linear Discriminant Analysis
+
+Überwachtes Lernen: man hat schon class label, und vesucht eine Achse in den Daten zu finden entlang diese Klassen separiert sind
+Unterschied zu PCA: PCA versucht nur, die globale Varianz entlang der Achse zu maximieren
+
+## t-SNE
+t-SNE verwenden wir, wenn wir weniger an lokalen und globalen Distanzen zwischen Datenpunkten, und mehr an *Clustern* interessiert sind.
+Wir erhalten also (lokale) nächste Nachbarn.
+t-SNE ist designt für Visualisierung, eher weniger für Feature-Extraction (könnte Cluster halluzinieren wo keine sind).
+Es ist außerdem *unüberwacht* (im Gegensatz zu LDA).
+
+Beispiel: Pixel Grid von handgeschriebenen Ziffern
+
+SNE: Stochastic Neighborhood Embedding
+Wir konvertieren paarweise Distanzen in eine Wahrscheinlichkeit: gegeben eine Nachbarschaft, wie wahrscheinlich ist es, dass ein Punkt $x_{i}$ den Punkt $x_{j}$ als Nachbarn wählen würde?
+Dann ordnen wir die Punkte so an, dass die W'keitverteilungen benachbarter Punkte nach Kullback-Leibler-Divergenz so ähnlich sind wie möglich.
+Die lokale Dichte, und die größe der Cluster, wird wegabstrahiert.
+
+Der Haupt-Hyperparameter ist **Complexity**. Je höher die Complexity, desto größer die Nachbarschaft und desto gröbere Strukturen werden erfasst.
+Bei kleiner Complexity geht auch die Distanz zwsichen Clustern verloren.
+
+Resultat hängt zusätzlich auch von Lernparametern, Initialisierung etc. ab.
+
+## UMAP
+Uniform Manifold Approximation and Embedding
+
+Sehr ähnlich zu t-SNE
