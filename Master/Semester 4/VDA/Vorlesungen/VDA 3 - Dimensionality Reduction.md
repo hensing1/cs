@@ -147,4 +147,7 @@ Resultat hängt zusätzlich auch von Lernparametern, Initialisierung etc. ab.
 ## UMAP
 Uniform Manifold Approximation and Embedding
 
-Sehr ähnlich zu t-SNE
+Ähnlich zu t-SNE
+
+- fängt an mit kNN-Graph
+- similarity scores für Kanten
