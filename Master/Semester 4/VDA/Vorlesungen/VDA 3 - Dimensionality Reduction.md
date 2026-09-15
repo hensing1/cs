@@ -81,7 +81,20 @@ Mögliche Fehlerfunktionen:
 - absolute Abweichungen minimieren: $$J_{ee}=\frac{\sum_{i < j}(d_{ij}-\delta_{ij})^{2}}{\sum_{i<j}\delta_{ij}^{2}}$$
 	- Cluster schrumpfen gerne zusammen
 - relative Abweichungen minimieren: $$J_{ff}=\sum_{i<j}\left( \frac{d_{ij}-\delta_{ij}}{\delta_{ij}} \right)^{2}$$
-- Kompromiss zwischen den beiden: $J_{ef}$
+- Kompromiss zwischen den beiden: $$J_{ef}=\frac{1}{\sum_{i<j}\delta_{ij}}\sum_{i<j}\frac{(d_{ij}-\delta_{ij})^{2}}{\delta_{ij}}$$
 
 Lösen mit gradient descent
+
+**Alternative zu MDA:** Distanzbasierte Kernel-PCA
+
+## Manifold Learning
+
+Wir möchten in unserem Datensatz eine *Mannigfaltigkeit* finden, auf der die Punkte liegen.
+Auf einer Mannigfaltigkeit haben wir geodätische Distanzen (geodesics), nicht die euklidischen im darüber liegenden Raum.
+
+Schätzung der geodätischen Distanz: Summe der euklidischen Distanzen nahegelegener Punkte
+Man muss also einen Nachbarschaftsgraph aufbauen.
+- $$
+
+### ISOMAP
 
