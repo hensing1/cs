@@ -41,7 +41,12 @@ halt scatterplots
 
 Gegen Overdraw: z.B. 2D-Histogramm
 
+**Splatterplots:** überlappende Cluster einfärben / farblich umranden - in überlappenden Regionen Farben vermischen (z.B. alpha blending, oder in 
+
+KDE geht auch in 2D
+
 **SPLOM:** bei $p$ Dimensionen, alle Kombinationen von 2 Dimensionen darstellen als Matrix (Scatterplot Matrix -> SPLOM)
 - Attribute sortieren für bessere Lesbarkeit
 - ähnliche Scatterplots nebeneinander; Ähnlichkeit mit Korrelationskoeffizienten nach Pearson messen
 	- alle Möglichkeiten ggf. zu aufwändig - Heuristik mit zufälligem Vertauschen
+
