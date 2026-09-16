@@ -10,7 +10,30 @@ Höhere Effektivität: kleinere Differenzen können mit bloßem Auge auseinander
 
 Von den Kanälen ist *Länge* der einzige, der linear wahrgenommen wird. Andere Kanäle, wie Fläche, Helligkeit oder Sättigung, werden proportional zu einem bestimmten Power Law wahrgenommen
 
-**Pre-Attentive**
-Einzeln: Farbe und Form
-beide kombiniert funktioniert nicht mehr richtig
+**Pre-Attentiveness:** Attribute heißen pre-attentive, wenn sie direkt (innerhalb ~250ms) wahrgenommen werden können, ohne dass man danach suchen muss
 
+Farbe und Form sind einzeln pre-attentive. Innerhalb einer Farbe ist eine Form nicht mehr pre-attentive, wenn dieselbe Form auch in anderen Farben vorhanden ist
+
+- schiefe Linie unter geraden ist pre-attentive, gerade Linie unter schiefen nicht
+- Text ist nicht pre-attentive
+
+ -> effektivere Kanäle, am besten welche die pre-attentive sind, für wichtige Attribute behalten
+
+## Designprozess für Visualisierungen
+
+### 1. Precondition
+*Lernen* (über eigenes Projet, Visualisierungsmethoden und menschliche Wahrnehmung Bescheid wissen) -> *Durchstöbern* (mit Leuten reden um (die richtigen) Daten zufinden) -> *Rollen besetzen* (Mensch der das Tool benutzen und damit Daten analysieren will, und häufig auch die Daten selbst erstellt; Mensch der die Daten gatekeept; Leute die das Tool mitbauen)
+
+### 2. Core
+*Entdecken* (Forschungsfragen und Analyseprobleme der User verstehen; 5 W-Fragen stellen (was warum wer wo wann)) -> *Designen* -> *Implementieren* (Mock-ups zuerst, existierende Infrastrukturen verwenden) -> *Deployen* 
+
+> Verschachteltes Vis-Modell:
+> (Domäne (Aufgabe (Art der Visualisierung (Algorithmus))))
+> 
+> => gelöste Aufgaben im inneren sind nutzlos, wenn auf höherem Level falsche Entscheidungen getroffen wurden
+
+### 3. Analyse
+
+*Reflektieren* (was kann nächstes Mal besser laufen) -> *Schreiben* (Paper rausbringen wie / wie gut es funktioniert hat)
+
+## Algebraische Perspektive
