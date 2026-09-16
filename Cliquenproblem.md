@@ -1,5 +1,3 @@
-# Cliquenproblem
-
 ## Problembeschreibung
 Bei dem Cliquenproblem geht es darum, in einem gegebenen Graphen eine größtmögliche [[Graphen#^961695|Clique]] zu finden. 
 

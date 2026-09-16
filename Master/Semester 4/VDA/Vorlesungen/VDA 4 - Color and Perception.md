@@ -29,3 +29,29 @@ Es gibt 9 Farben, die Menschen zuverlässig voneinander unterscheiden können:
 Zu unterscheidbare Farben für nominale Daten (Komplementärfarben zuerst verwenden):
 ![[Farben.png]]
 
+### Cornsweet Edge
+Verbessert augenscheinlichen Kontrast:
+![[Cornsweet Edge.png|252]]
+
+## Gestaltprinzipien
+
+- **Gesetz der Nähe**
+	- Elemente, die nahe beieinander sind, werden als Gruppe aufgefasst
+- **Gesetz der Ähnlichkeit**
+	- Elemente mit ähnlichem Umriss werden als Gruppe aufgefasst
+- **Gesetz der verbundenen Elemente**
+- **Gesetz der Kontinuität** (Gesetz der guten Fortsetzung)
+	- einfache Erklärungen (z.B. für kreuzende Linien) werden komplizierten Erklärungen bevorzugt
+- **Gesetz der Symmetrie**
+	- Symmetrische Layouts werden eher als Einheit wahrgenommen als parallele
+- **Gesetz der Geschlossenheit**
+	- Unterbewusst wird eher von geschlossenen Kurven als offenen ausgegangen, auch wenn die Kurven nicht vollständig angezeigt werden
+- **Figur-Grund-Wahrnehmung**
+	- Bei Umrissen ist nicht immer eindeutig, ob das Umschlossene der Vorder- oder Hintergrund ist
+- **Gesetz des gemeinsamen Schicksals**
+	- Objekte, die sich zusammen bewegen, gehören zusammen
+
+
+- **Konstanz der Größe**
+	- Größenwahrnehmung hängt von Perspektive ab
+	- 
