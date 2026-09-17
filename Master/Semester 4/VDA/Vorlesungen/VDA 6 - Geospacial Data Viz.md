@@ -79,3 +79,14 @@ Problem mit IDW: Gewichtungen werden problematisch, wenn Punkte ungleichmäßig 
 Auch gewichteter Durchschnitt: $$\hat{f}(x)=\sum_{i}\lambda_{i}y_{i}$$
 aber $\lambda_{i}$ wird optimiert, sodass $$E\left[ \left( \sum_{i}\lambda_{i}y_{i}-f(x) \right)^{2} \right]-2m\left( \sum_{i}\lambda_{i}-1 \right)$$
 minimiert wird. Der Term links ist der erwartete Vorhersagefehler (durch ein geschätztes $f(x)$), und der rechte Term sorgt dafür, dass sich die $\lambda_{i}$s möglichst auf 1 summieren (unbiased).
+
+Die Schwierigkeit liegt nun darin, $f(x)$ zu schätzen.
+Annahme: wenn zwei Punkte $x_{i},\ x_{j}$ nah beieinander sind, ist die erwartete Varianz gering.
+Die Varianz wird geschätzt als $\text{Var}(f(x_{i})-f(x_{j}))=2\gamma(x_{i}-x_{j})$. 
+- $\gamma(\varepsilon>0)$ nennen wir *Nugget*, also erwarteter Messfehler oder Diskontinuitäten
+- $\gamma$ steigt an mit steigendem Argument - der Bereich, in dem das passiert, ist die *Range*, also die Distanz ab dem zwei Werte unkorreliert werden
+- Dann kommt der *Sill*, wo $\gamma$ nicht mehr Ansteigt und die Varianz des gesamten Prozesses erreicht wird
+
+Wir sagen, dass es von der konkreten Richtung von $x_{i}$ nach $x_{j}$ nicht abhängt, es ist also *isotropisch*.
+$\gamma$ wird meist empirisch gesetzt.
+
