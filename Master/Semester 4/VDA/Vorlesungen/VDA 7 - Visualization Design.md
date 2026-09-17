@@ -37,3 +37,13 @@ Farbe und Form sind einzeln pre-attentive. Innerhalb einer Farbe ist eine Form n
 *Reflektieren* (was kann nächstes Mal besser laufen) -> *Schreiben* (Paper rausbringen wie / wie gut es funktioniert hat)
 
 ## Algebraische Perspektive
+
+Das hier:
+![[VisDesign als Algebra.png|342]]
+
+heißt: wenn sich Daten ändern, sollen diese Änderungen aus der Visualisierung angemessen ersichtlich sein.
+
+- $\omega$ soll Sinn ergeben, gegeben $\alpha$ (Visual-Data Correspondence)
+- für alle wichtigen $\alpha$ soll $\omega$ ersichtlich sein (Unambiguous Data Depiction)
+- auffallende $\omega$ sollten ohne Datenänderung $(\alpha=1)$ nicht passieren (Representative Invariance)
+
