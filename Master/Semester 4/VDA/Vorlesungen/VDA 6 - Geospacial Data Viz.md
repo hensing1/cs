@@ -85,8 +85,19 @@ Annahme: wenn zwei Punkte $x_{i},\ x_{j}$ nah beieinander sind, ist die erwartet
 Die Varianz wird geschätzt als $\text{Var}(f(x_{i})-f(x_{j}))=2\gamma(x_{i}-x_{j})$. 
 - $\gamma(\varepsilon>0)$ nennen wir *Nugget*, also erwarteter Messfehler oder Diskontinuitäten
 - $\gamma$ steigt an mit steigendem Argument - der Bereich, in dem das passiert, ist die *Range*, also die Distanz ab dem zwei Werte unkorreliert werden
-- Dann kommt der *Sill*, wo $\gamma$ nicht mehr Ansteigt und die Varianz des gesamten Prozesses erreicht wird
+- Dann kommt der *Sill*, wo $\gamma$ nicht mehr Ansteigt und die (halbe) Varianz des gesamten Prozesses erreicht wird
+
+$\gamma$ heißt Semivariogramm.
 
 Wir sagen, dass es von der konkreten Richtung von $x_{i}$ nach $x_{j}$ nicht abhängt, es ist also *isotropisch*.
-$\gamma$ wird meist empirisch gesetzt.
+$\gamma$ wird meist empirisch gesetzt: tatsächliche Werte eintragen und dann eine Funktion drauf fitten
 
+Am Ende fällt ein lineares System raus, das nur von $\gamma$ abhängt.
+
+Nachteil: alle $\lambda_{i}$s müssen für jeden Punkt neu ausgewertet werden.
+
+Vorteil: je weiter man von den Messungen entfernt ist, desto unsicherer ist die Vorhersage - Kriging kann uns mehr oder weniger direkt die Varianz an einem Punkt mitteilen
+
+### Lineare Interpolation
+
+Man trianguliert die Fläche (als Delauney, Plane-Sweep, etc.) und macht lineare Interpolation mittels baryzentrischen Koordinaten.

@@ -46,4 +46,4 @@ heißt: wenn sich Daten ändern, sollen diese Änderungen aus der Visualisierung
 - $\omega$ soll Sinn ergeben, gegeben $\alpha$ (Visual-Data Correspondence)
 - für alle wichtigen $\alpha$ soll $\omega$ ersichtlich sein (Unambiguous Data Depiction)
 - auffallende $\omega$ sollten ohne Datenänderung $(\alpha=1)$ nicht passieren (Representative Invariance)
-
+	- Rendering-Entscheidungen, die unabhängig von den Daten getroffen werden, sollten nicht die Interpretation des Plots verändern
