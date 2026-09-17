@@ -32,3 +32,14 @@ Konformität und Erhalt von Flächen kann mit **Tissot's Indicatrix** illusitrie
 	- Pole sind spitze Ecken
 - Mollweide
 	- flächenerhaltend
+
+## Punkt- und linienbasierte Vis
+
+Wir haben punktweise Daten auf einer Karte (Events).
+
+*Proportional Symbol Map:* Punkte werden mit einem numerischen Wert, der zu dem Event gehört, skaliert
+Problem: Events mit Wert 0 können nicht dargestellt werden
+
+Da Menschen schlecht im abschätzen von Flächen sind: Kreise etwas schneller mit dem Wert wachsen lassen, als es für die Fläche passen würde: $$r=r_{0}\left( \frac{v}{v_{0}} \right)^{0.5716}$$
+für einen Referenzwert $r_{0}$ mit Radius $v_{0}$. "Korrekt" für die Fläche wäre ein Exponent von $0.5$.
+
