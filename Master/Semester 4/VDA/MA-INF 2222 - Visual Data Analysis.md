@@ -1,3 +1,5 @@
+9 CP
+
 Herr Prof. Dr. Schultz
 
 Schriftliche Prüfung am 21.09.

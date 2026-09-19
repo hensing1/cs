@@ -23,7 +23,26 @@ Die zweite Ableitung hat einen Nulldurchlauf, wenn der Gradient am stärksten is
 
 Mehrdimensionale Funktionen: zusätzlich Gradienten, zweite Ableitungen, Output von Segmentierungsalgorithmen verarbeiten
 
+### Design for Transfer Functions
+Schritt 1: den Inputs 1-/2- oder 3-dimensional *Wahrscheinlichkeiten* für $n$ Gewebearten zuweisen
+Schritt 2: den Wahrscheinlichkeiten Farbe und Opazität zuweisen
 
+### Interpolation
+Wir wollen zwischen zwei RGBA-Farben interpolieren.
+
+*Straight Color Interpolation*
+Wir machen lineare Interpolation direkt zwischen den RGBA-Vektoren.
+
+*Accociated Color Interpolation*
+Wir:
+- multiplizieren die RGBs mit ihren eigenen Alphas (pre-multiplying)
+- interpolieren dann die resultierende "associated color" separat vom Alpha
+- teilen die interpolierte associated color durch das interpolierte Alpha, um den Farbwert in der Mitte zu erhalten
+-> bewirkt, dass keine Farben mit $\alpha=0$ Einfluss auf das Ergebnis haben.
+
+### Pre-Segmentation
+Manchmal reichen auch hochdimensionale Transferfunktionen nicht aus.
+Pre-Segmentierung wird manuell oder durch spezialisierte Segmentierungsalgorithmen ausgeführt, um 
 
 ## Volume Rendering Integral
 
