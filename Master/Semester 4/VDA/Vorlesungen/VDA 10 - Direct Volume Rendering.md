@@ -63,11 +63,29 @@ Wir möchten unser transferfunktionalisiertes Bild jetzt rendern.
 **Optisches Modell:** jeder Punkt absorbiert einen Teil des Lichts, emittiert aber auch einen gewissen Teil selbst
 
 Wir senden einen Strahl von einem Punkt $s_{0}$ aus und terminieren ihn bei $s_{b}$. Dann ist die Lichtintensität, die bei $s_{0}$ ankommt: $$I(s_{0})=\int_{s_{0}}^{s_{b}}q(s)e^{-\tau(s_{0},s)}\,ds$$
-mit 
+mit
+- $q(s)$ die Emission bei $s$
+- $\tau(s_{0},s)=\int_{s_{0}}^{s}\kappa(s')\,ds'$
+	- $\kappa(s)$ die Absorption bei $s$
 
-Ray Casting
-Opacity Integral
-siehe FOCVE
+Das approximieren wir mit $$\sum_{i=1}^{n}\tilde{C}_{i}\prod_{j=1}^{i-1}(1-A_{j})$$
+-> **Front to Back Compositing:**
+- $\tilde{C}_{i}$ ist die Farbe am Punkt $i$
+- $A_{j}$ die Opazität
+- akkumulierte Opazität ist $A_{i}'=A_{i-1}' + (1-A_{i-1}')A_{i}$
+- akkumulierte Farbe ist $\tilde{C}_{i}' = \tilde{C}_{i-1}'+(1-A_{i-1}')\tilde{C}_{i}$
+-> aufhören, sobald $A_{i}' \approx 1$
 
-Opacity Peeling: statt early ray termination, zweites Bild anfangen zu rendern sobald sich Opazität ändert -> zeigt nur, was anderenfalls verborgen wäre
+Wollen wir verschachtelte Volumen rendern, kann das mit Volume Rendering schwierig werden.
+*Opacity Peeling:* statt early ray termination, zweites Bild anfangen zu rendern sobald 1. die akkumulierte Opazität sich 1 nähert und 2. die aktuelle Opazität unter einem Schwellwert liegt -> zweites Bild zeigt nur, was anderenfalls verborgen wäre
 
+**Back to Front Compositing**
+Mit $\tilde{C}_{n+1}'=0$ anfangen, und mit Alpha-Blending nach vorne arbeiten: $$\tilde{C}_{i}'=\tilde{C}_{i}+(1-A_{i})\tilde{C}_{i+1}'$$
+## Accelerated Volume Rendering
+Schnelleres Rendering, z.B. während man interaktiv das 3D-Modell dreht
+
+Ansätze:
+- step size erhöhen
+- Pre-Integration, wo wir Volume Rendering Integrale im Voraus berechnen und in eine Lookup Table werfen
+- Empty Space Skipping: homogene Regionen mit weniger Sample-Punkten approximieren
+- Precomputing Gradients: Oberflächengradienten zusammen mit Intensität speichern
