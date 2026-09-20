@@ -67,7 +67,7 @@ Ziel: stückweise lineare Approximierung von Stream Line
 $s$ ist die step size.
 Der Fehler ist in $\mathcal{O}(s^{2})$.
 
-**Second-Order Runge Kutta Integration:** Halben (Euler-)Schritt machen, den Vektor von dort nehmen, und diesen Vektor am Startpunkt für den nächsten Schritt setzen: $$x_{i+1}=x_{i}+s \cdot v\left( x_{i}+\frac{s}{2} v(x_{i}) \right)$$
+**Second-Order Runge Kutta Integration:** Halben (Euler-)Schritt machen, den Vektor von dort nehmen, und mit diesem Vektor den eigentlichen Schritt (vom Startpunkt aus) machen: $$x_{i+1}=x_{i}+s \cdot v\left( x_{i}+\frac{s}{2} v(x_{i}) \right)$$
 Fehler von $\mathcal{O}(s ^{3})$.
 
 **Fourth-Order Runge Kutta Integration** (Standard in vielen Anwendungen): Vektor ist konvexe Kombination von vier Vektoren: $$x_{i+1}=\text{RK4}(x_{i})=x_{i}+s \cdot \left( \frac{v_{1}}{6}+\frac{v_{2}}{3}+\frac{v_{3}}{3}+\frac{v_{4}}{6} \right)$$
@@ -82,3 +82,39 @@ Sonst: Schritt gehen und $s$ neu schätzen mit $s'=s \cdot \rho \cdot \sqrt[5]{\
 **Embedded Runge-Kutta:** Zwei verschieden genaue Integrationsschemata nehmen und deren Differenz nehmen, z.B. $\text{RK5}$ vs. $\text{RK4}$
 Effizienter, weil man Zwischenergebnisse vom einen Schema im anderen Schema wiederverwenden kann.
 
+## Stream Line Seeding & Selection
+
+Welche Stream Line nehmen wir denn jetzt?
+
+### 2D
+- Einfache Ansätze: An Grid-Punkten starten, evtl. random jitter hinzufügen, zufällig starten
+- Image Guided: mit sehr kurzen Stream Lines anfangen und versuchen, möglichst gleichmäßig die Domain mit Stream Lines abzudecken
+- Evenly Spaced: Neue Stream Lines in der Nähe von existierenden Stream Lines platzieren
+	- Stream Line in beide Richtungen erweitern, bis sie die Domäne verlässt, einen kritischen Punkt findet, oder einer anderen Stream line zu nahe kommt
+
+### 3D
+Stream Lines nur dort zeichnen, wo "interessante" Dinge passieren (Verwirbelungen)
+
+Verwirbelungen da, wo Curl groß ist: $\| \nabla \times v \| \geq t$
+
+Wir können die Jakobi-Matrix (Ableitung) vom Vektorfeld in einen *symmetrischen* Teil $S=\frac{1}{2}(J_{v}+J_{v}^{t})$ und einen *antisymmetrischen* Teil $\Omega=\frac{1}{2}(J_{v}-J_{v}^{t})$ aufteilen.
+
+Ist $\|\Omega\|\gg \|S\|$ haben wir viel Vortex
+Ist $\|S\|\gg\|\Omega\|$ haben wir viel gleichmäßigen Fluss
+*Q-Kriterium:* $Q=\frac{1}{2}(\|\Omega\|^{2}-\|S\|^{2})$
+Wir fangen mit unseren Stream Lines dort an, wo $Q$ groß ist (viel Vortex)
+
+Dann machen wir noch nach cleveren Kriterien die Stream Lines mehr oder weniger opak, weil sonst zu unübersichtlich.
+
+## Stream Line Rendering
+
+Als lange Zylinder, oder
+
+man kann auch für Stream Lines Diffuse & Specular Terme definieren (streamlines direkt beleuchten)
+
+## Integral-Oberflächen
+Analog zu Kurven kann man auch Oberflächen erzeugen:
+- **Stream Surface:** Punkte, die von Seed-Kurve ausgehen, durch stetiges Vektorfeld verfolgen
+- **Path Surface:** Punkte, die von Seed-Kurve ausgehen, durch unstetiges Vektorfeld verfolgen
+- **Streak Surface:** Kontinuierlich Punkte von einer Seed-Kurve in unstetiges Vektorfeld werfen, dann Snapshot machen
+- **Time Surface:** Einmal Puntke in einer Oberfläche seeden, dann Snapshots machen
