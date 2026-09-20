@@ -12,7 +12,7 @@ Alternativ: Summe des quadratischen Fehlers wird bei Projektion minimiert
 Weiterer Effekt: *Dekorrelation*
 
 - Ursprung des neuen Koordinatensystems: Durchschnitt der Punkte
-- Summe der äußeren Produkte von $(x_{i}-\bar{x})$ (skaliert mit $\frac{1}{n-1}$)
+- **Scatter Matrix:** Summe der äußeren Produkte von $(x_{i}-\bar{x})$ (skaliert mit $\frac{1}{n-1}$)
 - Eigendekomposition der resultierenden Matrix - höchste Varianz entlang Eigenvektor mit größtem Eigenwert
 
 Die Anzahl der großen Eigenwerte sagt einem etwas über die Dimensionalität der Verteilung
