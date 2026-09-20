@@ -38,3 +38,24 @@ Wir haben dann noch einen Superparameter $\gamma$, mit dem wir die Scharfkantigk
 Für die Visualisierung kann es ganz hilfreich sein, die Glyphs von einem regulären Grid dorthin zu bewegen, wo sie sich selber nicht überdecken und trotzdem noch möglichst gut alles abdecken (Glyph Packing)
 
 ## Derived Scalar Fields
+Matrizen auf Skalarwerte reduzieren, dann mit gewöhnlichen Volume Rendering-Methoden visualisieren
+
+Für Graustufen:
+- Spur der Matrix (Summe der Eigenwerte)
+- Mean Diffusivity (durchschnittlicher Eigenwert)
+	- Anwendung in Diffusion MRI
+- Fractional Anisotropy (FA)
+	- basiert auf Varianz von Eigenwerten
+	- In MRT: korrelliert mit weißer Materie
+- Tensor Mode
+	- Normalisiert von -1 bis 1
+	- "senkrecht" zu FA
+	- Falls $FA>0$, beschreibt der Mode die Art von Anisotropie:
+		- -1, wenn Tensor planar ($c_{p} \approx 1$)
+		- 1, wenn Tensor linear ($c_{l} \approx 1$)
+		- 0, wenn der mittlere Eigenwert genau der Durchschnitt der beiden anderen ist
+
+In Farbe:
+- Ausrichtung des größten Eigenvektors in RGB kodieren
+	- skalieren mit $c_{l}$, damit gehighlighted wird wenn es nur einen großen EW gibt
+
