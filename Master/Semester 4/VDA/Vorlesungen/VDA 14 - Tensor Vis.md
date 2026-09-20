@@ -36,3 +36,5 @@ Für $c_{p} \approx_{1}$ ist ein flacher Zylinder aus denselben Gründen gut. In
 Wir haben dann noch einen Superparameter $\gamma$, mit dem wir die Scharfkantigkeit steuern können.
 
 Für die Visualisierung kann es ganz hilfreich sein, die Glyphs von einem regulären Grid dorthin zu bewegen, wo sie sich selber nicht überdecken und trotzdem noch möglichst gut alles abdecken (Glyph Packing)
+
+## Derived Scalar Fields
