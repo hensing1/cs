@@ -17,3 +17,12 @@ Verfolge die Vortex Core Lines wie folgt:
 - Gradient Descent im Correction Step
 - Stop-Kriterium (z.B. wenn Korrekturschritt zu groß)
 
+### Parallel Vectors Operator
+
+Wir haben 2 unabhängige Vektorfelder.
+Orte, an denen beide parallel sind, formen kontinuierliche Kurven *(PV-Lines)*
+Zwei Vektoren sind parallel $\iff$ Kreuzprodukt ist 0
+- Nimm Kreuzprodukt der Vektorfelder
+- Im resultierenden Vektorfeld: nimm die 0-Iso-Oberflächen der drei Vektorkomponenten und finde die Schnittpunkte
+
+Man kann nun die beiden Vektorfelder so wählen, dass die PV-Lines Kandidaten für Vortex Cores sind
