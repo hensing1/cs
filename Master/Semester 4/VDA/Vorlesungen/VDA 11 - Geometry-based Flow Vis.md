@@ -102,7 +102,7 @@ Wir können die Jakobi-Matrix (Ableitung) vom Vektorfeld in einen *symmetrischen
 Ist $\|\Omega\|\gg \|S\|$ haben wir viel Vortex
 Ist $\|S\|\gg\|\Omega\|$ haben wir viel gleichmäßigen Fluss
 *Q-Kriterium:* $Q=\frac{1}{2}(\|\Omega\|^{2}-\|S\|^{2})$
-Wir fangen mit unseren Stream Lines dort an, wo $Q$ groß ist (viel Vortex)
+Wir fangen mit unseren Stream Lines dort an, wo $Q$ groß ist (viel Vortex) ^e3052b
 
 Dann machen wir noch nach cleveren Kriterien die Stream Lines mehr oder weniger opak, weil sonst zu unübersichtlich.
 
