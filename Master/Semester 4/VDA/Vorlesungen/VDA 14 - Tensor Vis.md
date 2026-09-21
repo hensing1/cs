@@ -59,3 +59,13 @@ In Farbe:
 - Ausrichtung des größten Eigenvektors in RGB kodieren
 	- skalieren mit $c_{l}$, damit gehighlighted wird wenn es nur einen großen EW gibt
 
+In Materialien: "shear stress" und "von Mises stress"
+
+## Derived Vector Fields
+
+Streamline Tracking vom Haupteigenvektor
+erst Tensoren interpolieren, dann Haupt-EV berechnen
+
+Zusätzlich zweiten und dritten Eigenvektor mit einbeziehen: *Stream Tubes*
+Streamlines werden elliptisch gemacht (im Querschnitt), die Ellipsenachsen folgen den anderen Eigenvektoren (und -werten)
+Geht auch mit Superellipse
