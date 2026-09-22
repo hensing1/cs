@@ -25,3 +25,10 @@ MA-INF 2207 - Seminar Computer Graphics - 1. Parallelgruppe
 
 - Keine Uhrzeit festgelegt (nach Vereinbarung)
 - [[Labs und Seminare#^ebd7b4|Meeting]]
+
+### Audio
+MA-INF 2208 - Seminar Audio - 1. Parallelgruppe
+
+- Donnerstag, 15.10.26 von 13:00 bis 14:00 Uhr (Einzeltermin)  
+- Dozent/-in: PD Dr. Kurth, Frank
+- Bemerkung zum Termin Online meeting 1 p.m. - 2 p.m.
