@@ -1,5 +1,6 @@
 [[atcg1-02-Global_Illumination_Problem.pdf]]
 
+## BRDF und Renderinggleichung
 **BSSRDF**
 *Bidirectional Scattering Surface Reflectance Distribution Function*
 - 12-dimensionale Funktion:
