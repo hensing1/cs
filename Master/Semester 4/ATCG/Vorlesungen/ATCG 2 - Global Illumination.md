@@ -49,7 +49,6 @@ Weitere Zutaten:
 	- Raumwinkel, den die Oberfläche einnimmt, wird proportional zur quadrierten Distanz kleiner
 - Wir nennen $V(x'' \leftrightarrow x')$ den Term, der uns sagt, ob $x''$ von $x'$ aus überhaupt sichtbar ist (kann mit ray casting function $h(x', x''-x')$ ausgewertet werden)
 - Für Lesbarkeit definieren wir den Geometrieterm $$G(x'' \leftrightarrow x'):= V(x'' \leftrightarrow x')  \frac{\cos(\theta_{i})\cos(\theta_{o})}{\|x''-x'\|^{2}}$$
-
 Die LTE in diesem Kontext ausgedrückt: $$L(x' \to x)=L_{e}(x' \to x) + \int_{S}f_{\text{BSDF}}(x'' \to x' \to x)L(x' \leftarrow x'') G(x'' \leftrightarrow x') \, dA(x'').$$
 Wir integrieren also über jeden einzelnen Punkt $x''$ in der Szene $S$.
 
@@ -58,7 +57,7 @@ Als kompakte Schreibweise fassen wir das Integral über die Szene als Integral-O
 $$L=L_{e}+TL$$
 Umgeschrieben: $L=(I-T)^{-1}L_{e}$ - um den gesamten Lichttransport zu bestimmen, müssen wir also $(I-T)$ bestimmen und invertieren.
 
-### Radiocity Method
+### Radiosity Method
 
 Wir wollen $I-T$ als Matrix darstellen.
 
