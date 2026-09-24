@@ -64,7 +64,7 @@ Wir wollen $I-T$ als Matrix darstellen.
 Wir nehmen dafür erst mal an, dass alle Oberflächen diffus sind - die BSDF hängt also nur vom Oberflächenpunkt $x$ ab, aber nicht von Eingangs- oder Ausgangswinkel.
 $$f_{\text{BSDF}}(\omega_{i},x,\omega_{o})=f_{\text{BSDF}}(x)$$
 [^1]
-Das machen wir, damit wir den BSDF-Term aus dem Integral der Renderinggleichung rausziehen können. Dann beschreibt das Integral nämlich nur noch einfallende *Radiocity* (Irradianz) ($\frac{W}{m^{2}}$).[^2]
+Das machen wir, damit wir den BSDF-Term aus dem Integral der Renderinggleichung rausziehen können. Dann beschreibt das Integral nämlich nur noch einfallende *Radiosity* (Irradianz) ($\frac{W}{m^{2}}$).[^2]
 
 Damit alles die Einheit der Radianz hat (Gesamtlichtmenge, die von einem Punkt in die gesamte Halbkugel abgestrahlt wird), mutliplizieren wir den Rest einmal mit $\pi$ (Halbkugel in Einheit Steradian ($sr$)): 
 $$L(x)\pi=L_{e}(x)\pi+f_{\text{BSDF}}(x)\pi \int_{S}L(x')G(x \leftrightarrow x')\,dA(x')$$
