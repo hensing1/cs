@@ -13,11 +13,12 @@ Random Samples $x_{i}$, um Integral zu berechnen: $$\int_{[0,1)^{s}}f(x)\,dx \ap
 - keine Garantie, dass Punkte nicht sehr nah beieinander landen
 - curse of dimensionality, Anzahl der benötigten Strata wächst exponentiell mit den Dimensionen
 
-*Quasi-Monte Carlo:* Punkte sind nicht mehr unabhängig voneinander, aber dafür gleichmäßig verteilt - **progressive Stratification**
-
-unbiased := Erwartungswert entspricht mathematischem Objekt, das modelliert werden soll (reicht aber nicht, um Konvergenz zu garantieren)
-
-Bias nicht so schlimm wenn man Fehler kontrollieren kann
+> **Random vs. Deterministic Sampling**
+> *Quasi-Monte Carlo:* Punkte sind nicht mehr unabhängig voneinander, aber dafür gleichmäßig verteilt - **progressive Stratification**
+> 
+> unbiased := Erwartungswert entspricht mathematischem Objekt, das modelliert werden soll (reicht aber nicht, um Konvergenz zu garantieren)
+> 
+> Bias nicht so schlimm wenn man Fehler kontrollieren kann
 
 Wie macht man Sampling
 Man transformiert sein Problem auf den $s$-dimensionalen Einheitswürfel $[0,1)^{s}$
