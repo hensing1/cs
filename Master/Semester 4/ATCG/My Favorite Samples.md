@@ -72,3 +72,4 @@ Effizienter machen: Paare von Ziffern nehmen und Lookup-Tabelle verwenden
 - man braucht einen generator vector $(g_{0},\dots,g_{s-1}) \in \mathbb{N}^{s}$
 - man multipliziert ihn und nimmt den Modulus, sodass er im Einheitswürfel landet: $$x_{i}=\frac{i}{n}(g_{0},\dots,g_{s-1}) \text{ mod } [0,1)^{s}$$
 Um daraus eine Sequenz zu machen, kann man $\frac{i}{n}$ mit dem radical inverse ersetzen
+
