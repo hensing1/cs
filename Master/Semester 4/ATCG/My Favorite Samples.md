@@ -2,15 +2,18 @@
 
 ## Alex Keller, NVIDIA
 
-Samples, um Integral zu berechnen
+Rank-1 lattice: gleichmäßig samplen, dann Voronoi-Zellen des Samples als Pixel verwenden -> in manchen Applikationen bessere Approximation als quadratische Pixel (mit gleicher Anzahl von Pixeln)
+
+### Monte Carlo - Methoden
+
+Random Samples $x_{i}$, um Integral zu berechnen: $$\int_{[0,1)^{s}}f(x)\,dx \approx \frac{1}{n}\sum_{i=1}^{n}f(x_{i})$$
 
 *Stratified Sampling*
 - vermeiden, dass komplette Regionen ausgelassen werden
 - keine Garantie, dass Punkte nicht sehr nah beieinander landen
 - curse of dimensionality, Anzahl der benötigten Strata wächst exponentiell mit den Dimensionen
 
-Quasi-Monte Carlo: Punkte sind nicht mehr unabhängig voneinander
-progressive Stratification
+*Quasi-Monte Carlo:* Punkte sind nicht mehr unabhängig voneinander, aber dafür gleichmäßig verteilt - **progressive Stratification**
 
 unbiased := Erwartungswert entspricht mathematischem Objekt, das modelliert werden soll (reicht aber nicht, um Konvergenz zu garantieren)
 
