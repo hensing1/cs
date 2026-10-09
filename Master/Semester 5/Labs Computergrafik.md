@@ -31,8 +31,8 @@ Seminare:
 
 - Text-Driven Human Motion Editing
 
-- Relighting of Dynamic 3D Gaussian Models
-- Refraction and Reflection in 3DGS
+- ==🔵Relighting of Dynamic 3D Gaussian Models==
+- ==Refraction and Reflection in 3DGS==
 
 Labs:
 - Deep Learning for Weather Forecasting on ERA5 Dataset

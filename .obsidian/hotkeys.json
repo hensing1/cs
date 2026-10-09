@@ -72,15 +72,6 @@
       "key": "H"
     }
   ],
-  "editor:toggle-highlight": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "0"
-    }
-  ],
   "editor:toggle-strikethrough": [
     {
       "modifiers": [
@@ -89,5 +80,13 @@
       "key": "D"
     }
   ],
-  "editor:delete-paragraph": []
+  "editor:delete-paragraph": [],
+  "editor:toggle-highlight": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ]
 }
