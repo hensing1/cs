@@ -1,4 +1,3 @@
-# Verknüpfung
 ## Definition
 
 > [!abstract] Definition

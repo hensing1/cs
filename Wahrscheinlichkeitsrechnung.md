@@ -1,10 +1,10 @@
-# Grundlagen
+## Grundlagen
 
-## Zufallsvariablen
+### Zufallsvariablen
 Eine Zufallsvariable kann genau einen Wert aus einer beliebigen, gegebenen Menge annehmen.
 Jedem dieser Werte ist eine Wahrscheinlichkeit zugeordnet. Die Wahrscheinlichkeiten müssen sich zu 1 aufsummieren.
 
-## Wahrscheinlichkeit und Erwartungswert
+### Wahrscheinlichkeit und Erwartungswert
 
 Für ein Zufallsereignis $A$ ist $Pr[A]$ die *Wahrscheinlichkeit*, dass es eintritt. $Pr[A]$ ist auch die *relative Häufigkeit* von $A$, wenn das Experiment sehr oft wiederholt wird.
 

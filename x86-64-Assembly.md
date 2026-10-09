@@ -1,5 +1,3 @@
-# x86-64-Assembly
-
 ## Allgemeines
 
 Prozessoren mit der x86-64-Architektur realisieren den (64-Bit-)*x86-Instruktionssatz*.
@@ -142,7 +140,7 @@ Verschiebt man Sachen per indirekter Adressierung in Intel, gibt man mit `byte p
 	- `mov rax, [rsi+10]`
 
 Allgemeine Indizierung: `mov register, segreg:[base+index*scale+displ]`
-`segreg` ist hierbei ein spezielles Register, das auf Segmente (z.B. die [[x86-64#.data-Section|.data-Section]]) zeigt. Im 64-Bit protected mode wird es kaum genutzt.
+`segreg` ist hierbei ein spezielles Register, das auf Segmente (z.B. die [[x86-64-Assembly#.data-Section|.data-Section]]) zeigt. Im 64-Bit protected mode wird es kaum genutzt.
 
 Segmentregister werden iW. nur vom Betriebssystem benutzt ("real mode"), für gewöhnliche Programme muss (und darf) man nicht darauf zugreifen ("protected mode").
 

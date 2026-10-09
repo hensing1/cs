@@ -1,4 +1,3 @@
-# Von-Neumann-Architektur
 ### Grundlagen
 
 Die *Von-Neumann-Architektur* ist eine Computerarchitektur, die sich durch die folgenden Bestandteile und Konzepte auszeichnet:

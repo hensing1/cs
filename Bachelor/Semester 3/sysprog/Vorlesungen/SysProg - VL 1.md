@@ -9,15 +9,15 @@ Datum: 17.10.
 	- Umrechnung von Marken in Adressen
 	- Bearbeitung von Pseudobefehlen (z.B. Reservierung von Speicherplatz)
 
-![[x86-64#Allgemeines]]
+![[x86-64-Assembly#Allgemeines]]
 
-![[x86-64#Prozessorregister]]
+![[x86-64-Assembly#Prozessorregister]]
 
-![[x86-64#Prozessorflags]]
+![[x86-64-Assembly#Prozessorflags]]
 
-![[x86-64#Kompilieren]]
+![[x86-64-Assembly#Kompilieren]]
 
-![[x86-64#Aufbau der Quelldatei]]
+![[x86-64-Assembly#Aufbau der Quelldatei]]
 
-![[x86-64#Syscalls]]
+![[x86-64-Assembly#Syscalls]]
 

@@ -1,4 +1,3 @@
-# Vertex Cover
 Vertex Cover ist ein [[Komplexitätstheorie#NP-Vollständigkeit|NP-vollständiges]] Problem für [[Graphen#Ungerichteter Graph|ungerichtete Graphen]].
 > [!abstract] Definition *Vertex Cover*
 > Finde eine möglichst kleine Knotenmenge, sodass jede Kante zu mindestens einem der Knoten inzident ist.

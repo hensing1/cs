@@ -1,5 +1,3 @@
-# Kreuzkorrelation
-
 Die Kreuzkorrelation ist die kleine Schwester der [[Konvolution]].
 
 > [!abstract] Definition *Kreuzkorrelation*

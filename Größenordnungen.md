@@ -1,5 +1,5 @@
 Größenordnungen in O-Notation sind der übliche Weg, um Laufzeiten von [[Algorithmen]] zu beschreiben.
-# Obergrenze
+## Obergrenze
 Wenn **ab einem gewissen Punkt** eine Funktion $g(x)$, ggf. skaliert mit einer Konstante $c$, für jedes $x$ einen höheren Wert hat als eine Funktion $f(x)$, dann schreibt man:
 $$f=O(g)$$
 -> $f$ wächst nicht schneller als $g$.
@@ -8,7 +8,7 @@ Formell:
 $$f=O(g) \iff \exists c \in \mathbb{R} : \exists n _{0} \in \mathbb{N} : \forall n \ge n_{0} : f(n) \le c * g(n)$$
 Wächst $f$ *langsamer* als $g$ (also $\lim _{x \to \infty} \frac{f(x)}{g(x)} = 0$), schreibt man:
 $$f=o(g)$$
-# Untergrenze
+## Untergrenze
 Entgegengesetzt: wenn $f$ (skaliert) *mindestens* so schnell wächst wie $g$, schreibt man:
 $$f=\Omega (g)$$
 Wächst $f$ schneller als $g$, schreibt man:
@@ -17,12 +17,12 @@ $$f=\omega(g)$$
 > $f=\Omega (g) \iff g=O(f)$
 > $f=\omega (g) \iff g=o(f)$
 
-# Gleiche Größenordnung
+## Gleiche Größenordnung
 Wenn $f=O(g)$ und $f=\Omega (g)$, dann sind $f$ und $g$ in der gleichen Größenordnung und man schreibt:
 $$f=\Theta(g)$$
 
 ---
-# Geltungsbereich
+## Geltungsbereich
 Die O-Notation kann angewendet werden auf alle Funktionen, die asymptotisch positiv sind:
 ![[Glossar#Asymptotisch Positiv]]
 

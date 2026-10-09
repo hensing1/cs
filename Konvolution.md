@@ -1,4 +1,4 @@
-# Konvolution (Faltung)
+(Faltung)
 
 Im Eindimensionalen (verwendet in [[INF 132 - Grundlagen der Robotik]]):
 

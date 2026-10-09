@@ -4,9 +4,9 @@ Datum: 24.10.
 
 # Mehr Assembler
 
-![[x86-64#Assembler-Syntax Intel vs. AT&T]]
+![[x86-64-Assembly#Assembler-Syntax Intel vs. AT&T]]
 
-![[x86-64#Adressierungsarten]]
+![[x86-64-Assembly#Adressierungsarten]]
 
 ## Jetzt Assembly wirklich richtig
 
@@ -74,7 +74,7 @@ schleife:
 ```
 ## Calling Conventions
 
-![[x86-64#Funktionsaufruf]]
+![[x86-64-Assembly#Funktionsaufruf]]
 
 ### cdecl
 cdecl ist die Standard-Calling Convention für (32-Bit) x86 C-Compiler. 
@@ -92,4 +92,4 @@ Ist der return-Wert ein Int oder Pointer, kommt er in `eax`.
 Die Register `eax`, `ecx` und `edx` sind caller-saved, können also von der aufgerufenen Funktion überschrieben werden.
 Die restlichen Register müssen von der Funktion wiederhergestellt werden.
 
-![[x86-64#System V AMD64 ABI]]
+![[x86-64-Assembly#System V AMD64 ABI]]
