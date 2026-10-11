@@ -32,17 +32,17 @@ Seminare:
 - Text-Driven Human Motion Editing
 
 - ==Relighting of Dynamic 3D Gaussian Models==
-- ==Refraction and Reflection in 3DGS==
+- ~~==Refraction and Reflection in 3DGS==~~
 
 Labs:
-- Deep Learning for Weather Forecasting on ERA5 Dataset
+- ==Deep Learning for Weather Forecasting on ERA5 Dataset==
 - CRF training in Avatar Pipeline (HDRGS)
 
 - Capturing Scene-Aware Human Motion in VR
 - Diffusion Models für Generierung von menschlicher Bewegung
 
 - Continuous Densification of 3DGS
-- Metal Scatter Artifact Reduction in MRI
+- ==Metal Scatter Artifact Reduction in CT==
 
 **Human-Centered Sensing & Digital Health**
 *Prof. Krüger*
