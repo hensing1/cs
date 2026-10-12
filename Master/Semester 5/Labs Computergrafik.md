@@ -16,7 +16,7 @@ Streaming & Compressing 4D Gaussian Splatting
 
 Labs:
 - Clouds Simulation
-- Heuristic Algorithms Global Illumination (DDGI)
+- ==Heuristic Algorithms Global Illumination (DDGI)==
 
 **Computer Graphics**
 *Prof. Klein*
@@ -27,7 +27,7 @@ Seminare:
 - HDRGS: Camera Response Function und Kameraartefakte lernen
 - Single View Avatar Reconstruction
 
-- Deformable Clothing for Gaussian Avatars
+- ==🟢Deformable Clothing for Gaussian Avatars==
 
 - Text-Driven Human Motion Editing
 
@@ -35,7 +35,7 @@ Seminare:
 - ~~==Refraction and Reflection in 3DGS==~~
 
 Labs:
-- ==Deep Learning for Weather Forecasting on ERA5 Dataset==
+- Deep Learning for Weather Forecasting on ERA5 Dataset
 - CRF training in Avatar Pipeline (HDRGS)
 
 - Capturing Scene-Aware Human Motion in VR
