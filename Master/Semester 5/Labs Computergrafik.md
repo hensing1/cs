@@ -55,10 +55,10 @@ Seminare:
 - Repräsentation von Handskellett
 
 Labs:
-- Krampfanfälle erkennen in EEG
+- ==Krampfanfälle erkennen in EEG==
 - Eye Tracking Modul basteln
-- Studie zu Uncanny Valley
-- Rage Game entwickeln
+- ~~Studie zu Uncanny Valley~~
+- ~~Rage Game entwickeln~~
 - Hand Tracking in Unity (2 Labs), Handtracking Data Set
 - Puls und Atmung mit Kamera
 - Face Tracking in Thermalbild
