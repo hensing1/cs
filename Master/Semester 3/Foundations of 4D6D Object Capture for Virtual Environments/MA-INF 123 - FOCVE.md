@@ -1,0 +1,13 @@
+**Inhalte**
+[[FOCVE 1 - Linear Transformations]]
+[[FOCVE 2 - Cameras]]
+[[FOCVE 3 - Scene Representations]]
+[[FOCVE 4 - Reconstruction Methods]]
+[[FOCVE 5 - Human Models]]
+[[FOCVE 6 - Colors and Rendering]]
+[[FOCVE 7 - Differentiable Rendering]]
+[[FOCVE 8 - Machine Learning]]
+[[FOCVE 9 - Neural Radiance Fields]]
+[[FOCVE 10 - Gaussian Splatting]]
+[[FOCVE 11 - Inverse Kinematics]]
+[[FOCVE 12 - Motion Tasks]]
