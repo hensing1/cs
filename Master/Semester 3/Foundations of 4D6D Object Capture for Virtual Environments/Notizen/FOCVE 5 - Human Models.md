@@ -36,7 +36,7 @@ Es gibt ein männliches, ein weibliches, und ein geschlechtsneutrales mit je $N 
 
 Zuerst verformen wir $\overline{T}$ bzgl. der Körperparameter $\beta$: Vertices werden additiv verschoben mit $$\overline{T}+B_{S}(\beta)= \overline{T} + \mathcal{S}\beta.$$
 [^1]
-Dadurch verschieben sich die $K$ Gelenkpositionen. Diese recovern wir mit einer gelernten Matrix $\mathcal{J} \in \mathbb{R}^{3K \times 3N}$: $$J(\beta)=\mathcal{J}(\overline{T}+B_{S}(\beta))$$
+Dadurch verschieben sich die $K$ Gelenkpositionen in der Ruheposition. Diese recovern wir mit einer gelernten Matrix $\mathcal{J} \in \mathbb{R}^{3K \times 3N}$: $$J(\beta)=\mathcal{J}(\overline{T}+B_{S}(\beta))$$
 Die Gelenkpositionen können wir jetzt mit den Parametern $\theta$ verschieben und erhalten mit Vorwärtskinematik pro Gelenk $k$ die globale Verschiebung & Rotation $T_{k}$ zum globalen Frame.
 
 Damit können wir jetzt schon *linear blend skinning* (LBS) machen, in dem wir jedem Vertex des Modells ein paar Gelenke zuweisen, die auf ihn Einfluss nehmen:
