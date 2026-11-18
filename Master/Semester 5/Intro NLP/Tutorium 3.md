@@ -20,3 +20,6 @@ $$IDF=\log\left( \frac{\#\text{documents}}{\#\text{documents containing word}+1}
 Word2Vec: next token prediction
 
 Similar words have high cosine similarity (vectors point in same direction)
+
+
+BERT: sentence embedding
