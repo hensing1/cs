@@ -11,3 +11,4 @@
 Long-Short Term Memory network
 
 - löst nicht vanishing gradients, aber ist besser als RNN
+

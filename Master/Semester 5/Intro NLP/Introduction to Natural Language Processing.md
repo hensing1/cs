@@ -15,3 +15,7 @@ Projekt besteht aus
 	- Deadline 05.02.
 
 
+Dinge manuell können in Klausur
+- dot product
+- cross entropy loss
+- softmax
