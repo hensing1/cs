@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"c500ccc5c792809d","x":157,"y":-360,"width":356,"height":376,"type":"group","label":"3DGS-Verbesserungen"},
+		{"id":"2b5301db54d2fc5e","x":157,"y":89,"width":336,"height":291,"type":"group","label":"Geometry Extraction"},
+		{"id":"ea1c93d7d052c21e","type":"group","x":203,"y":-660,"width":310,"height":186,"label":"Basics"},
+		{"id":"15a9ef4cf8cb1db6","type":"text","text":"NeRF (Mildenhall et al. 2020)","x":223,"y":-640,"width":270,"height":60},
+		{"id":"b8c2d09f8ee846f9","type":"text","text":"3DGS (Kerbl et al. 2023)","x":223,"y":-554,"width":250,"height":60},
+		{"id":"3fe48049a7097a33","x":177,"y":-340,"width":250,"height":60,"type":"text","text":"Lightgaussian (Fan et al. 2023)"},
+		{"id":"1dc6b3d402f28645","x":177,"y":-64,"width":250,"height":60,"type":"text","text":"Absgs (Ye et al. 2024)"},
+		{"id":"59f84e48ac50d4c4","x":177,"y":-246,"width":250,"height":60,"type":"text","text":"3DGS as MCMC (Kheradmand et al. 2024)"},
+		{"id":"9eeb88534a4134d7","x":177,"y":-152,"width":316,"height":53,"type":"text","text":"Compact 3DGS as Radiance Field (Lee et al. 2024)"},
+		{"id":"295f929f025bba63","type":"text","text":"**Ref-DGS**","x":-400,"y":560,"width":200,"height":70},
+		{"id":"07f130096e51095e","x":177,"y":109,"width":250,"height":60,"type":"text","text":"Pgsr (Chen et al. 2024)"},
+		{"id":"880516f7b7e16eea","x":177,"y":200,"width":250,"height":60,"type":"text","text":"2DGS (Huang et al. 2024)"},
+		{"id":"4f90f89ca90b9d8f","x":177,"y":280,"width":250,"height":60,"type":"text","text":"Gaussian Opacity Fields (Yu et al. 2024)"}
+	],
+	"edges":[
+		{"id":"3f8c5e8622cb9add","fromNode":"295f929f025bba63","fromSide":"top","toNode":"3fe48049a7097a33","toSide":"left"},
+		{"id":"62d6ebffd55408d2","fromNode":"295f929f025bba63","fromSide":"top","toNode":"59f84e48ac50d4c4","toSide":"left"},
+		{"id":"77ab7f3f8a2a7e27","fromNode":"295f929f025bba63","fromSide":"top","toNode":"9eeb88534a4134d7","toSide":"left"},
+		{"id":"31ae72474bf575af","fromNode":"295f929f025bba63","fromSide":"top","toNode":"1dc6b3d402f28645","toSide":"left"},
+		{"id":"ea2ece0e7bd7fd8b","fromNode":"295f929f025bba63","fromSide":"top","toNode":"07f130096e51095e","toSide":"left"},
+		{"id":"557289fad57087f3","fromNode":"295f929f025bba63","fromSide":"top","toNode":"880516f7b7e16eea","toSide":"left"},
+		{"id":"3ce51b9e1d0bb3ad","fromNode":"295f929f025bba63","fromSide":"top","toNode":"4f90f89ca90b9d8f","toSide":"left"}
+	]
+}
